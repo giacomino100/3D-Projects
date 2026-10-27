@@ -1,0 +1,114 @@
+{
+  "source": "C:\\Users\\giacomo_inghilleri\\Documents\\Personal\\81A807925A_CAD_project\\cad\\exports\\V9\\81A807925A_V9.step",
+  "source_version": "V9d",
+  "units": "mm",
+  "tessellation_tolerance_mm": 0.05,
+  "angular_tolerance_rad": 0.08,
+  "objects": [
+    {
+      "name": "BODY_81A807925A_V9",
+      "file": "C:\\Users\\giacomo_inghilleri\\Documents\\Personal\\81A807925A_CAD_project\\cad\\exports\\V9\\blender_meshes\\BODY_81A807925A_V9.stl",
+      "volume_mm3": 35331.95490701219,
+      "size_mm": [
+        484.6091557511444,
+        56.93182276034883,
+        77.69084177964088
+      ],
+      "center_mm": [
+        275.39025755166944,
+        -28.14055964500675,
+        -6.5636035434764555
+      ]
+    },
+    {
+      "name": "CLIP_C01",
+      "file": "C:\\Users\\giacomo_inghilleri\\Documents\\Personal\\81A807925A_CAD_project\\cad\\exports\\V9\\blender_meshes\\CLIP_C01.stl",
+      "volume_mm3": 638.8358189377104,
+      "size_mm": [
+        31.120247368030164,
+        2.694604598385906,
+        15.644999719995624
+      ],
+      "center_mm": [
+        426.90720662794314,
+        -5.442202601444524,
+        5.9198002969863435
+      ]
+    },
+    {
+      "name": "CLIP_C02",
+      "file": "C:\\Users\\giacomo_inghilleri\\Documents\\Personal\\81A807925A_CAD_project\\cad\\exports\\V9\\blender_meshes\\CLIP_C02.stl",
+      "volume_mm3": 602.7522362318623,
+      "size_mm": [
+        29.602591916227766,
+        2.8394501658884614,
+        15.41611113551402
+      ],
+      "center_mm": [
+        327.93689251542753,
+        -3.9120888632423214,
+        3.6618072294519197
+      ]
+    },
+    {
+      "name": "CLIP_C03",
+      "file": "C:\\Users\\giacomo_inghilleri\\Documents\\Personal\\81A807925A_CAD_project\\cad\\exports\\V9\\blender_meshes\\CLIP_C03.stl",
+      "volume_mm3": 726.5393580989689,
+      "size_mm": [
+        38.57078993248825,
+        2.863607105645001,
+        15.393094653611117
+      ],
+      "center_mm": [
+        184.167245249427,
+        -1.9848789479486253,
+        3.21588147932377
+      ]
+    },
+    {
+      "name": "CLIP_C05",
+      "file": "C:\\Users\\giacomo_inghilleri\\Documents\\Personal\\81A807925A_CAD_project\\cad\\exports\\V9\\blender_meshes\\CLIP_C05.stl",
+      "volume_mm3": 803.9139599735837,
+      "size_mm": [
+        41.22359663011264,
+        3.709122730692606,
+        18.161507556909662
+      ],
+      "center_mm": [
+        157.5083869251613,
+        -50.22711948698313,
+        -1.161203305113872
+      ]
+    },
+    {
+      "name": "CLIP_C06",
+      "file": "C:\\Users\\giacomo_inghilleri\\Documents\\Personal\\81A807925A_CAD_project\\cad\\exports\\V9\\blender_meshes\\CLIP_C06.stl",
+      "volume_mm3": 722.7109408490307,
+      "size_mm": [
+        34.5978620145826,
+        3.6858309260629696,
+        16.2452013316548
+      ],
+      "center_mm": [
+        264.6825924983657,
+        -53.16574434429333,
+        -1.688177788796732
+      ]
+    },
+    {
+      "name": "CLIP_C07",
+      "file": "C:\\Users\\giacomo_inghilleri\\Documents\\Personal\\81A807925A_CAD_project\\cad\\exports\\V9\\blender_meshes\\CLIP_C07.stl",
+      "volume_mm3": 704.2548193073995,
+      "size_mm": [
+        33.608712524008354,
+        2.9915101317494788,
+        16.411447044743934
+      ],
+      "center_mm": [
+        370.2158328254007,
+        -54.74989536372891,
+        -0.17377270592557845
+      ]
+    }
+  ]
+}

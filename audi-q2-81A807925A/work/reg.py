@@ -27,7 +27,7 @@ class Model:
             mod = params
         elif version == "V2":
             import parameters_v2 as mod
-        elif version in ("V3", "V4", "V5", "V6", "V7", "V8"):
+        elif version in ("V3", "V4", "V5", "V6", "V7", "V8", "V10", "V11", "V12", "V13", "V14", "V15", "V16", "V17", "V18"):
             mod = importlib.import_module("parameters_" + version.lower())
             importlib.reload(mod)
         elif version == "V1":

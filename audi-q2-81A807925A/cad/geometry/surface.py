@@ -200,6 +200,19 @@ def _depth_table():
             ch *= _smoothstep((P.BOTTOM_FLAT_Y + 5.0 - pts[:, 1]) / 15.0)          # smooth in y (loop legs)
             ch *= _smoothstep((c1 - pts[:, 0]) / 20.0) * _smoothstep((pts[:, 0] - c0) / 10.0)
             out = (out ** 8 + ch ** 8) ** 0.125
+        if getattr(P, "TOP_CHANNEL", None):
+            # V18 (utente): lo stesso rientro del bordo inferiore continua
+            # lungo il bordo superiore. La selezione segue il bordo superiore
+            # dell'apertura, quindi non usa una soglia Y misurata a occhio.
+            dch, wl, rwc, c0, c1 = P.TOP_CHANNEL
+            o_sm = PF.outer_smooth_polygon()
+            rails = _rail_tables()
+            inner_top = np.interp(pts[:, 0], rails["s"], rails["it"])
+            mT = (pts[:, 1] >= inner_top) & Path(np.asarray(o_sm.exterior.coords)).contains_points(pts)
+            dOt = np.zeros(len(pts)); dOt[mT] = shapely.distance(shapely.points(pts[mT]), o_sm.boundary)
+            ch = np.where(mT, dch * _smoothstep((dOt - wl) / rwc), 0.0)
+            ch *= _smoothstep((c1 - pts[:, 0]) / 20.0) * _smoothstep((pts[:, 0] - c0) / 10.0)
+            out = (out ** 8 + ch ** 8) ** 0.125
         if getattr(P, "ENDA_SINGLE", None):
             # V9 (photos alB_1, alA_3): at END A the plate drops from the rails in ONE concave crease (no ledge level),
             # crease lines = straight extensions of the opening edges, narrow rim along the slanted nose
@@ -217,7 +230,14 @@ def _depth_table():
         r0, r1 = getattr(P, "RECESS_RAMP_S", (None, None))
         if r0 is not None:
             rmin = getattr(P, "RECESS_RAMP_MIN", 0.0)
-            out *= rmin + (1 - rmin) * _smoothstep((pts[:, 0] - r0) / (r1 - r0))
+            ramp_t = np.clip((pts[:, 0] - r0) / (r1 - r0), 0.0, 1.0)
+            # V11: uniform longitudinal ramp from the END A nose to the cavity.
+            # Smoothstep concentrated the slope in the middle and read as a step.
+            if getattr(P, "RECESS_RAMP_PROFILE", "smoothstep") == "linear":
+                ramp = ramp_t
+            else:
+                ramp = _smoothstep(ramp_t)
+            out *= rmin + (1 - rmin) * ramp
         out = out.reshape(S.shape)
         if getattr(P, "CROWN_IN_TABLE", False):
             # V8: rail crown (rounded bead) from EXACT distances to the outer edge (vertical tables gave a sawtooth
@@ -244,6 +264,10 @@ def _depth_table():
             if getattr(P, "BOTTOM_CHANNEL", None):      # bottom rail is a recessed channel, not a raised bead
                 c0b, c1b = P.BOTTOM_CHANNEL[3], P.BOTTOM_CHANNEL[4]
                 amp = amp * (1 - (cy < P.BOTTOM_FLAT_Y) * _smoothstep((c1b - cs) / 20.0) * _smoothstep((cs - c0b) / 10.0))
+            if getattr(P, "TOP_CHANNEL", None):         # V18: stesso comportamento sul bordo superiore
+                c0t, c1t = P.TOP_CHANNEL[3], P.TOP_CHANNEL[4]
+                itc = np.interp(cs, T_["s"], T_["it"])
+                amp = amp * (1 - (cy >= itc) * _smoothstep((c1t - cs) / 20.0) * _smoothstep((cs - c0t) / 10.0))
             crown = np.zeros(len(pts)); crown[mC] = -RAIL_CROWN * amp * wc * 16 * (t * (1 - t)) ** 2
             out = out + crown.reshape(S.shape)
         bs, by = getattr(P, "RECESS_BLUR", (0.3, 0.3))
