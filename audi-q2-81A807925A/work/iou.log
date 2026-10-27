@@ -1,0 +1,4 @@
+{'photo': '925_krik_0', 'iou_v1': np.float64(0.633), 'iou_v2': np.float64(0.6132), 'delta': np.float64(-0.0198)}
+{'photo': '925_pru_1_r', 'iou_v1': np.float64(0.5488), 'iou_v2': np.float64(0.5473), 'delta': np.float64(-0.0015)}
+{'photo': 'corner_4', 'iou_v1': np.float64(0.4451), 'iou_v2': np.float64(0.4721), 'delta': np.float64(0.027)}
+{'photo': 'corner_1', 'iou_v1': np.float64(0.5124), 'iou_v2': np.float64(0.5033), 'delta': np.float64(-0.0091)}

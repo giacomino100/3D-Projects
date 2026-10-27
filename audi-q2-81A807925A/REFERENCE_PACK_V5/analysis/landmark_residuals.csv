@@ -1,0 +1,241 @@
+cad_version,view,landmark_id,name,source_image,pixel_x,pixel_y,cad_x_mm,cad_y_mm,cad_z_mm,projected_x,projected_y,residual_px,residual_mm,confidence
+V4,front_A,P01,wide-end outer nose (inner tip),925_alB_1,2516.0,1081.0,477.08,-8.54,-1.15,2512.29,1080.64,3.73,0.76,MEDIUM (hand pick +-3 px)
+V4,front_A,P02,wide-end upper max,925_alB_1,,,362.49,-3.54,-3.42,1949.6,1090.11,,,not measurable in this view
+V4,front_A,P03,wide-end lower max (lower end of solid zone),925_alB_1,2303.99,868.2,435.02,-49.67,-6.71,2303.37,869.55,1.48,0.31,HIGH
+V4,front_A,P04,opening start upper fillet,925_alB_1,,,359.14,-18.48,-5.58,1932.85,1013.54,,,not measurable in this view
+V4,front_A,P05,opening start lower fillet,925_alB_1,,,358.65,-27.19,-6.6,1930.17,969.49,,,not measurable in this view
+V4,front_A,P06,opening start (min s),925_alB_1,1937.0,1012.0,359.86,-21.38,-5.92,1936.38,998.98,13.03,2.61,MEDIUM (hand pick +-3 px)
+V4,front_A,P07,upper rail 20%,925_alB_1,,,380.49,-3.83,-3.11,2039.08,1090.96,,,not measurable in this view
+V4,front_A,P08,upper rail 40%,925_alB_1,1557.63,1085.66,284.5,-2.38,-4.22,1557.63,1086.31,0.65,0.13,HIGH
+V4,front_A,P09,upper rail 60%,925_alB_1,1051.54,1083.65,185.51,-1.1,-3.42,1051.55,1082.56,1.1,0.21,HIGH
+V4,front_A,P10,upper rail 80%,925_alB_1,557.98,1089.56,89.53,-0.12,6.89,558.04,1088.32,1.25,0.24,HIGH
+V4,front_A,P11,lower rail 20%,925_alB_1,2028.27,830.63,378.94,-55.85,-8.42,2028.26,830.36,0.27,0.05,HIGH
+V4,front_A,P12,lower rail 40%,925_alB_1,1551.06,822.88,282.95,-54.71,-9.69,1551.02,821.64,1.25,0.25,HIGH
+V4,front_A,P13,lower rail 60%,925_alB_1,1064.81,822.22,187.0,-51.74,-9.95,1064.81,823.17,0.95,0.19,HIGH
+V4,front_A,P14,lower rail 80%,925_alB_1,573.95,832.62,91.02,-49.76,-1.28,573.95,832.42,0.19,0.04,HIGH
+V4,front_A,P15,narrow-end upper shoulder,925_alB_1,108.28,1103.48,-3.94,-2.47,43.67,107.28,1106.72,3.39,0.65,HIGH
+V4,front_A,P16,narrowmost tip,925_alB_1,91.0,1092.0,-6.5,-6.83,44.16,96.46,1085.92,8.17,1.89,MEDIUM (hand pick +-3 px)
+V4,front_A,P17,narrow-end lower shoulder,925_alB_1,337.98,874.74,43.6,-44.17,13.27,337.57,873.51,1.3,0.27,HIGH
+V4,front_A,P18,opening outer-most point,925_alB_1,186.0,1052.0,13.02,-11.29,32.46,186.16,1053.5,1.51,0.31,MEDIUM (hand pick +-3 px)
+V4,front_A,P19,opening outer upper fillet,925_alB_1,,,13.02,-11.29,32.46,186.16,1053.5,,,not measurable in this view
+V4,front_A,P20,opening outer lower fillet,925_alB_1,344.79,918.0,45.15,-35.99,13.84,343.47,914.33,3.9,0.8,HIGH
+V4,front_A,P21,opening upper edge 50%,925_alB_1,1062.31,1037.68,187.4,-9.89,-4.96,1062.32,1036.96,0.72,0.14,HIGH
+V4,front_A,P22,opening lower edge 50%,925_alB_1,1066.23,879.27,187.51,-40.47,-8.97,1066.23,880.0,0.73,0.14,HIGH
+V4,front_A,P23,"lower band step (opening lower edge, s~378)",925_alB_1,,,94.54,-39.13,-0.76,589.8,885.86,,,not measurable in this view
+V4,front_A,P24,"upper band step (opening upper edge, s~386)",925_alB_1,523.35,1049.34,82.42,-8.31,6.86,523.32,1046.63,2.71,0.52,HIGH
+V4,front_B,P01,wide-end outer nose (inner tip),925_ccm_1,,,477.08,-8.54,-1.15,-110.17,330.44,,,not measurable in this view
+V4,front_B,P02,wide-end upper max,925_ccm_1,197.54,326.51,362.49,-3.54,-3.42,197.54,326.61,0.1,0.04,HIGH
+V4,front_B,P03,wide-end lower max (lower end of solid zone),925_ccm_1,,,435.02,-49.67,-6.71,0.84,446.89,,,not measurable in this view
+V4,front_B,P04,opening start upper fillet,925_ccm_1,,,359.14,-18.48,-5.58,205.46,367.51,,,not measurable in this view
+V4,front_B,P05,opening start lower fillet,925_ccm_1,,,358.65,-27.19,-6.6,206.09,391.15,,,not measurable in this view
+V4,front_B,P06,opening start (min s),925_ccm_1,203.0,362.0,359.86,-21.38,-5.92,203.36,375.31,13.31,5.07,MEDIUM (hand pick +-3 px)
+V4,front_B,P07,upper rail 20%,925_ccm_1,150.14,326.35,380.49,-3.83,-3.11,150.14,325.91,0.43,0.16,HIGH
+V4,front_B,P08,upper rail 40%,925_ccm_1,399.08,327.55,284.5,-2.38,-4.22,399.08,329.8,2.25,0.84,HIGH
+V4,front_B,P09,upper rail 60%,925_ccm_1,645.25,333.69,185.51,-1.1,-3.42,645.25,333.61,0.08,0.03,MEDIUM
+V4,front_B,P10,upper rail 80%,925_ccm_1,865.98,333.24,89.53,-0.12,6.89,865.93,334.92,1.69,0.65,HIGH
+V4,front_B,P11,lower rail 20%,925_ccm_1,,,378.94,-55.85,-8.42,149.82,467.13,,,not measurable in this view
+V4,front_B,P12,lower rail 40%,925_ccm_1,,,282.95,-54.71,-9.69,398.62,469.47,,,not measurable in this view
+V4,front_B,P13,lower rail 60%,925_ccm_1,,,187.0,-51.74,-9.95,638.41,466.61,,,not measurable in this view
+V4,front_B,P14,lower rail 80%,925_ccm_1,,,91.02,-49.76,-1.28,861.12,463.03,,,not measurable in this view
+V4,front_B,P15,narrow-end upper shoulder,925_ccm_1,,,-3.94,-2.47,43.67,1042.64,336.32,,,not measurable in this view
+V4,front_B,P16,narrowmost tip,925_ccm_1,,,-6.5,-6.83,44.16,1047.01,346.97,,,not measurable in this view
+V4,front_B,P17,narrow-end lower shoulder,925_ccm_1,,,43.6,-44.17,13.27,958.05,446.09,,,not measurable in this view
+V4,front_B,P18,opening outer-most point,925_ccm_1,,,13.02,-11.29,32.46,1014.41,360.16,,,not measurable in this view
+V4,front_B,P19,opening outer upper fillet,925_ccm_1,,,13.02,-11.29,32.46,1014.41,360.16,,,not measurable in this view
+V4,front_B,P20,opening outer lower fillet,925_ccm_1,,,45.15,-35.99,13.84,955.45,425.44,,,not measurable in this view
+V4,front_B,P21,opening upper edge 50%,925_ccm_1,640.44,358.27,187.4,-9.89,-4.96,640.43,356.71,1.57,0.59,HIGH
+V4,front_B,P22,opening lower edge 50%,925_ccm_1,638.28,437.67,187.51,-40.47,-8.97,638.29,437.15,0.52,0.2,HIGH
+V4,front_B,P23,"lower band step (opening lower edge, s~378)",925_ccm_1,,,94.54,-39.13,-0.76,854.32,435.79,,,not measurable in this view
+V4,front_B,P24,"upper band step (opening upper edge, s~386)",925_ccm_1,881.01,353.45,82.42,-8.31,6.86,881.11,356.11,2.66,1.03,HIGH
+V4,front_C_assembly,P01,wide-end outer nose (inner tip),681_pa_1,301.0,834.0,477.08,-8.54,-1.15,286.91,844.25,17.43,7.35,MEDIUM (hand pick +-3 px)
+V4,front_C_assembly,P02,wide-end upper max,681_pa_1,,,362.49,-3.54,-3.42,570.87,843.76,,,not measurable in this view
+V4,front_C_assembly,P03,wide-end lower max (lower end of solid zone),681_pa_1,,,435.02,-49.67,-6.71,366.24,959.05,,,not measurable in this view
+V4,front_C_assembly,P04,opening start upper fillet,681_pa_1,,,359.14,-18.48,-5.58,573.53,882.34,,,not measurable in this view
+V4,front_C_assembly,P05,opening start lower fillet,681_pa_1,,,358.65,-27.19,-6.6,571.56,905.32,,,not measurable in this view
+V4,front_C_assembly,P06,opening start (min s),681_pa_1,569.0,885.0,359.86,-21.38,-5.92,570.67,889.84,5.12,2.08,MEDIUM (hand pick +-3 px)
+V4,front_C_assembly,P07,upper rail 20%,681_pa_1,,,380.49,-3.83,-3.11,527.06,842.61,,,not measurable in this view
+V4,front_C_assembly,P08,upper rail 40%,681_pa_1,,,284.5,-2.38,-4.22,758.29,849.01,,,not measurable in this view
+V4,front_C_assembly,P09,upper rail 60%,681_pa_1,,,185.51,-1.1,-3.42,988.69,855.87,,,not measurable in this view
+V4,front_C_assembly,P10,upper rail 80%,681_pa_1,1192.94,868.31,89.53,-0.12,6.89,1191.99,862.39,6.0,2.53,MEDIUM
+V4,front_C_assembly,P11,lower rail 20%,681_pa_1,507.9,988.45,378.94,-55.85,-8.42,508.73,981.99,6.52,2.27,HIGH
+V4,front_C_assembly,P12,lower rail 40%,681_pa_1,,,282.95,-54.71,-9.69,754.94,987.64,,,not measurable in this view
+V4,front_C_assembly,P13,lower rail 60%,681_pa_1,,,187.0,-51.74,-9.95,993.26,987.68,,,not measurable in this view
+V4,front_C_assembly,P14,lower rail 80%,681_pa_1,,,91.02,-49.76,-1.28,1210.97,986.64,,,not measurable in this view
+V4,front_C_assembly,P15,narrow-end upper shoulder,681_pa_1,,,-3.94,-2.47,43.67,1334.34,873.55,,,not measurable in this view
+V4,front_C_assembly,P16,narrowmost tip,681_pa_1,1338.0,879.0,-6.5,-6.83,44.16,1339.91,882.96,4.4,2.88,MEDIUM (hand pick +-3 px)
+V4,front_C_assembly,P17,narrow-end lower shoulder,681_pa_1,1293.91,969.25,43.6,-44.17,13.27,1294.61,970.8,1.7,0.67,HIGH
+V4,front_C_assembly,P18,opening outer-most point,681_pa_1,1323.0,882.0,13.02,-11.29,32.46,1319.85,892.29,10.76,9.09,MEDIUM (hand pick +-3 px)
+V4,front_C_assembly,P19,opening outer upper fillet,681_pa_1,,,13.02,-11.29,32.46,1319.85,892.29,,,not measurable in this view
+V4,front_C_assembly,P20,opening outer lower fillet,681_pa_1,,,45.15,-35.99,13.84,1287.88,950.52,,,not measurable in this view
+V4,front_C_assembly,P21,opening upper edge 50%,681_pa_1,986.12,879.5,187.4,-9.89,-4.96,985.94,877.46,2.05,0.82,HIGH
+V4,front_C_assembly,P22,opening lower edge 50%,681_pa_1,,,187.51,-40.47,-8.97,990.52,956.98,,,not measurable in this view
+V4,front_C_assembly,P23,"lower band step (opening lower edge, s~378)",681_pa_1,1199.59,959.46,94.54,-39.13,-0.76,1199.57,958.73,0.73,0.28,HIGH
+V4,front_C_assembly,P24,"upper band step (opening upper edge, s~386)",681_pa_1,,,82.42,-8.31,6.86,1209.31,882.34,,,not measurable in this view
+V4,oblique_A,P01,wide-end outer nose (inner tip),925_alA_1,2488.0,962.0,477.08,-8.54,-1.15,2493.73,992.22,30.76,6.65,MEDIUM (hand pick +-3 px)
+V4,oblique_A,P02,wide-end upper max,925_alA_1,1896.62,1013.81,362.49,-3.54,-3.42,1896.39,1014.6,0.82,0.19,MEDIUM
+V4,oblique_A,P03,wide-end lower max (lower end of solid zone),925_alA_1,2365.31,795.89,435.02,-49.67,-6.71,2362.49,798.97,4.17,0.66,HIGH
+V4,oblique_A,P04,opening start upper fillet,925_alA_1,,,359.14,-18.48,-5.58,1898.06,949.85,,,not measurable in this view
+V4,oblique_A,P05,opening start lower fillet,925_alA_1,,,358.65,-27.19,-6.6,1906.52,909.83,,,not measurable in this view
+V4,oblique_A,P06,opening start (min s),925_alA_1,1905.0,912.0,359.86,-21.38,-5.92,1905.61,936.75,24.75,4.72,MEDIUM (hand pick +-3 px)
+V4,oblique_A,P07,upper rail 20%,925_alA_1,1990.42,1010.57,380.49,-3.83,-3.11,1989.46,1013.45,3.04,0.69,MEDIUM
+V4,oblique_A,P08,upper rail 40%,925_alA_1,1492.92,1018.55,284.5,-2.38,-4.22,1493.01,1017.68,0.88,0.21,MEDIUM
+V4,oblique_A,P09,upper rail 60%,925_alA_1,,,185.51,-1.1,-3.42,985.2,1016.25,,,not measurable in this view
+V4,oblique_A,P10,upper rail 80%,925_alA_1,,,89.53,-0.12,6.89,524.59,991.19,,,not measurable in this view
+V4,oblique_A,P11,lower rail 20%,925_alA_1,2063.03,748.36,378.94,-55.85,-8.42,2058.21,766.33,18.61,3.4,HIGH
+V4,oblique_A,P12,lower rail 40%,925_alA_1,,,282.95,-54.71,-9.69,1510.47,770.22,,,not measurable in this view
+V4,oblique_A,P13,lower rail 60%,925_alA_1,964.42,764.24,187.0,-51.74,-9.95,966.43,782.11,17.98,3.42,HIGH
+V4,oblique_A,P14,lower rail 80%,925_alA_1,453.47,762.3,91.02,-49.76,-1.28,456.62,772.41,10.59,2.03,MEDIUM
+V4,oblique_A,P15,narrow-end upper shoulder,925_alA_1,,,-3.94,-2.47,43.67,194.27,902.7,,,not measurable in this view
+V4,oblique_A,P16,narrowmost tip,925_alA_1,143.0,905.0,-6.5,-6.83,44.16,179.0,884.19,41.58,10.54,MEDIUM (hand pick +-3 px)
+V4,oblique_A,P17,narrow-end lower shoulder,925_alA_1,267.37,781.56,43.6,-44.17,13.27,262.01,773.62,9.58,1.74,HIGH
+V4,oblique_A,P18,opening outer-most point,925_alA_1,220.0,893.0,13.02,-11.29,32.46,222.99,887.44,6.31,2.65,MEDIUM (hand pick +-3 px)
+V4,oblique_A,P19,opening outer upper fillet,925_alA_1,,,13.02,-11.29,32.46,222.99,887.44,,,not measurable in this view
+V4,oblique_A,P20,opening outer lower fillet,925_alA_1,,,45.15,-35.99,13.84,283.07,811.97,,,not measurable in this view
+V4,oblique_A,P21,opening upper edge 50%,925_alA_1,,,187.4,-9.89,-4.96,990.28,979.92,,,not measurable in this view
+V4,oblique_A,P22,opening lower edge 50%,925_alA_1,,,187.51,-40.47,-8.97,975.05,839.34,,,not measurable in this view
+V4,oblique_A,P23,"lower band step (opening lower edge, s~378)",925_alA_1,,,94.54,-39.13,-0.76,489.25,825.59,,,not measurable in this view
+V4,oblique_A,P24,"upper band step (opening upper edge, s~386)",925_alA_1,,,82.42,-8.31,6.86,481.25,954.77,,,not measurable in this view
+V4,oblique_B,P01,wide-end outer nose (inner tip),925_krik_0,151.0,354.0,477.08,-8.54,-1.15,153.33,351.27,3.59,2.41,MEDIUM (hand pick +-3 px)
+V4,oblique_B,P02,wide-end upper max,925_krik_0,338.83,339.33,362.49,-3.54,-3.42,338.88,338.84,0.49,0.3,HIGH
+V4,oblique_B,P03,wide-end lower max (lower end of solid zone),925_krik_0,208.63,418.29,435.02,-49.67,-6.71,208.15,419.08,0.93,0.5,HIGH
+V4,oblique_B,P04,opening start upper fillet,925_krik_0,,,359.14,-18.48,-5.58,341.7,363.34,,,not measurable in this view
+V4,oblique_B,P05,opening start lower fillet,925_krik_0,,,358.65,-27.19,-6.6,341.01,378.08,,,not measurable in this view
+V4,oblique_B,P06,opening start (min s),925_krik_0,348.0,380.0,359.86,-21.38,-5.92,339.97,368.24,14.25,8.54,MEDIUM (hand pick +-3 px)
+V4,oblique_B,P07,upper rail 20%,925_krik_0,309.16,340.48,380.49,-3.83,-3.11,309.22,340.0,0.48,0.3,HIGH
+V4,oblique_B,P08,upper rail 40%,925_krik_0,470.15,334.15,284.5,-2.38,-4.22,470.16,334.12,0.03,0.02,HIGH
+V4,oblique_B,P09,upper rail 60%,925_krik_0,642.58,331.49,185.51,-1.1,-3.42,642.35,328.9,2.6,1.58,HIGH
+V4,oblique_B,P10,upper rail 80%,925_krik_0,808.32,325.41,89.53,-0.12,6.89,808.7,327.74,2.36,1.43,HIGH
+V4,oblique_B,P11,lower rail 20%,925_krik_0,301.48,428.73,378.94,-55.85,-8.42,301.46,428.95,0.22,0.12,HIGH
+V4,oblique_B,P12,lower rail 40%,925_krik_0,470.46,430.76,282.95,-54.71,-9.69,470.39,425.1,5.65,3.08,MEDIUM
+V4,oblique_B,P13,lower rail 60%,925_krik_0,646.0,417.86,187.0,-51.74,-9.95,646.0,417.82,0.04,0.02,HIGH
+V4,oblique_B,P14,lower rail 80%,925_krik_0,,,91.02,-49.76,-1.28,821.97,413.7,,,not measurable in this view
+V4,oblique_B,P15,narrow-end upper shoulder,925_krik_0,944.64,342.63,-3.94,-2.47,43.67,944.55,341.14,1.5,1.07,HIGH
+V4,oblique_B,P16,narrowmost tip,925_krik_0,950.0,346.0,-6.5,-6.83,44.16,949.68,348.17,2.2,1.49,MEDIUM (hand pick +-3 px)
+V4,oblique_B,P17,narrow-end lower shoulder,925_krik_0,898.36,405.47,43.6,-44.17,13.27,898.17,405.12,0.4,0.21,HIGH
+V4,oblique_B,P18,opening outer-most point,925_krik_0,921.0,348.0,13.02,-11.29,32.46,927.57,352.5,7.97,6.74,MEDIUM (hand pick +-3 px)
+V4,oblique_B,P19,opening outer upper fillet,925_krik_0,,,13.02,-11.29,32.46,927.57,352.5,,,not measurable in this view
+V4,oblique_B,P20,opening outer lower fillet,925_krik_0,,,45.15,-35.99,13.84,892.6,390.69,,,not measurable in this view
+V4,oblique_B,P21,opening upper edge 50%,925_krik_0,,,187.4,-9.89,-4.96,640.11,343.6,,,not measurable in this view
+V4,oblique_B,P22,opening lower edge 50%,925_krik_0,,,187.51,-40.47,-8.97,643.7,397.15,,,not measurable in this view
+V4,oblique_B,P23,"lower band step (opening lower edge, s~378)",925_krik_0,,,94.54,-39.13,-0.76,812.63,394.3,,,not measurable in this view
+V4,oblique_B,P24,"upper band step (opening upper edge, s~386)",925_krik_0,,,82.42,-8.31,6.86,823.22,341.48,,,not measurable in this view
+V5,front_A,P01,wide-end outer nose (inner tip),925_alB_1,2516.0,1081.0,477.08,-8.54,-1.15,2508.93,1081.0,7.07,1.46,MEDIUM (hand pick +-3 px)
+V5,front_A,P02,wide-end upper max,925_alB_1,,,362.49,-3.54,-3.42,1948.55,1090.81,,,not measurable in this view
+V5,front_A,P03,wide-end lower max (lower end of solid zone),925_alB_1,2305.66,868.56,435.02,-49.67,-6.72,2305.4,869.11,0.61,0.13,HIGH
+V5,front_A,P04,opening start upper fillet,925_alB_1,,,359.14,-18.48,-5.58,1933.01,1014.31,,,not measurable in this view
+V5,front_A,P05,opening start lower fillet,925_alB_1,,,358.65,-27.19,-6.6,1931.0,970.15,,,not measurable in this view
+V5,front_A,P06,opening start (min s),925_alB_1,1937.0,1012.0,359.86,-21.38,-5.92,1936.75,999.73,12.27,2.47,MEDIUM (hand pick +-3 px)
+V5,front_A,P07,upper rail 20%,925_alB_1,,,380.49,-3.83,-3.11,2037.51,1091.63,,,not measurable in this view
+V5,front_A,P08,upper rail 40%,925_alB_1,1559.18,1085.39,284.5,-2.38,-4.22,1559.17,1086.97,1.58,0.31,HIGH
+V5,front_A,P09,upper rail 60%,925_alB_1,1056.77,1083.55,185.51,-1.1,-3.87,1056.78,1082.3,1.25,0.24,HIGH
+V5,front_A,P10,upper rail 80%,925_alB_1,563.83,1089.48,89.53,-0.12,9.57,563.91,1087.64,1.85,0.36,HIGH
+V5,front_A,P11,lower rail 20%,925_alB_1,2031.22,830.74,378.94,-55.85,-8.43,2031.19,829.76,0.98,0.2,HIGH
+V5,front_A,P12,lower rail 40%,925_alB_1,1554.79,822.67,282.95,-54.71,-9.69,1554.75,821.18,1.49,0.3,HIGH
+V5,front_A,P13,lower rail 60%,925_alB_1,1069.66,821.79,187.0,-51.74,-9.55,1069.66,823.11,1.32,0.26,HIGH
+V5,front_A,P14,lower rail 80%,925_alB_1,578.13,832.33,91.02,-49.76,1.74,578.14,832.02,0.31,0.06,HIGH
+V5,front_A,P15,narrow-end upper shoulder,925_alB_1,107.34,1103.8,-3.94,-2.47,59.47,106.37,1106.92,3.27,0.63,HIGH
+V5,front_A,P16,narrowmost tip,925_alB_1,91.0,1092.0,-6.5,-6.83,60.52,95.1,1086.34,6.98,1.58,MEDIUM (hand pick +-3 px)
+V5,front_A,P17,narrow-end lower shoulder,925_alB_1,339.45,874.34,43.6,-44.17,21.1,339.17,873.56,0.83,0.17,HIGH
+V5,front_A,P18,opening outer-most point,925_alB_1,186.0,1052.0,13.02,-11.29,44.97,186.72,1053.74,1.88,0.38,MEDIUM (hand pick +-3 px)
+V5,front_A,P19,opening outer upper fillet,925_alB_1,,,13.02,-11.29,44.97,186.72,1053.74,,,not measurable in this view
+V5,front_A,P20,opening outer lower fillet,925_alB_1,346.55,916.85,45.15,-35.99,21.44,345.68,914.48,2.53,0.47,HIGH
+V5,front_A,P21,opening upper edge 50%,925_alB_1,1067.51,1037.55,187.4,-9.89,-5.27,1067.5,1037.0,0.55,0.12,HIGH
+V5,front_A,P22,opening lower edge 50%,925_alB_1,1071.23,879.66,187.51,-40.47,-8.76,1071.22,880.22,0.57,0.1,HIGH
+V5,front_A,P23,"lower band step (opening lower edge, s~378)",925_alB_1,,,94.54,-39.13,1.93,594.62,885.69,,,not measurable in this view
+V5,front_A,P24,"upper band step (opening upper edge, s~386)",925_alB_1,528.82,1048.52,82.42,-8.31,10.3,528.81,1046.35,2.16,0.46,MEDIUM
+V5,front_B,P01,wide-end outer nose (inner tip),925_ccm_1,,,477.08,-8.54,-1.15,-117.17,330.76,,,not measurable in this view
+V5,front_B,P02,wide-end upper max,925_ccm_1,188.61,326.22,362.49,-3.54,-3.42,188.6,327.04,0.81,0.3,HIGH
+V5,front_B,P03,wide-end lower max (lower end of solid zone),925_ccm_1,,,435.02,-49.67,-6.72,-5.61,443.49,,,not measurable in this view
+V5,front_B,P04,opening start upper fillet,925_ccm_1,,,359.14,-18.48,-5.58,196.53,367.14,,,not measurable in this view
+V5,front_B,P05,opening start lower fillet,925_ccm_1,,,358.65,-27.19,-6.6,197.41,390.3,,,not measurable in this view
+V5,front_B,P06,opening start (min s),925_ccm_1,203.0,362.0,359.86,-21.38,-5.92,194.46,374.78,15.37,5.78,MEDIUM (hand pick +-3 px)
+V5,front_B,P07,upper rail 20%,925_ccm_1,140.69,326.54,380.49,-3.83,-3.11,140.69,326.35,0.2,0.07,HIGH
+V5,front_B,P08,upper rail 40%,925_ccm_1,395.19,327.36,284.5,-2.38,-4.22,395.15,330.24,2.87,1.08,HIGH
+V5,front_B,P09,upper rail 60%,925_ccm_1,653.18,330.37,185.51,-1.1,-3.87,653.13,334.35,3.99,1.52,HIGH
+V5,front_B,P10,upper rail 80%,925_ccm_1,884.14,333.64,89.53,-0.12,9.57,884.06,335.58,1.95,0.78,HIGH
+V5,front_B,P11,lower rail 20%,925_ccm_1,,,378.94,-55.85,-8.43,143.2,463.92,,,not measurable in this view
+V5,front_B,P12,lower rail 40%,925_ccm_1,,,282.95,-54.71,-9.69,395.95,467.71,,,not measurable in this view
+V5,front_B,P13,lower rail 60%,925_ccm_1,,,187.0,-51.74,-9.55,644.88,465.97,,,not measurable in this view
+V5,front_B,P14,lower rail 80%,925_ccm_1,,,91.02,-49.76,1.74,877.47,460.36,,,not measurable in this view
+V5,front_B,P15,narrow-end upper shoulder,925_ccm_1,,,-3.94,-2.47,59.47,1040.26,335.75,,,not measurable in this view
+V5,front_B,P16,narrowmost tip,925_ccm_1,,,-6.5,-6.83,60.52,1043.35,345.14,,,not measurable in this view
+V5,front_B,P17,narrow-end lower shoulder,925_ccm_1,,,43.6,-44.17,21.1,970.61,439.83,,,not measurable in this view
+V5,front_B,P18,opening outer-most point,925_ccm_1,,,13.02,-11.29,44.97,1019.1,357.73,,,not measurable in this view
+V5,front_B,P19,opening outer upper fillet,925_ccm_1,,,13.02,-11.29,44.97,1019.1,357.73,,,not measurable in this view
+V5,front_B,P20,opening outer lower fillet,925_ccm_1,,,45.15,-35.99,21.44,968.57,420.54,,,not measurable in this view
+V5,front_B,P21,opening upper edge 50%,925_ccm_1,647.53,358.74,187.4,-9.89,-5.27,647.67,357.3,1.45,0.58,HIGH
+V5,front_B,P22,opening lower edge 50%,925_ccm_1,644.79,437.84,187.51,-40.47,-8.76,644.76,436.99,0.84,0.3,HIGH
+V5,front_B,P23,"lower band step (opening lower edge, s~378)",925_ccm_1,,,94.54,-39.13,1.93,870.96,434.1,,,not measurable in this view
+V5,front_B,P24,"upper band step (opening upper edge, s~386)",925_ccm_1,899.87,350.76,82.42,-8.31,10.3,898.8,356.05,5.39,2.25,HIGH
+V5,front_C_assembly,P01,wide-end outer nose (inner tip),681_pa_1,301.0,834.0,477.08,-8.54,-1.15,302.04,843.68,9.74,4.28,MEDIUM (hand pick +-3 px)
+V5,front_C_assembly,P02,wide-end upper max,681_pa_1,,,362.49,-3.54,-3.42,565.7,844.83,,,not measurable in this view
+V5,front_C_assembly,P03,wide-end lower max (lower end of solid zone),681_pa_1,,,435.02,-49.67,-6.72,390.55,944.21,,,not measurable in this view
+V5,front_C_assembly,P04,opening start upper fillet,681_pa_1,,,359.14,-18.48,-5.58,571.02,879.74,,,not measurable in this view
+V5,front_C_assembly,P05,opening start lower fillet,681_pa_1,,,358.65,-27.19,-6.6,570.8,900.04,,,not measurable in this view
+V5,front_C_assembly,P06,opening start (min s),681_pa_1,569.0,885.0,359.86,-21.38,-5.92,568.91,886.38,1.38,0.6,MEDIUM (hand pick +-3 px)
+V5,front_C_assembly,P07,upper rail 20%,681_pa_1,,,380.49,-3.83,-3.11,524.46,843.53,,,not measurable in this view
+V5,front_C_assembly,P08,upper rail 40%,681_pa_1,,,284.5,-2.38,-4.22,743.93,850.74,,,not measurable in this view
+V5,front_C_assembly,P09,upper rail 60%,681_pa_1,,,185.51,-1.1,-3.87,968.39,858.56,,,not measurable in this view
+V5,front_C_assembly,P10,upper rail 80%,681_pa_1,1177.27,868.56,89.53,-0.12,9.57,1177.3,866.08,2.48,1.11,MEDIUM
+V5,front_C_assembly,P11,lower rail 20%,681_pa_1,,,378.94,-55.85,-8.43,519.47,964.86,,,not measurable in this view
+V5,front_C_assembly,P12,lower rail 40%,681_pa_1,,,282.95,-54.71,-9.69,741.57,972.53,,,not measurable in this view
+V5,front_C_assembly,P13,lower rail 60%,681_pa_1,,,187.0,-51.74,-9.55,962.05,975.64,,,not measurable in this view
+V5,front_C_assembly,P14,lower rail 80%,681_pa_1,,,91.02,-49.76,1.74,1174.76,979.16,,,not measurable in this view
+V5,front_C_assembly,P15,narrow-end upper shoulder,681_pa_1,,,-3.94,-2.47,59.47,1348.64,878.35,,,not measurable in this view
+V5,front_C_assembly,P16,narrowmost tip,681_pa_1,1338.0,879.0,-6.5,-6.83,60.52,1353.09,887.79,17.46,10.17,MEDIUM (hand pick +-3 px)
+V5,front_C_assembly,P17,narrow-end lower shoulder,681_pa_1,,,43.6,-44.17,21.1,1269.24,968.27,,,not measurable in this view
+V5,front_C_assembly,P18,opening outer-most point,681_pa_1,1323.0,882.0,13.02,-11.29,44.97,1321.93,896.45,14.49,8.66,MEDIUM (hand pick +-3 px)
+V5,front_C_assembly,P19,opening outer upper fillet,681_pa_1,,,13.02,-11.29,44.97,1321.93,896.45,,,not measurable in this view
+V5,front_C_assembly,P20,opening outer lower fillet,681_pa_1,1266.26,950.19,45.15,-35.99,21.44,1266.07,949.8,0.43,0.18,HIGH
+V5,front_C_assembly,P21,opening upper edge 50%,681_pa_1,963.72,878.64,187.4,-9.89,-5.27,963.72,878.52,0.11,0.05,HIGH
+V5,front_C_assembly,P22,opening lower edge 50%,681_pa_1,,,187.51,-40.47,-8.76,961.7,949.33,,,not measurable in this view
+V5,front_C_assembly,P23,"lower band step (opening lower edge, s~378)",681_pa_1,1166.32,962.01,94.54,-39.13,1.93,1167.49,954.47,7.63,3.34,HIGH
+V5,front_C_assembly,P24,"upper band step (opening upper edge, s~386)",681_pa_1,,,82.42,-8.31,10.3,1192.1,885.15,,,not measurable in this view
+V5,oblique_A,P01,wide-end outer nose (inner tip),925_alA_1,2488.0,962.0,477.08,-8.54,-1.15,2506.73,988.8,32.7,6.79,MEDIUM (hand pick +-3 px)
+V5,oblique_A,P02,wide-end upper max,925_alA_1,1905.08,1015.51,362.49,-3.54,-3.42,1905.31,1014.33,1.2,0.27,MEDIUM
+V5,oblique_A,P03,wide-end lower max (lower end of solid zone),925_alA_1,2351.15,788.13,435.02,-49.67,-6.72,2347.55,792.72,5.83,0.99,HIGH
+V5,oblique_A,P04,opening start upper fillet,925_alA_1,,,359.14,-18.48,-5.58,1901.31,947.05,,,not measurable in this view
+V5,oblique_A,P05,opening start lower fillet,925_alA_1,,,358.65,-27.19,-6.6,1906.43,906.04,,,not measurable in this view
+V5,oblique_A,P06,opening start (min s),925_alA_1,1905.0,912.0,359.86,-21.38,-5.92,1907.76,933.55,21.73,4.12,MEDIUM (hand pick +-3 px)
+V5,oblique_A,P07,upper rail 20%,925_alA_1,1999.85,1009.92,380.49,-3.83,-3.11,1999.22,1012.76,2.91,0.65,MEDIUM
+V5,oblique_A,P08,upper rail 40%,925_alA_1,1498.62,1017.47,284.5,-2.38,-4.22,1498.5,1019.37,1.9,0.44,MEDIUM
+V5,oblique_A,P09,upper rail 60%,925_alA_1,,,185.51,-1.1,-3.87,985.56,1021.8,,,not measurable in this view
+V5,oblique_A,P10,upper rail 80%,925_alA_1,,,89.53,-0.12,9.57,519.98,994.78,,,not measurable in this view
+V5,oblique_A,P11,lower rail 20%,925_alA_1,2045.25,756.49,378.94,-55.85,-8.43,2044.34,761.75,5.34,1.01,HIGH
+V5,oblique_A,P12,lower rail 40%,925_alA_1,1507.53,764.08,282.95,-54.71,-9.69,1507.43,768.04,3.96,0.75,HIGH
+V5,oblique_A,P13,lower rail 60%,925_alA_1,973.2,768.97,187.0,-51.74,-9.55,974.24,781.62,12.69,2.44,HIGH
+V5,oblique_A,P14,lower rail 80%,925_alA_1,472.09,765.56,91.02,-49.76,1.74,473.31,771.16,5.73,1.13,MEDIUM
+V5,oblique_A,P15,narrow-end upper shoulder,925_alA_1,,,-3.94,-2.47,59.47,194.32,891.33,,,not measurable in this view
+V5,oblique_A,P16,narrowmost tip,925_alA_1,143.0,905.0,-6.5,-6.83,60.52,181.7,871.7,51.05,13.26,MEDIUM (hand pick +-3 px)
+V5,oblique_A,P17,narrow-end lower shoulder,925_alA_1,284.07,774.2,43.6,-44.17,21.1,280.59,767.58,7.48,1.43,HIGH
+V5,oblique_A,P18,opening outer-most point,925_alA_1,220.0,893.0,13.02,-11.29,44.97,226.19,878.3,15.95,6.53,MEDIUM (hand pick +-3 px)
+V5,oblique_A,P19,opening outer upper fillet,925_alA_1,,,13.02,-11.29,44.97,226.19,878.3,,,not measurable in this view
+V5,oblique_A,P20,opening outer lower fillet,925_alA_1,,,45.15,-35.99,21.44,297.0,806.1,,,not measurable in this view
+V5,oblique_A,P21,opening upper edge 50%,925_alA_1,,,187.4,-9.89,-5.27,991.92,983.37,,,not measurable in this view
+V5,oblique_A,P22,opening lower edge 50%,925_alA_1,,,187.51,-40.47,-8.76,981.07,838.85,,,not measurable in this view
+V5,oblique_A,P23,"lower band step (opening lower edge, s~378)",925_alA_1,,,94.54,-39.13,1.93,500.81,824.48,,,not measurable in this view
+V5,oblique_A,P24,"upper band step (opening upper edge, s~386)",925_alA_1,,,82.42,-8.31,10.3,480.15,955.81,,,not measurable in this view
+V5,oblique_B,P01,wide-end outer nose (inner tip),925_krik_0,151.0,354.0,477.08,-8.54,-1.15,152.27,351.93,2.43,1.58,MEDIUM (hand pick +-3 px)
+V5,oblique_B,P02,wide-end upper max,925_krik_0,340.89,339.05,362.49,-3.54,-3.42,340.9,338.94,0.11,0.07,HIGH
+V5,oblique_B,P03,wide-end lower max (lower end of solid zone),925_krik_0,211.84,419.59,435.02,-49.67,-6.72,211.44,420.31,0.82,0.45,HIGH
+V5,oblique_B,P04,opening start upper fillet,925_krik_0,,,359.14,-18.48,-5.58,344.49,363.84,,,not measurable in this view
+V5,oblique_B,P05,opening start lower fillet,925_krik_0,,,358.65,-27.19,-6.6,344.23,378.75,,,not measurable in this view
+V5,oblique_B,P06,opening start (min s),925_krik_0,348.0,380.0,359.86,-21.38,-5.92,342.89,368.8,12.31,7.28,MEDIUM (hand pick +-3 px)
+V5,oblique_B,P07,upper rail 20%,925_krik_0,310.73,340.77,380.49,-3.83,-3.11,310.78,340.17,0.6,0.36,HIGH
+V5,oblique_B,P08,upper rail 40%,925_krik_0,473.82,334.04,284.5,-2.38,-4.22,473.82,333.88,0.16,0.1,HIGH
+V5,oblique_B,P09,upper rail 60%,925_krik_0,647.34,324.77,185.51,-1.1,-3.87,647.59,328.01,3.25,1.93,HIGH
+V5,oblique_B,P10,upper rail 80%,925_krik_0,814.15,325.64,89.53,-0.12,9.57,814.31,326.93,1.3,0.77,HIGH
+V5,oblique_B,P11,lower rail 20%,925_krik_0,305.91,429.16,378.94,-55.85,-8.43,305.88,429.83,0.68,0.38,HIGH
+V5,oblique_B,P12,lower rail 40%,925_krik_0,475.04,422.61,282.95,-54.71,-9.69,475.1,425.41,2.8,1.53,HIGH
+V5,oblique_B,P13,lower rail 60%,925_krik_0,650.05,417.71,187.0,-51.74,-9.55,650.05,417.61,0.1,0.06,HIGH
+V5,oblique_B,P14,lower rail 80%,925_krik_0,,,91.02,-49.76,1.74,824.08,413.11,,,not measurable in this view
+V5,oblique_B,P15,narrow-end upper shoulder,925_krik_0,945.22,343.48,-3.94,-2.47,59.47,945.2,341.98,1.5,1.08,HIGH
+V5,oblique_B,P16,narrowmost tip,925_krik_0,950.0,346.0,-6.5,-6.83,60.52,949.61,349.07,3.1,2.26,MEDIUM (hand pick +-3 px)
+V5,oblique_B,P17,narrow-end lower shoulder,925_krik_0,898.53,405.41,43.6,-44.17,21.1,898.24,404.77,0.7,0.38,HIGH
+V5,oblique_B,P18,opening outer-most point,925_krik_0,921.0,348.0,13.02,-11.29,44.97,928.69,352.98,9.16,8.11,MEDIUM (hand pick +-3 px)
+V5,oblique_B,P19,opening outer upper fillet,925_krik_0,,,13.02,-11.29,44.97,928.69,352.98,,,not measurable in this view
+V5,oblique_B,P20,opening outer lower fillet,925_krik_0,,,45.15,-35.99,21.44,893.53,390.51,,,not measurable in this view
+V5,oblique_B,P21,opening upper edge 50%,925_krik_0,,,187.4,-9.89,-5.27,645.13,343.02,,,not measurable in this view
+V5,oblique_B,P22,opening lower edge 50%,925_krik_0,,,187.51,-40.47,-8.76,648.02,397.02,,,not measurable in this view
+V5,oblique_B,P23,"lower band step (opening lower edge, s~378)",925_krik_0,,,94.54,-39.13,1.93,815.61,393.87,,,not measurable in this view
+V5,oblique_B,P24,"upper band step (opening upper edge, s~386)",925_krik_0,,,82.42,-8.31,10.3,828.03,340.97,,,not measurable in this view

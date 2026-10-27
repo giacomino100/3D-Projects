@@ -1,0 +1,565 @@
+{
+ "part": "81A807925A",
+ "version": "V1",
+ "cadquery": "2.8.0",
+ "frame": "right-handed; X_cad = L - s (X toward vehicle right/inner tip), Y up, Z rearward",
+ "edge_fillet": "applied r=1.0 on 12 front edges",
+ "body_valid": true,
+ "body_volume_mm3": 56574.705315093626,
+ "body_bbox": {
+  "xmin": 0.01,
+  "xmax": 472.0,
+  "ymin": -58.0,
+  "ymax": 0.0,
+  "zmin": -10.0,
+  "zmax": 37.57,
+  "dx": 472.0,
+  "dy": 58.0,
+  "dz": 47.57
+ },
+ "clips": [
+  {
+   "cid": "C01",
+   "family": "HOOK_TAB",
+   "edge": "top",
+   "s": 44.0,
+   "x_cad": 428.0,
+   "y": -1.0,
+   "z": 10.2,
+   "insertion": [
+    0,
+    0,
+    1
+   ],
+   "tab_dir": [
+    0.028,
+    0.0,
+    1.0
+   ],
+   "base_width": 10.0,
+   "base_thickness": 1.8,
+   "flex_length": 9.0,
+   "hook_length": 2.5,
+   "hook_height": 1.5,
+   "angle_deg": 0.0,
+   "root_fillet": 0.8,
+   "clearance": 0.3,
+   "window": [
+    0.0,
+    0.0
+   ],
+   "confidence": "medium",
+   "note": "near plate, small flat tab with barb (pru_4, pru_5)"
+  },
+  {
+   "cid": "C02",
+   "family": "HOOK_TAB",
+   "edge": "top",
+   "s": 144.0,
+   "x_cad": 328.0,
+   "y": -1.0,
+   "z": 8.2,
+   "insertion": [
+    0,
+    0,
+    1
+   ],
+   "tab_dir": [
+    0.013,
+    0.0,
+    1.0
+   ],
+   "base_width": 10.0,
+   "base_thickness": 1.8,
+   "flex_length": 9.0,
+   "hook_length": 2.5,
+   "hook_height": 1.5,
+   "angle_deg": 0.0,
+   "root_fillet": 0.8,
+   "clearance": 0.3,
+   "window": [
+    0.0,
+    0.0
+   ],
+   "confidence": "medium",
+   "note": "pru_4, pru_5"
+  },
+  {
+   "cid": "C03",
+   "family": "HOOK_TAB",
+   "edge": "top",
+   "s": 282.0,
+   "x_cad": 190.0,
+   "y": -1.0,
+   "z": 7.7,
+   "insertion": [
+    0,
+    0,
+    1
+   ],
+   "tab_dir": [
+    -0.007,
+    0.0,
+    1.0
+   ],
+   "base_width": 10.0,
+   "base_thickness": 1.8,
+   "flex_length": 9.0,
+   "hook_length": 2.5,
+   "hook_height": 1.5,
+   "angle_deg": 0.0,
+   "root_fillet": 0.8,
+   "clearance": 0.3,
+   "window": [
+    0.0,
+    0.0
+   ],
+   "confidence": "low",
+   "note": "pru_4 only (small)"
+  },
+  {
+   "cid": "C04",
+   "family": "TONGUE",
+   "edge": "outer_end",
+   "s": 459.9,
+   "x_cad": 12.1,
+   "y": -14.0,
+   "z": 31.0,
+   "insertion": [
+    0,
+    0,
+    1
+   ],
+   "tab_dir": [
+    0.129,
+    -0.331,
+    0.935
+   ],
+   "base_width": 12.0,
+   "base_thickness": 1.8,
+   "flex_length": 15.0,
+   "hook_length": 0.0,
+   "hook_height": 0.0,
+   "angle_deg": 20.0,
+   "root_fillet": 0.8,
+   "clearance": 0.3,
+   "window": [
+    6.0,
+    4.0
+   ],
+   "confidence": "low",
+   "note": "x is recomputed on the outer slanted end at y; long tongue at outer end (pru_4, pru_1 inside loop)"
+  },
+  {
+   "cid": "C05",
+   "family": "EYELET",
+   "edge": "bottom",
+   "s": 308.0,
+   "x_cad": 164.0,
+   "y": -57.0,
+   "z": -1.9,
+   "insertion": [
+    0,
+    0,
+    1
+   ],
+   "tab_dir": [
+    -0.023,
+    -0.574,
+    0.819
+   ],
+   "base_width": 20.0,
+   "base_thickness": 1.8,
+   "flex_length": 14.0,
+   "hook_length": 0.0,
+   "hook_height": 0.0,
+   "angle_deg": 35.0,
+   "root_fillet": 0.8,
+   "clearance": 0.3,
+   "window": [
+    10.0,
+    5.0
+   ],
+   "confidence": "medium",
+   "note": "pru_1 x=665/995, pru_4 x=660"
+  },
+  {
+   "cid": "C06",
+   "family": "EYELET",
+   "edge": "bottom",
+   "s": 199.0,
+   "x_cad": 273.0,
+   "y": -57.0,
+   "z": -2.2,
+   "insertion": [
+    0,
+    0,
+    1
+   ],
+   "tab_dir": [
+    0.004,
+    -0.574,
+    0.819
+   ],
+   "base_width": 20.0,
+   "base_thickness": 1.8,
+   "flex_length": 14.0,
+   "hook_length": 0.0,
+   "hook_height": 0.0,
+   "angle_deg": 35.0,
+   "root_fillet": 0.8,
+   "clearance": 0.3,
+   "window": [
+    10.0,
+    5.0
+   ],
+   "confidence": "medium",
+   "note": "pru_1 x=420, pru_4 x=450"
+  },
+  {
+   "cid": "C07",
+   "family": "EYELET",
+   "edge": "bottom",
+   "s": 88.0,
+   "x_cad": 384.0,
+   "y": -57.0,
+   "z": -0.7,
+   "insertion": [
+    0,
+    0,
+    1
+   ],
+   "tab_dir": [
+    0.017,
+    -0.574,
+    0.819
+   ],
+   "base_width": 20.0,
+   "base_thickness": 1.8,
+   "flex_length": 14.0,
+   "hook_length": 0.0,
+   "hook_height": 0.0,
+   "angle_deg": 35.0,
+   "root_fillet": 0.8,
+   "clearance": 0.3,
+   "window": [
+    10.0,
+    5.0
+   ],
+   "confidence": "medium",
+   "note": "pru_1 x=170, pru_4 x=240; close-ups fre_5, mp_3, ccm_3"
+  }
+ ],
+ "clip_valid": {
+  "C01": true,
+  "C02": true,
+  "C03": true,
+  "C04": true,
+  "C05": true,
+  "C06": true,
+  "C07": true
+ },
+ "fused_valid": true,
+ "fused_volume_mm3": 58712.8,
+ "fused_bbox": {
+  "xmin": -0.34,
+  "xmax": 472.05,
+  "ymin": -66.23,
+  "ymax": 1.4,
+  "zmin": -10.86,
+  "zmax": 47.25,
+  "dx": 472.39,
+  "dy": 67.63,
+  "dz": 58.11
+ },
+ "mass_estimate_g_PCABS": 67.5,
+ "coupon_interference_mm3": {
+  "HOOK_TAB_c0.20": 0.0,
+  "HOOK_TAB_c0.30": 0.0,
+  "HOOK_TAB_c0.45": 0.0,
+  "TONGUE_c0.20": 0.0,
+  "TONGUE_c0.30": 0.0,
+  "TONGUE_c0.45": 0.0,
+  "EYELET_c0.20": 0.0,
+  "EYELET_c0.30": 0.0,
+  "EYELET_c0.45": 0.0
+ },
+ "coupons": [
+  "EYELET_c0.20",
+  "EYELET_c0.30",
+  "EYELET_c0.45",
+  "HOOK_TAB_c0.20",
+  "HOOK_TAB_c0.30",
+  "HOOK_TAB_c0.45",
+  "TONGUE_c0.20",
+  "TONGUE_c0.30",
+  "TONGUE_c0.45"
+ ],
+ "stations": [
+  {
+   "name": "S0",
+   "x": 0.0,
+   "y_top": 0.0,
+   "y_bot": -58.0,
+   "y_mid": -29.0,
+   "z_mid": -3.0480228227046178,
+   "z_top": 0.0,
+   "z_bot": -6.0960456454092355,
+   "tangent": [
+    0.9994,
+    0.0,
+    -0.0339
+   ],
+   "normal": [
+    -0.0337,
+    0.1045,
+    -0.994
+   ],
+   "pitch_deg": 6.000000000000001,
+   "band": "solid plate",
+   "ret_outer": 6.0,
+   "ret_top": 10.0
+  },
+  {
+   "name": "S1",
+   "x": 47.2,
+   "y_top": 0.0,
+   "y_bot": -58.0,
+   "y_mid": -29.0,
+   "z_mid": -4.488022822704618,
+   "z_top": -1.4400000000000002,
+   "z_bot": -7.536045645409236,
+   "tangent": [
+    0.9996,
+    0.0,
+    -0.0271
+   ],
+   "normal": [
+    -0.027,
+    0.1045,
+    -0.9942
+   ],
+   "pitch_deg": 6.000000000000001,
+   "band": "solid plate",
+   "ret_outer": 6.0,
+   "ret_top": 10.0
+  },
+  {
+   "name": "S2",
+   "x": 94.4,
+   "y_top": 0.0,
+   "y_bot": -58.0,
+   "y_mid": -29.0,
+   "z_mid": -5.608022822704618,
+   "z_top": -2.5600000000000005,
+   "z_bot": -8.656045645409236,
+   "tangent": [
+    0.9998,
+    0.0,
+    -0.0203
+   ],
+   "normal": [
+    -0.0202,
+    0.1045,
+    -0.9943
+   ],
+   "pitch_deg": 6.000000000000001,
+   "band": "solid plate",
+   "ret_outer": 6.0,
+   "ret_top": 10.0
+  },
+  {
+   "name": "S3",
+   "x": 141.60000000000002,
+   "y_top": 0.0,
+   "y_bot": -58.0,
+   "y_mid": -29.0,
+   "z_mid": -6.408022822704618,
+   "z_top": -3.3600000000000003,
+   "z_bot": -9.456045645409237,
+   "tangent": [
+    0.9999,
+    0.0,
+    -0.0136
+   ],
+   "normal": [
+    -0.0135,
+    0.1045,
+    -0.9944
+   ],
+   "pitch_deg": 6.000000000000001,
+   "band": "top 8.5 / bottom 16.5",
+   "ret_outer": 6.0,
+   "ret_top": 10.0
+  },
+  {
+   "name": "S4",
+   "x": 188.8,
+   "y_top": 0.0,
+   "y_bot": -58.0,
+   "y_mid": -29.0,
+   "z_mid": -6.888022822704618,
+   "z_top": -3.84,
+   "z_bot": -9.936045645409235,
+   "tangent": [
+    1.0,
+    0.0,
+    -0.0068
+   ],
+   "normal": [
+    -0.0067,
+    0.1045,
+    -0.9945
+   ],
+   "pitch_deg": 6.000000000000001,
+   "band": "top 8.5 / bottom 16.5",
+   "ret_outer": 6.0,
+   "ret_top": 10.0
+  },
+  {
+   "name": "S5",
+   "x": 236.0,
+   "y_top": 0.0,
+   "y_bot": -58.0,
+   "y_mid": -29.0,
+   "z_mid": -7.048022822704618,
+   "z_top": -4.0,
+   "z_bot": -10.096045645409236,
+   "tangent": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "normal": [
+    0.0,
+    0.1045,
+    -0.9945
+   ],
+   "pitch_deg": 6.000000000000001,
+   "band": "top 8.5 / bottom 16.5",
+   "ret_outer": 6.0,
+   "ret_top": 10.0
+  },
+  {
+   "name": "S6",
+   "x": 283.20000000000005,
+   "y_top": 0.0,
+   "y_bot": -58.0,
+   "y_mid": -29.0,
+   "z_mid": -6.888022822704618,
+   "z_top": -3.8399999999999994,
+   "z_bot": -9.936045645409237,
+   "tangent": [
+    1.0,
+    0.0,
+    0.0068
+   ],
+   "normal": [
+    0.0068,
+    0.1045,
+    -0.9945
+   ],
+   "pitch_deg": 6.000000000000001,
+   "band": "top 8.5 / bottom 16.5",
+   "ret_outer": 6.0,
+   "ret_top": 10.0
+  },
+  {
+   "name": "S7",
+   "x": 330.40000000000003,
+   "y_top": 0.0,
+   "y_bot": -58.0,
+   "y_mid": -29.0,
+   "z_mid": -5.081770827008016,
+   "z_top": -1.5210185608237827,
+   "z_bot": -8.64252309319225,
+   "tangent": [
+    0.9972,
+    0.0,
+    0.0752
+   ],
+   "normal": [
+    0.0746,
+    0.1215,
+    -0.9898
+   ],
+   "pitch_deg": 7.000000000000001,
+   "band": "top 8.5 / bottom 16.5",
+   "ret_outer": 6.0,
+   "ret_top": 10.0
+  },
+  {
+   "name": "S8",
+   "x": 377.6,
+   "y_top": 0.0,
+   "y_bot": -58.0,
+   "y_mid": -29.0,
+   "z_mid": 0.48583112036825415,
+   "z_top": 4.561515326737607,
+   "z_bot": -3.5898530860010984,
+   "tangent": [
+    0.9871,
+    0.0,
+    0.1603
+   ],
+   "normal": [
+    0.1587,
+    0.1374,
+    -0.9777
+   ],
+   "pitch_deg": 8.000000000000002,
+   "band": "top 8.5 / bottom 16.5",
+   "ret_outer": 6.0,
+   "ret_top": 10.0
+  },
+  {
+   "name": "S9",
+   "x": 424.8,
+   "y_top": 0.0,
+   "y_bot": -58.0,
+   "y_mid": -29.0,
+   "z_mid": 10.381355480190091,
+   "z_top": 14.974504249601647,
+   "z_bot": 5.788206710778538,
+   "tangent": [
+    0.9683,
+    0.0,
+    0.2499
+   ],
+   "normal": [
+    0.2471,
+    0.1516,
+    -0.9571
+   ],
+   "pitch_deg": 9.000000000000002,
+   "band": "top 8.5 / bottom 16.5",
+   "ret_outer": 6.0,
+   "ret_top": 10.0
+  },
+  {
+   "name": "S10",
+   "x": 472.0,
+   "y_top": 0.0,
+   "y_bot": -58.0,
+   "y_mid": -29.0,
+   "z_mid": 24.951977177295383,
+   "z_top": 30.065459617840865,
+   "z_bot": 19.838494736749897,
+   "tangent": [
+    0.9408,
+    0.0,
+    0.3389
+   ],
+   "normal": [
+    0.3343,
+    0.1637,
+    -0.9282
+   ],
+   "pitch_deg": 10.000000000000002,
+   "band": "outer end loop",
+   "ret_outer": 6.0,
+   "ret_top": 10.0
+  }
+ ],
+ "build_seconds": 13.1
+}

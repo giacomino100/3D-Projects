@@ -1,0 +1,6 @@
+V4 front_A 925_alB_1 {'outer': {'n': 283, 'coverage': 0.842, 'mean': -0.05, 'mae': 0.23, 'p90': 0.47}, 'opening': {'n': 199, 'coverage': 0.826, 'mean': 0.07, 'mae': 0.29, 'p90': 0.42}}
+V4 front_B 925_ccm_1 {'outer': {'n': 139, 'coverage': 0.414, 'mean': 0.43, 'mae': 0.68, 'p90': 1.08}, 'opening': {'n': 199, 'coverage': 0.826, 'mean': -0.38, 'mae': 0.69, 'p90': 1.19}}
+V4 oblique_A 925_alA_1 {'outer': {'n': 231, 'coverage': 0.688, 'mean': -0.1, 'mae': 1.39, 'p90': 3.18}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}
+V4 oblique_B 925_krik_0 {'outer': {'n': 235, 'coverage': 0.699, 'mean': 0.17, 'mae': 0.85, 'p90': 1.78}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}
+V4 rear 925_alB_2 {'outer': {'n': 172, 'coverage': 0.512, 'mean': -0.91, 'mae': 1.81, 'p90': 3.48}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}
+V4 profile 925_mp_2_hr {'outer': {'n': 60, 'coverage': 0.179, 'mean': -1.29, 'mae': 1.65, 'p90': 3.36}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}

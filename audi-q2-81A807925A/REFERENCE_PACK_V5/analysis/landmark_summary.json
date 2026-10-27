@@ -1,0 +1,52 @@
+{
+ "V4_front_A": {
+  "n": 18,
+  "mean_mm": 0.53,
+  "max_mm": 2.61
+ },
+ "V4_front_B": {
+  "n": 9,
+  "mean_mm": 0.96,
+  "max_mm": 5.07
+ },
+ "V4_front_C_assembly": {
+  "n": 9,
+  "mean_mm": 3.11,
+  "max_mm": 9.09
+ },
+ "V4_oblique_A": {
+  "n": 12,
+  "mean_mm": 3.08,
+  "max_mm": 10.54
+ },
+ "V4_oblique_B": {
+  "n": 15,
+  "mean_mm": 1.85,
+  "max_mm": 8.54
+ },
+ "V5_front_A": {
+  "n": 18,
+  "mean_mm": 0.54,
+  "max_mm": 2.47
+ },
+ "V5_front_B": {
+  "n": 9,
+  "mean_mm": 1.41,
+  "max_mm": 5.78
+ },
+ "V5_front_C_assembly": {
+  "n": 8,
+  "mean_mm": 3.55,
+  "max_mm": 10.17
+ },
+ "V5_oblique_A": {
+  "n": 13,
+  "mean_mm": 3.06,
+  "max_mm": 13.26
+ },
+ "V5_oblique_B": {
+  "n": 15,
+  "mean_mm": 1.76,
+  "max_mm": 8.11
+ }
+}

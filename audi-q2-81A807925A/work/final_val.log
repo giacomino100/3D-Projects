@@ -1,0 +1,10 @@
+V2 front 925_alB_1 {'outer': {'n': 262, 'coverage': 0.799, 'mean': 0.19, 'mae': 0.64, 'p90': 1.19}, 'opening': {'n': 195, 'coverage': 0.823, 'mean': -0.02, 'mae': 2.13, 'p90': 3.52}} 
+V2 oblique_01 925_alA_1 {'outer': {'n': 215, 'coverage': 0.655, 'mean': 0.23, 'mae': 1.69, 'p90': 3.34}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}} 
+V2 oblique_02 925_krik_0 {'outer': {'n': 229, 'coverage': 0.698, 'mean': 0.18, 'mae': 1.13, 'p90': 2.76}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}} 
+V2 rear 925_alB_2 {'outer': {'n': 143, 'coverage': 0.436, 'mean': -0.55, 'mae': 1.69, 'p90': 3.38}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}} 
+V2 profile 925_mp_2_hr {'outer': {'n': 57, 'coverage': 0.174, 'mean': -0.93, 'mae': 2.0, 'p90': 3.74}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}} 4.36
+V3 front 925_alB_1 {'outer': {'n': 287, 'coverage': 0.854, 'mean': -0.08, 'mae': 0.36, 'p90': 0.7}, 'opening': {'n': 202, 'coverage': 0.838, 'mean': 0.13, 'mae': 0.35, 'p90': 0.51}} 
+V3 oblique_01 925_alA_1 {'outer': {'n': 225, 'coverage': 0.67, 'mean': -0.09, 'mae': 1.39, 'p90': 3.09}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}} 
+V3 oblique_02 925_krik_0 {'outer': {'n': 233, 'coverage': 0.693, 'mean': -0.02, 'mae': 0.87, 'p90': 1.81}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}} 
+V3 rear 925_alB_2 {'outer': {'n': 179, 'coverage': 0.533, 'mean': -0.88, 'mae': 1.79, 'p90': 3.45}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}} 
+V3 profile 925_mp_2_hr {'outer': {'n': 64, 'coverage': 0.19, 'mean': -1.65, 'mae': 1.81, 'p90': 3.27}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}} 3.81

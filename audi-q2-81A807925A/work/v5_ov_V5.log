@@ -1,0 +1,7 @@
+V5 front_A 925_alB_1 {'outer': {'n': 284, 'coverage': 0.845, 'mean': -0.07, 'mae': 0.26, 'p90': 0.5}, 'opening': {'n': 197, 'coverage': 0.817, 'mean': 0.05, 'mae': 0.3, 'p90': 0.47}}
+V5 front_B 925_ccm_1 {'outer': {'n': 137, 'coverage': 0.408, 'mean': 0.57, 'mae': 0.8, 'p90': 1.32}, 'opening': {'n': 192, 'coverage': 0.797, 'mean': -0.22, 'mae': 0.66, 'p90': 1.16}}
+V5 front_C_assembly 681_pa_1 {'outer': {'n': 53, 'coverage': 0.158, 'mean': -0.79, 'mae': 0.87, 'p90': 1.53}, 'opening': {'n': 107, 'coverage': 0.444, 'mean': 0.12, 'mae': 0.45, 'p90': 0.96}}
+V5 oblique_A 925_alA_1 {'outer': {'n': 222, 'coverage': 0.661, 'mean': -0.02, 'mae': 1.39, 'p90': 2.91}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}
+V5 oblique_B 925_krik_0 {'outer': {'n': 229, 'coverage': 0.682, 'mean': 0.02, 'mae': 0.74, 'p90': 1.62}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}
+V5 rear 925_alB_2 {'outer': {'n': 180, 'coverage': 0.536, 'mean': -0.88, 'mae': 1.61, 'p90': 3.28}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}
+V5 profile 925_mp_2_hr {'outer': {'n': 62, 'coverage': 0.185, 'mean': -1.05, 'mae': 1.26, 'p90': 3.56}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}

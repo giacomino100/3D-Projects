@@ -1,0 +1,194 @@
+[
+ {
+  "station": "S00",
+  "model": "V2",
+  "y_top": -3.47,
+  "y_bot": -14.21,
+  "opening": null,
+  "band_top": null,
+  "band_bot": null,
+  "z_top": -0.62,
+  "z_bot": -2.19,
+  "inclination_deg": 8.3
+ },
+ {
+  "station": "S00",
+  "model": "V3",
+  "y_top": -4.45,
+  "y_bot": -18.96,
+  "opening": null,
+  "band_top": null,
+  "band_bot": null,
+  "z_top": -0.76,
+  "z_bot": -2.78,
+  "inclination_deg": 7.9
+ },
+ {
+  "station": "S02",
+  "model": "V2",
+  "y_top": -2.28,
+  "y_bot": -52.76,
+  "opening": null,
+  "band_top": null,
+  "band_bot": null,
+  "z_top": -2.82,
+  "z_bot": -8.0,
+  "inclination_deg": 5.9
+ },
+ {
+  "station": "S02",
+  "model": "V3",
+  "y_top": -3.91,
+  "y_bot": -56.04,
+  "opening": null,
+  "band_top": null,
+  "band_bot": null,
+  "z_top": -3.0,
+  "z_bot": -8.28,
+  "inclination_deg": 5.8
+ },
+ {
+  "station": "S04",
+  "model": "V2",
+  "y_top": -2.04,
+  "y_bot": -52.5,
+  "opening": [
+   -44.83,
+   -6.82
+  ],
+  "band_top": 4.78,
+  "band_bot": 7.67,
+  "z_top": -4.13,
+  "z_bot": -9.35,
+  "inclination_deg": 5.9
+ },
+ {
+  "station": "S04",
+  "model": "V3",
+  "y_top": -2.6,
+  "y_bot": -55.2,
+  "opening": [
+   -42.38,
+   -11.66
+  ],
+  "band_top": 9.07,
+  "band_bot": 12.82,
+  "z_top": -4.12,
+  "z_bot": -9.56,
+  "inclination_deg": 5.9
+ },
+ {
+  "station": "S06",
+  "model": "V2",
+  "y_top": -1.15,
+  "y_bot": -50.79,
+  "opening": [
+   -42.9,
+   -6.37
+  ],
+  "band_top": 5.22,
+  "band_bot": 7.89,
+  "z_top": -3.75,
+  "z_bot": -9.64,
+  "inclination_deg": 6.8
+ },
+ {
+  "station": "S06",
+  "model": "V3",
+  "y_top": -1.44,
+  "y_bot": -52.31,
+  "opening": [
+   -41.07,
+   -10.26
+  ],
+  "band_top": 8.82,
+  "band_bot": 11.24,
+  "z_top": -3.88,
+  "z_bot": -9.98,
+  "inclination_deg": 6.8
+ },
+ {
+  "station": "S08",
+  "model": "V2",
+  "y_top": -0.32,
+  "y_bot": -47.95,
+  "opening": [
+   -37.17,
+   -5.33
+  ],
+  "band_top": 5.0,
+  "band_bot": 10.78,
+  "z_top": 2.34,
+  "z_bot": -4.63,
+  "inclination_deg": 8.3
+ },
+ {
+  "station": "S08",
+  "model": "V3",
+  "y_top": -0.52,
+  "y_bot": -51.41,
+  "opening": [
+   -39.43,
+   -8.64
+  ],
+  "band_top": 8.12,
+  "band_bot": 11.98,
+  "z_top": 0.01,
+  "z_bot": -7.38,
+  "inclination_deg": 8.3
+ },
+ {
+  "station": "S10",
+  "model": "V2",
+  "y_top": -0.32,
+  "y_bot": -40.75,
+  "opening": [
+   -29.43,
+   -5.03
+  ],
+  "band_top": 4.71,
+  "band_bot": 11.31,
+  "z_top": 21.55,
+  "z_bot": 14.34,
+  "inclination_deg": 10.1
+ },
+ {
+  "station": "S10",
+  "model": "V3",
+  "y_top": -0.2,
+  "y_bot": -44.06,
+  "opening": [
+   -33.78,
+   -7.97
+  ],
+  "band_top": 7.76,
+  "band_bot": 10.28,
+  "z_top": 21.29,
+  "z_bot": 13.54,
+  "inclination_deg": 10.0
+ },
+ {
+  "station": "S11",
+  "model": "V2",
+  "y_top": -1.45,
+  "y_bot": -15.33,
+  "opening": null,
+  "band_top": null,
+  "band_bot": null,
+  "z_top": 37.65,
+  "z_bot": 34.62,
+  "inclination_deg": 12.3
+ },
+ {
+  "station": "S11",
+  "model": "V3",
+  "y_top": -2.04,
+  "y_bot": -15.48,
+  "opening": null,
+  "band_top": null,
+  "band_bot": null,
+  "z_top": 40.69,
+  "z_bot": 37.78,
+  "inclination_deg": 12.2
+ }
+]

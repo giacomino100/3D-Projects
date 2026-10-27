@@ -1,0 +1,114 @@
+{
+ "H2_band_widths": [
+  {
+   "frac": 0.1,
+   "s": 146.8,
+   "cad_upper": 8.81,
+   "front_A_upper": 8.59,
+   "front_B_upper": 10.28,
+   "front_C_assembly_upper": null,
+   "cad_lower": 13.16,
+   "front_A_lower": 12.49,
+   "front_B_lower": null,
+   "front_C_assembly_lower": null
+  },
+  {
+   "frac": 0.25,
+   "s": 198.9,
+   "cad_upper": 8.73,
+   "front_A_upper": 8.81,
+   "front_B_upper": 10.5,
+   "front_C_assembly_upper": null,
+   "cad_lower": 12.19,
+   "front_A_lower": 12.04,
+   "front_B_lower": null,
+   "front_C_assembly_lower": null
+  },
+  {
+   "frac": 0.5,
+   "s": 285.6,
+   "cad_upper": 8.75,
+   "front_A_upper": 8.83,
+   "front_B_upper": 10.45,
+   "front_C_assembly_upper": null,
+   "cad_lower": 11.27,
+   "front_A_lower": 11.26,
+   "front_B_lower": null,
+   "front_C_assembly_lower": null
+  },
+  {
+   "frac": 0.75,
+   "s": 372.4,
+   "cad_upper": 8.5,
+   "front_A_upper": 8.63,
+   "front_B_upper": 10.45,
+   "front_C_assembly_upper": null,
+   "cad_lower": 11.0,
+   "front_A_lower": 10.86,
+   "front_B_lower": null,
+   "front_C_assembly_lower": null
+  },
+  {
+   "frac": 0.9,
+   "s": 424.4,
+   "cad_upper": 7.61,
+   "front_A_upper": 6.94,
+   "front_B_upper": 6.64,
+   "front_C_assembly_upper": null,
+   "cad_lower": 8.91,
+   "front_A_lower": 8.94,
+   "front_B_lower": null,
+   "front_C_assembly_lower": null
+  }
+ ],
+ "H3_H4_chord": {
+  "upper": {
+   "cad_max_from_chord": 0.6,
+   "front_A": {
+    "oem_max_from_chord": 0.59,
+    "residual_shape_rms": 0.1
+   },
+   "front_B": {
+    "oem_max_from_chord": 0.74,
+    "residual_shape_rms": 0.29
+   },
+   "front_C_assembly": "insufficient coverage"
+  },
+  "lower": {
+   "cad_max_from_chord": 0.47,
+   "front_A": {
+    "oem_max_from_chord": 0.46,
+    "residual_shape_rms": 0.34
+   },
+   "front_B": "insufficient coverage",
+   "front_C_assembly": "insufficient coverage"
+  }
+ },
+ "H1_wide_end": {
+  "front_A": {
+   "n": 48,
+   "mean": -0.12,
+   "mae": 0.26
+  },
+  "front_B": {
+   "n": 26,
+   "mean": -0.04,
+   "mae": 0.67
+  },
+  "front_C_assembly": {
+   "n": 52,
+   "mean": 0.31,
+   "mae": 1.41
+  },
+  "oblique_A": {
+   "n": 65,
+   "mean": 0.09,
+   "mae": 1.08
+  },
+  "oblique_B": {
+   "n": 56,
+   "mean": -0.3,
+   "mae": 0.54
+  }
+ }
+}

@@ -1,0 +1,6 @@
+thicken solid=True faces=6 vol=90977 t=57.6
+trim lumps=1 closed=[True] faces=18 vol=35649 t=70.7
+TMP_lip_v8 FAILED seguire un'operazione di unione/taglio/intersezione, verificare che i corpi presentino una sovrapposizione trasparente (possono verificarsi problemi se le facce e gli spigoli sono quasi coincidenti).
+
+TMP_ret_open_v8 ok=True lumps=1 closed=[True] vol=42859 t=157.9
+final solid=True faces=48 vol=42859

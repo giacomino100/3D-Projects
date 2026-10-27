@@ -1,0 +1,12 @@
+[
+ {
+  "case": "pru_1_isolated_front",
+  "px_per_mm": 2.086,
+  "file": "docs\\validation\\overlay_pru_1_isolated_front.jpg"
+ },
+ {
+  "case": "corner_4_installed",
+  "px_per_mm": 1.912,
+  "file": "docs\\validation\\overlay_corner_4_installed.jpg"
+ }
+]

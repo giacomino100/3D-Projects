@@ -1,0 +1,25 @@
+﻿BOMBONIERA - VASO F2 + 4 PIEDINI (Giacomo e Simona, 2 Ottobre 2027)
+Pensato per un vasetto di plastica diametro 70 x altezza 60 mm.
+
+1_STAMPA_3MF  (da stampare, piatto Kobra S1 250x250)
+  F2_vaso_Giacomo_Simona.3mf     vaso con scritta (Giacomo / e / Simona / 02.10.2027)
+  F2_vaso_senza_scritta.3mf      stesso vaso senza scritta
+  F2_piedini_x4.3mf              4 piedini svasati 14 gradi
+  F2_piatto_vaso+4piedini.3mf    vaso con scritta + piedini sullo stesso piatto
+2_BLENDER
+  F2_vaso_e_piedini.blend        F2, senza scritta, piedini, anteprima con vasetto
+  tutti_i_vasi_85x76.blend       tutti i modelli A-E, F2
+3_ARCHIVIO_grande_116x106       versione precedente per vasetto 100x80 (non piu valida)
+4_ALTRI_MODELLI_3MF             A petali torti, B loto, C intreccio, D gemma, E plisse grigio
+
+MISURE
+  Vaso: diametro circa 85 x altezza 76 mm, cavita diametro 74, fondo 8 mm
+  Profondita utile 68 mm: vasetto 70x60 poggia sul fondo, bordo 8 mm sotto il bordo vaso
+  Scritta: Segoe Script Bold, incisione 1,5 mm, nomi larghi 50 mm, data 02.10.2027 larga 44 mm (tratto 0,75-1 mm, ok ugello 0,4)
+  Piedino: alto 34,5 mm (perno diametro 9 x 4,5), svasato 14 gradi
+  Fori nel vaso: 4x diametro 9,4 x 5 mm, inclinati 14 gradi, a 24 mm dal centro
+
+STAMPA
+  Vaso con fondo sul piatto, senza supporti. Piedini in piedi, senza supporti.
+  Piedini incollati nei fori (gioco 0,2 mm per lato).
+  Non ancora provato in slicer/stampa: fare prima una prova di un piedino e di un foro.

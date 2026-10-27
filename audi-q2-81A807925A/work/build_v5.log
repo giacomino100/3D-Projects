@@ -1,0 +1,64 @@
+C:\Users\giaco\Documents\pezzo audi\.venv\Lib\site-packages\cadquery\utils.py:82: FutureWarning: save will be removed in the next release.
+  warn(f"{f.__name__} will be removed in the next release.", FutureWarning)
+{
+ "body_valid": true,
+ "fused_valid": true,
+ "boolean_volume_checks": "passed (skin, opening cut, rings, lip, body)",
+ "spline_seg_pts": 60,
+ "visible_fillets": "NOT applied: OCC fillet did not finish in 1 s on the spline edges -> sharp visible edges in V2 STEP (R_OUTER_VISIBLE/R_INNER_VISIBLE kept as parameters)",
+ "step_roundtrip_body": {
+  "type": "Solid",
+  "faces": 1735,
+  "solids": 1,
+  "free_edges": 0,
+  "valid": true
+ },
+ "stl_check": {
+  "81A807925A_V5.stl": {
+   "watertight": true,
+   "faces": 81620,
+   "volume_mm3": 49247.3
+  },
+  "81A807925A_V5_body.stl": {
+   "watertight": true,
+   "faces": 69242,
+   "volume_mm3": 46218.1
+  }
+ },
+ "body_bbox": {
+  "xmin": -6.88,
+  "xmax": 477.1,
+  "ymin": -56.19,
+  "ymax": 0.2,
+  "zmin": -10.67,
+  "zmax": 69.16,
+  "dx": 483.98,
+  "dy": 56.4,
+  "dz": 79.82
+ },
+ "mass_estimate_g_PCABS": 56.6,
+ "clip_valid": {
+  "C01": true,
+  "C02": true,
+  "C03": true,
+  "C04": true,
+  "C05": true,
+  "C06": true,
+  "C07": true
+ },
+ "coupon_interference_mm3": {
+  "TOP_SYM_c0.20": 0.0,
+  "TOP_SYM_c0.30": 0.0,
+  "TOP_SYM_c0.45": 0.0,
+  "TOP_RAMP_c0.20": 0.0,
+  "TOP_RAMP_c0.30": 0.0,
+  "TOP_RAMP_c0.45": 0.0,
+  "END_TONGUE_c0.20": 0.0,
+  "END_TONGUE_c0.30": 0.0,
+  "END_TONGUE_c0.45": 0.0,
+  "BOTTOM_RAMP_c0.20": 0.0,
+  "BOTTOM_RAMP_c0.30": 0.0,
+  "BOTTOM_RAMP_c0.45": 0.0
+ },
+ "build_seconds": 767.4
+}

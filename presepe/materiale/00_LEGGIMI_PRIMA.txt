@@ -1,0 +1,12 @@
+PACCHETTO PER CLAUDE CODE — MINI PRESEPE CON STELLA COMETA
+
+1) Apri questo pacchetto sul computer dove vuoi realizzare il progetto 3D.
+2) Installa Blender (https://www.blender.org/) e usa Claude Code con accesso alla cartella. Se usi soltanto Claude nel browser, può scrivere lo script ma non comandare automaticamente Blender sul tuo computer.
+3) Apri Claude Code nella cartella estratta.
+4) Incolla in Claude Code questo messaggio:
+
+"Leggi integralmente 02_BRIEF_PER_CLAUDE.md e usa 01_Reference_Presepe_Stella_Cometa.png come riferimento visivo. Realizza il progetto seguendo il brief, generando i file sorgente, gli STL per componente e i render. Esegui verifiche reali con gli strumenti disponibili e documenta ciò che non puoi testare. Inizia dalla struttura della scena e dagli script riproducibili."
+
+5) Per la prima stampa: prova fisicamente gli incastri su un campione prima di stampare l'intero presepe.
+
+NOTA: Le immagini sono concept, non file STL o disegni tecnici certificati.

@@ -1,0 +1,1 @@
+lip ok=True lumps=1 closed=[True] vol=48395 t=75.9

@@ -1,0 +1,3104 @@
+{
+ "front_A": {
+  "photo": "925_alB_1",
+  "rows": [
+   {
+    "id": "A01",
+    "name": "start of upper-end transition",
+    "s": 127.51,
+    "X": 344.49,
+    "Y": -3.26,
+    "Z": -3.68,
+    "cad_px": [
+     1859.4,
+     1090.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A02",
+    "name": "upper crown start",
+    "s": 54.52,
+    "X": 417.48,
+    "Y": -4.44,
+    "Z": -2.34,
+    "cad_px": [
+     2219.5,
+     1093.7
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A03",
+    "name": "maximum upper fullness",
+    "s": 111.51,
+    "X": 360.49,
+    "Y": -3.51,
+    "Z": -3.45,
+    "cad_px": [
+     1938.8,
+     1090.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A04",
+    "name": "beginning of outer descent",
+    "s": -2.38,
+    "X": 474.38,
+    "Y": -4.52,
+    "Z": -0.64,
+    "cad_px": [
+     2495.9,
+     1101.2
+    ],
+    "oem_px": [
+     2494.2,
+     1097.4
+    ],
+    "res_px": -4.14,
+    "res_mm": -0.82,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A05",
+    "name": "mid-point of outer descent",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     2314.4,
+     874.1
+    ],
+    "oem_px": [
+     2314.7,
+     873.6
+    ],
+    "res_px": 0.63,
+    "res_mm": 0.13,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A06",
+    "name": "outermost terminal point (nose)",
+    "s": -5.18,
+    "X": 477.18,
+    "Y": -9.53,
+    "Z": -1.29,
+    "cad_px": [
+     2509.7,
+     1076.3
+    ],
+    "oem_px": [
+     2514.9,
+     1076.5
+    ],
+    "res_px": 5.21,
+    "res_mm": 1.08,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A07",
+    "name": "lower terminal transition",
+    "s": 19.92,
+    "X": 452.08,
+    "Y": -37.56,
+    "Z": -5.32,
+    "cad_px": [
+     2388.8,
+     932.2
+    ],
+    "oem_px": [
+     2388.0,
+     933.1
+    ],
+    "res_px": -1.3,
+    "res_mm": -0.27,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A08",
+    "name": "return into lower rail",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     2314.4,
+     874.1
+    ],
+    "oem_px": [
+     2314.7,
+     873.6
+    ],
+    "res_px": 0.63,
+    "res_mm": 0.13,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A09",
+    "name": "upper opening-start tangent",
+    "s": 141.7,
+    "X": 330.3,
+    "Y": -11.73,
+    "Z": -5.14,
+    "cad_px": [
+     1789.5,
+     1044.9
+    ],
+    "oem_px": [
+     1789.4,
+     1043.7
+    ],
+    "res_px": -1.25,
+    "res_mm": -0.27,
+    "conf": "MEDIUM"
+   },
+   {
+    "id": "A10",
+    "name": "upper opening shoulder",
+    "s": 113.35,
+    "X": 358.65,
+    "Y": -17.52,
+    "Z": -5.47,
+    "cad_px": [
+     1930.7,
+     1019.3
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A11",
+    "name": "inner-most rounded point of opening",
+    "s": 112.13,
+    "X": 359.87,
+    "Y": -22.3,
+    "Z": -6.03,
+    "cad_px": [
+     1937.0,
+     995.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A12",
+    "name": "lower opening shoulder",
+    "s": 112.62,
+    "X": 359.38,
+    "Y": -25.25,
+    "Z": -6.37,
+    "cad_px": [
+     1934.8,
+     980.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A13",
+    "name": "lower opening-start tangent",
+    "s": 172.43,
+    "X": 299.57,
+    "Y": -42.41,
+    "Z": -8.78,
+    "cad_px": [
+     1637.8,
+     885.2
+    ],
+    "oem_px": [
+     1637.8,
+     884.3
+    ],
+    "res_px": 0.93,
+    "res_mm": 0.17,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B01",
+    "name": "upper rail entering terminal",
+    "s": 388.47,
+    "X": 83.53,
+    "Y": -0.21,
+    "Z": 11.5,
+    "cad_px": [
+     533.4,
+     1087.8
+    ],
+    "oem_px": [
+     533.3,
+     1089.7
+    ],
+    "res_px": 1.86,
+    "res_mm": 0.36,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B02",
+    "name": "beginning of upper bend",
+    "s": 439.04,
+    "X": 32.96,
+    "Y": -1.01,
+    "Z": 34.43,
+    "cad_px": [
+     281.3,
+     1097.2
+    ],
+    "oem_px": [
+     281.3,
+     1096.7
+    ],
+    "res_px": -0.55,
+    "res_mm": -0.11,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B03",
+    "name": "upper terminal shoulder",
+    "s": 477.75,
+    "X": -5.75,
+    "Y": -3.31,
+    "Z": 60.72,
+    "cad_px": [
+     98.2,
+     1103.0
+    ],
+    "oem_px": [
+     98.6,
+     1102.4
+    ],
+    "res_px": -0.81,
+    "res_mm": -0.16,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B04",
+    "name": "narrowest / outermost terminal point",
+    "s": 478.87,
+    "X": -6.87,
+    "Y": -4.89,
+    "Z": 61.26,
+    "cad_px": [
+     93.2,
+     1095.7
+    ],
+    "oem_px": [
+     92.2,
+     1096.0
+    ],
+    "res_px": 1.01,
+    "res_mm": 0.21,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B05",
+    "name": "lower terminal shoulder",
+    "s": 439.15,
+    "X": 32.85,
+    "Y": -38.87,
+    "Z": 27.6,
+    "cad_px": [
+     285.7,
+     904.3
+    ],
+    "oem_px": [
+     286.4,
+     905.4
+    ],
+    "res_px": -1.31,
+    "res_mm": -0.28,
+    "conf": "MEDIUM"
+   },
+   {
+    "id": "B06",
+    "name": "beginning of lower return",
+    "s": 423.66,
+    "X": 48.34,
+    "Y": -45.75,
+    "Z": 18.53,
+    "cad_px": [
+     362.8,
+     863.4
+    ],
+    "oem_px": [
+     363.1,
+     864.4
+    ],
+    "res_px": -1.03,
+    "res_mm": -0.21,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B07",
+    "name": "lower rail exit",
+    "s": 378.98,
+    "X": 93.02,
+    "Y": -49.78,
+    "Z": 1.19,
+    "cad_px": [
+     588.4,
+     831.3
+    ],
+    "oem_px": [
+     588.4,
+     831.6
+    ],
+    "res_px": -0.32,
+    "res_mm": -0.06,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B08",
+    "name": "upper inner tangent",
+    "s": 413.99,
+    "X": 58.01,
+    "Y": -7.42,
+    "Z": 20.11,
+    "cad_px": [
+     405.7,
+     1056.2
+    ],
+    "oem_px": [
+     405.7,
+     1056.4
+    ],
+    "res_px": 0.24,
+    "res_mm": 0.05,
+    "conf": "MEDIUM"
+   },
+   {
+    "id": "B09",
+    "name": "upper inner bend",
+    "s": 458.25,
+    "X": 13.75,
+    "Y": -9.52,
+    "Z": 44.84,
+    "cad_px": [
+     189.9,
+     1061.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B10",
+    "name": "deepest inner turning point",
+    "s": 459.12,
+    "X": 12.88,
+    "Y": -12.34,
+    "Z": 44.85,
+    "cad_px": [
+     186.2,
+     1047.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B11",
+    "name": "lower inner bend",
+    "s": 425.76,
+    "X": 46.24,
+    "Y": -36.33,
+    "Z": 20.83,
+    "cad_px": [
+     351.1,
+     911.9
+    ],
+    "oem_px": [
+     351.9,
+     914.4
+    ],
+    "res_px": -2.63,
+    "res_mm": -0.49,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B12",
+    "name": "lower inner tangent",
+    "s": 389.55,
+    "X": 82.45,
+    "Y": -42.65,
+    "Z": 5.12,
+    "cad_px": [
+     533.6,
+     869.5
+    ],
+    "oem_px": [
+     533.6,
+     869.3
+    ],
+    "res_px": 0.19,
+    "res_mm": 0.03,
+    "conf": "HIGH"
+   },
+   {
+    "id": "R01",
+    "name": "recess entry",
+    "s": 357.4,
+    "X": 114.6,
+    "Y": -39.23,
+    "Z": -2.76,
+    "cad_px": [
+     697.3,
+     882.8
+    ],
+    "oem_px": [
+     697.3,
+     884.3
+    ],
+    "res_px": -1.58,
+    "res_mm": -0.29,
+    "conf": "HIGH"
+   },
+   {
+    "id": "R02",
+    "name": "beginning of concavity",
+    "s": 369.39,
+    "X": 102.61,
+    "Y": -38.91,
+    "Z": -0.11,
+    "cad_px": [
+     635.8,
+     885.5
+    ],
+    "oem_px": [
+     635.8,
+     885.6
+    ],
+    "res_px": -0.1,
+    "res_mm": -0.02,
+    "conf": "HIGH"
+   },
+   {
+    "id": "R03",
+    "name": "maximum recess (max curvature)",
+    "s": 377.37,
+    "X": 94.63,
+    "Y": -38.71,
+    "Z": 1.95,
+    "cad_px": [
+     595.0,
+     887.5
+    ],
+    "oem_px": [
+     595.1,
+     886.7
+    ],
+    "res_px": 0.85,
+    "res_mm": 0.15,
+    "conf": "HIGH"
+   },
+   {
+    "id": "R04",
+    "name": "concavity exit",
+    "s": 385.58,
+    "X": 86.42,
+    "Y": -42.28,
+    "Z": 3.9,
+    "cad_px": [
+     553.7,
+     870.6
+    ],
+    "oem_px": [
+     557.7,
+     855.4
+    ],
+    "res_px": -15.71,
+    "res_mm": -3.03,
+    "conf": "MEDIUM"
+   },
+   {
+    "id": "R05",
+    "name": "transition back into the rail",
+    "s": 397.54,
+    "X": 74.46,
+    "Y": -42.3,
+    "Z": 7.91,
+    "cad_px": [
+     493.0,
+     873.0
+    ],
+    "oem_px": [
+     493.0,
+     872.7
+    ],
+    "res_px": 0.31,
+    "res_mm": 0.06,
+    "conf": "HIGH"
+   }
+  ]
+ },
+ "front_B": {
+  "photo": "925_ccm_1",
+  "rows": [
+   {
+    "id": "A01",
+    "name": "start of upper-end transition",
+    "s": 127.51,
+    "X": 344.49,
+    "Y": -3.26,
+    "Z": -3.68,
+    "cad_px": [
+     244.2,
+     327.3
+    ],
+    "oem_px": [
+     244.2,
+     326.2
+    ],
+    "res_px": 1.09,
+    "res_mm": 0.4,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A02",
+    "name": "upper crown start",
+    "s": 54.52,
+    "X": 417.48,
+    "Y": -4.44,
+    "Z": -2.34,
+    "cad_px": [
+     42.4,
+     324.2
+    ],
+    "oem_px": [
+     42.4,
+     326.3
+    ],
+    "res_px": -2.09,
+    "res_mm": -0.75,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A03",
+    "name": "maximum upper fullness",
+    "s": 111.51,
+    "X": 360.49,
+    "Y": -3.51,
+    "Z": -3.45,
+    "cad_px": [
+     200.6,
+     326.7
+    ],
+    "oem_px": [
+     200.6,
+     326.6
+    ],
+    "res_px": 0.05,
+    "res_mm": 0.02,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A04",
+    "name": "beginning of outer descent",
+    "s": -2.38,
+    "X": 474.38,
+    "Y": -4.52,
+    "Z": -0.64,
+    "cad_px": [
+     -119.4,
+     319.3
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A05",
+    "name": "mid-point of outer descent",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     -15.1,
+     445.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A06",
+    "name": "outermost terminal point (nose)",
+    "s": -5.18,
+    "X": 477.18,
+    "Y": -9.53,
+    "Z": -1.29,
+    "cad_px": [
+     -127.8,
+     333.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A07",
+    "name": "lower terminal transition",
+    "s": 19.92,
+    "X": 452.08,
+    "Y": -37.56,
+    "Z": -5.32,
+    "cad_px": [
+     -57.8,
+     413.3
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A08",
+    "name": "return into lower rail",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     -15.1,
+     445.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A09",
+    "name": "upper opening-start tangent",
+    "s": 141.7,
+    "X": 330.3,
+    "Y": -11.73,
+    "Z": -5.14,
+    "cad_px": [
+     282.1,
+     351.5
+    ],
+    "oem_px": [
+     282.0,
+     354.4
+    ],
+    "res_px": -2.82,
+    "res_mm": -1.09,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A10",
+    "name": "upper opening shoulder",
+    "s": 113.35,
+    "X": 358.65,
+    "Y": -17.52,
+    "Z": -5.47,
+    "cad_px": [
+     204.7,
+     365.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A11",
+    "name": "inner-most rounded point of opening",
+    "s": 112.13,
+    "X": 359.87,
+    "Y": -22.3,
+    "Z": -6.03,
+    "cad_px": [
+     201.0,
+     378.0
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A12",
+    "name": "lower opening shoulder",
+    "s": 112.62,
+    "X": 359.38,
+    "Y": -25.25,
+    "Z": -6.37,
+    "cad_px": [
+     202.2,
+     386.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A13",
+    "name": "lower opening-start tangent",
+    "s": 172.43,
+    "X": 299.57,
+    "Y": -42.41,
+    "Z": -8.78,
+    "cad_px": [
+     362.3,
+     436.3
+    ],
+    "oem_px": [
+     362.3,
+     434.5
+    ],
+    "res_px": -1.74,
+    "res_mm": -0.62,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B01",
+    "name": "upper rail entering terminal",
+    "s": 388.47,
+    "X": 83.53,
+    "Y": -0.21,
+    "Z": 11.5,
+    "cad_px": [
+     895.9,
+     335.4
+    ],
+    "oem_px": [
+     895.9,
+     333.5
+    ],
+    "res_px": 1.94,
+    "res_mm": 0.77,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B02",
+    "name": "beginning of upper bend",
+    "s": 439.04,
+    "X": 32.96,
+    "Y": -1.01,
+    "Z": 34.43,
+    "cad_px": [
+     990.2,
+     335.3
+    ],
+    "oem_px": [
+     990.2,
+     337.6
+    ],
+    "res_px": -2.25,
+    "res_mm": -0.92,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B03",
+    "name": "upper terminal shoulder",
+    "s": 477.75,
+    "X": -5.75,
+    "Y": -3.31,
+    "Z": 60.72,
+    "cad_px": [
+     1048.5,
+     337.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B04",
+    "name": "narrowest / outermost terminal point",
+    "s": 478.87,
+    "X": -6.87,
+    "Y": -4.89,
+    "Z": 61.26,
+    "cad_px": [
+     1050.0,
+     340.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B05",
+    "name": "lower terminal shoulder",
+    "s": 439.15,
+    "X": 32.85,
+    "Y": -38.87,
+    "Z": 27.6,
+    "cad_px": [
+     990.4,
+     427.5
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B06",
+    "name": "beginning of lower return",
+    "s": 423.66,
+    "X": 48.34,
+    "Y": -45.75,
+    "Z": 18.53,
+    "cad_px": [
+     962.9,
+     446.4
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B07",
+    "name": "lower rail exit",
+    "s": 378.98,
+    "X": 93.02,
+    "Y": -49.78,
+    "Z": 1.19,
+    "cad_px": [
+     874.3,
+     461.0
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B08",
+    "name": "upper inner tangent",
+    "s": 413.99,
+    "X": 58.01,
+    "Y": -7.42,
+    "Z": 20.11,
+    "cad_px": [
+     946.0,
+     352.7
+    ],
+    "oem_px": [
+     946.1,
+     352.3
+    ],
+    "res_px": 0.38,
+    "res_mm": 0.16,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B09",
+    "name": "upper inner bend",
+    "s": 458.25,
+    "X": 13.75,
+    "Y": -9.52,
+    "Z": 44.84,
+    "cad_px": [
+     1021.0,
+     354.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B10",
+    "name": "deepest inner turning point",
+    "s": 459.12,
+    "X": 12.88,
+    "Y": -12.34,
+    "Z": 44.85,
+    "cad_px": [
+     1022.4,
+     360.7
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B11",
+    "name": "lower inner bend",
+    "s": 425.76,
+    "X": 46.24,
+    "Y": -36.33,
+    "Z": 20.83,
+    "cad_px": [
+     967.2,
+     423.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B12",
+    "name": "lower inner tangent",
+    "s": 389.55,
+    "X": 82.45,
+    "Y": -42.65,
+    "Z": 5.12,
+    "cad_px": [
+     897.0,
+     442.3
+    ],
+    "oem_px": [
+     896.9,
+     441.8
+    ],
+    "res_px": -0.59,
+    "res_mm": -0.21,
+    "conf": "HIGH"
+   },
+   {
+    "id": "R01",
+    "name": "recess entry",
+    "s": 357.4,
+    "X": 114.6,
+    "Y": -39.23,
+    "Z": -2.76,
+    "cad_px": [
+     827.8,
+     435.2
+    ],
+    "oem_px": [
+     828.1,
+     437.3
+    ],
+    "res_px": 2.12,
+    "res_mm": 0.78,
+    "conf": "HIGH"
+   },
+   {
+    "id": "R02",
+    "name": "beginning of concavity",
+    "s": 369.39,
+    "X": 102.61,
+    "Y": -38.91,
+    "Z": -0.11,
+    "cad_px": [
+     854.4,
+     434.0
+    ],
+    "oem_px": [
+     855.0,
+     440.7
+    ],
+    "res_px": 6.72,
+    "res_mm": 2.49,
+    "conf": "HIGH"
+   },
+   {
+    "id": "R03",
+    "name": "maximum recess (max curvature)",
+    "s": 377.37,
+    "X": 94.63,
+    "Y": -38.71,
+    "Z": 1.95,
+    "cad_px": [
+     871.7,
+     433.2
+    ],
+    "oem_px": [
+     871.5,
+     443.6
+    ],
+    "res_px": 10.4,
+    "res_mm": 3.93,
+    "conf": "HIGH"
+   },
+   {
+    "id": "R04",
+    "name": "concavity exit",
+    "s": 385.58,
+    "X": 86.42,
+    "Y": -42.28,
+    "Z": 3.9,
+    "cad_px": [
+     888.8,
+     441.7
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R05",
+    "name": "transition back into the rail",
+    "s": 397.54,
+    "X": 74.46,
+    "Y": -42.3,
+    "Z": 7.91,
+    "cad_px": [
+     913.2,
+     440.8
+    ],
+    "oem_px": [
+     913.0,
+     439.8
+    ],
+    "res_px": -1.07,
+    "res_mm": -0.39,
+    "conf": "HIGH"
+   }
+  ]
+ },
+ "front_C_assembly": {
+  "photo": "681_pa_1",
+  "rows": [
+   {
+    "id": "A01",
+    "name": "start of upper-end transition",
+    "s": 127.51,
+    "X": 344.49,
+    "Y": -3.26,
+    "Z": -3.68,
+    "cad_px": [
+     607.7,
+     846.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A02",
+    "name": "upper crown start",
+    "s": 54.52,
+    "X": 417.48,
+    "Y": -4.44,
+    "Z": -2.34,
+    "cad_px": [
+     439.9,
+     840.8
+    ],
+    "oem_px": [
+     439.8,
+     842.5
+    ],
+    "res_px": -1.78,
+    "res_mm": -0.77,
+    "conf": "MEDIUM"
+   },
+   {
+    "id": "A03",
+    "name": "maximum upper fullness",
+    "s": 111.51,
+    "X": 360.49,
+    "Y": -3.51,
+    "Z": -3.45,
+    "cad_px": [
+     571.0,
+     844.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A04",
+    "name": "beginning of outer descent",
+    "s": -2.38,
+    "X": 474.38,
+    "Y": -4.52,
+    "Z": -0.64,
+    "cad_px": [
+     309.1,
+     834.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A05",
+    "name": "mid-point of outer descent",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     386.2,
+     942.3
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A06",
+    "name": "outermost terminal point (nose)",
+    "s": -5.18,
+    "X": 477.18,
+    "Y": -9.53,
+    "Z": -1.29,
+    "cad_px": [
+     301.4,
+     845.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A07",
+    "name": "lower terminal transition",
+    "s": 19.92,
+    "X": 452.08,
+    "Y": -37.56,
+    "Z": -5.32,
+    "cad_px": [
+     352.9,
+     914.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A08",
+    "name": "return into lower rail",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     386.2,
+     942.3
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A09",
+    "name": "upper opening-start tangent",
+    "s": 141.7,
+    "X": 330.3,
+    "Y": -11.73,
+    "Z": -5.14,
+    "cad_px": [
+     639.0,
+     867.3
+    ],
+    "oem_px": [
+     639.1,
+     866.5
+    ],
+    "res_px": 0.79,
+    "res_mm": 0.34,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A10",
+    "name": "upper opening shoulder",
+    "s": 113.35,
+    "X": 358.65,
+    "Y": -17.52,
+    "Z": -5.47,
+    "cad_px": [
+     572.9,
+     877.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A11",
+    "name": "inner-most rounded point of opening",
+    "s": 112.13,
+    "X": 359.87,
+    "Y": -22.3,
+    "Z": -6.03,
+    "cad_px": [
+     569.3,
+     888.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A12",
+    "name": "lower opening shoulder",
+    "s": 112.62,
+    "X": 359.38,
+    "Y": -25.25,
+    "Z": -6.37,
+    "cad_px": [
+     570.0,
+     895.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A13",
+    "name": "lower opening-start tangent",
+    "s": 172.43,
+    "X": 299.57,
+    "Y": -42.41,
+    "Z": -8.78,
+    "cad_px": [
+     705.7,
+     942.3
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B01",
+    "name": "upper rail entering terminal",
+    "s": 388.47,
+    "X": 83.53,
+    "Y": -0.21,
+    "Z": 11.5,
+    "cad_px": [
+     1190.8,
+     866.9
+    ],
+    "oem_px": [
+     1190.8,
+     868.4
+    ],
+    "res_px": -1.48,
+    "res_mm": -0.66,
+    "conf": "MEDIUM"
+   },
+   {
+    "id": "B02",
+    "name": "beginning of upper bend",
+    "s": 439.04,
+    "X": 32.96,
+    "Y": -1.01,
+    "Z": 34.43,
+    "cad_px": [
+     1286.6,
+     873.0
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B03",
+    "name": "upper terminal shoulder",
+    "s": 477.75,
+    "X": -5.75,
+    "Y": -3.31,
+    "Z": 60.72,
+    "cad_px": [
+     1350.3,
+     880.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B04",
+    "name": "narrowest / outermost terminal point",
+    "s": 478.87,
+    "X": -6.87,
+    "Y": -4.89,
+    "Z": 61.26,
+    "cad_px": [
+     1352.2,
+     884.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B05",
+    "name": "lower terminal shoulder",
+    "s": 439.15,
+    "X": 32.85,
+    "Y": -38.87,
+    "Z": 27.6,
+    "cad_px": [
+     1289.9,
+     956.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B06",
+    "name": "beginning of lower return",
+    "s": 423.66,
+    "X": 48.34,
+    "Y": -45.75,
+    "Z": 18.53,
+    "cad_px": [
+     1261.7,
+     972.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B07",
+    "name": "lower rail exit",
+    "s": 378.98,
+    "X": 93.02,
+    "Y": -49.78,
+    "Z": 1.19,
+    "cad_px": [
+     1172.6,
+     979.5
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B08",
+    "name": "upper inner tangent",
+    "s": 413.99,
+    "X": 58.01,
+    "Y": -7.42,
+    "Z": 20.11,
+    "cad_px": [
+     1241.3,
+     885.3
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B09",
+    "name": "upper inner bend",
+    "s": 458.25,
+    "X": 13.75,
+    "Y": -9.52,
+    "Z": 44.84,
+    "cad_px": [
+     1320.2,
+     892.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B10",
+    "name": "deepest inner turning point",
+    "s": 459.12,
+    "X": 12.88,
+    "Y": -12.34,
+    "Z": 44.85,
+    "cad_px": [
+     1322.0,
+     899.0
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B11",
+    "name": "lower inner bend",
+    "s": 425.76,
+    "X": 46.24,
+    "Y": -36.33,
+    "Z": 20.83,
+    "cad_px": [
+     1265.2,
+     950.8
+    ],
+    "oem_px": [
+     1265.2,
+     950.7
+    ],
+    "res_px": -0.12,
+    "res_mm": -0.05,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B12",
+    "name": "lower inner tangent",
+    "s": 389.55,
+    "X": 82.45,
+    "Y": -42.65,
+    "Z": 5.12,
+    "cad_px": [
+     1194.5,
+     963.6
+    ],
+    "oem_px": [
+     1194.9,
+     966.4
+    ],
+    "res_px": 2.83,
+    "res_mm": 1.17,
+    "conf": "HIGH"
+   },
+   {
+    "id": "R01",
+    "name": "recess entry",
+    "s": 357.4,
+    "X": 114.6,
+    "Y": -39.23,
+    "Z": -2.76,
+    "cad_px": [
+     1126.8,
+     953.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R02",
+    "name": "beginning of concavity",
+    "s": 369.39,
+    "X": 102.61,
+    "Y": -38.91,
+    "Z": -0.11,
+    "cad_px": [
+     1152.4,
+     953.8
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R03",
+    "name": "maximum recess (max curvature)",
+    "s": 377.37,
+    "X": 94.63,
+    "Y": -38.71,
+    "Z": 1.95,
+    "cad_px": [
+     1169.2,
+     953.8
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R04",
+    "name": "concavity exit",
+    "s": 385.58,
+    "X": 86.42,
+    "Y": -42.28,
+    "Z": 3.9,
+    "cad_px": [
+     1186.3,
+     962.6
+    ],
+    "oem_px": [
+     1186.8,
+     960.2
+    ],
+    "res_px": 2.4,
+    "res_mm": 1.05,
+    "conf": "HIGH"
+   },
+   {
+    "id": "R05",
+    "name": "transition back into the rail",
+    "s": 397.54,
+    "X": 74.46,
+    "Y": -42.3,
+    "Z": 7.91,
+    "cad_px": [
+     1210.7,
+     963.2
+    ],
+    "oem_px": [
+     1211.1,
+     965.5
+    ],
+    "res_px": 2.3,
+    "res_mm": 0.95,
+    "conf": "HIGH"
+   }
+  ]
+ },
+ "oblique_A": {
+  "photo": "925_alA_1",
+  "rows": [
+   {
+    "id": "A01",
+    "name": "start of upper-end transition",
+    "s": 127.51,
+    "X": 344.49,
+    "Y": -3.26,
+    "Z": -3.68,
+    "cad_px": [
+     1880.5,
+     1022.3
+    ],
+    "oem_px": [
+     1882.0,
+     1016.3
+    ],
+    "res_px": -6.13,
+    "res_mm": -1.35,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A02",
+    "name": "upper crown start",
+    "s": 54.52,
+    "X": 417.48,
+    "Y": -4.44,
+    "Z": -2.34,
+    "cad_px": [
+     2221.8,
+     1014.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A03",
+    "name": "maximum upper fullness",
+    "s": 111.51,
+    "X": 360.49,
+    "Y": -3.51,
+    "Z": -3.45,
+    "cad_px": [
+     1957.0,
+     1020.7
+    ],
+    "oem_px": [
+     1959.4,
+     1012.4
+    ],
+    "res_px": -8.65,
+    "res_mm": -1.91,
+    "conf": "MEDIUM"
+   },
+   {
+    "id": "A04",
+    "name": "beginning of outer descent",
+    "s": -2.38,
+    "X": 474.38,
+    "Y": -4.52,
+    "Z": -0.64,
+    "cad_px": [
+     2471.7,
+     1011.4
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A05",
+    "name": "mid-point of outer descent",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     2381.5,
+     809.4
+    ],
+    "oem_px": [
+     2382.5,
+     808.2
+    ],
+    "res_px": 1.49,
+    "res_mm": 0.27,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A06",
+    "name": "outermost terminal point (nose)",
+    "s": -5.18,
+    "X": 477.18,
+    "Y": -9.53,
+    "Z": -1.29,
+    "cad_px": [
+     2493.3,
+     990.0
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A07",
+    "name": "lower terminal transition",
+    "s": 19.92,
+    "X": 452.08,
+    "Y": -37.56,
+    "Z": -5.32,
+    "cad_px": [
+     2433.5,
+     864.0
+    ],
+    "oem_px": [
+     2432.5,
+     864.8
+    ],
+    "res_px": -1.2,
+    "res_mm": -0.22,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A08",
+    "name": "return into lower rail",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     2381.5,
+     809.4
+    ],
+    "oem_px": [
+     2382.5,
+     808.2
+    ],
+    "res_px": 1.49,
+    "res_mm": 0.27,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A09",
+    "name": "upper opening-start tangent",
+    "s": 141.7,
+    "X": 330.3,
+    "Y": -11.73,
+    "Z": -5.14,
+    "cad_px": [
+     1821.2,
+     984.5
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A10",
+    "name": "upper opening shoulder",
+    "s": 113.35,
+    "X": 358.65,
+    "Y": -17.52,
+    "Z": -5.47,
+    "cad_px": [
+     1966.0,
+     957.7
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A11",
+    "name": "inner-most rounded point of opening",
+    "s": 112.13,
+    "X": 359.87,
+    "Y": -22.3,
+    "Z": -6.03,
+    "cad_px": [
+     1977.9,
+     935.5
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A12",
+    "name": "lower opening shoulder",
+    "s": 112.62,
+    "X": 359.38,
+    "Y": -25.25,
+    "Z": -6.37,
+    "cad_px": [
+     1979.1,
+     921.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A13",
+    "name": "lower opening-start tangent",
+    "s": 172.43,
+    "X": 299.57,
+    "Y": -42.41,
+    "Z": -8.78,
+    "cad_px": [
+     1694.6,
+     834.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B01",
+    "name": "upper rail entering terminal",
+    "s": 388.47,
+    "X": 83.53,
+    "Y": -0.21,
+    "Z": 11.5,
+    "cad_px": [
+     529.9,
+     1005.7
+    ],
+    "oem_px": [
+     531.6,
+     1016.5
+    ],
+    "res_px": 10.93,
+    "res_mm": 2.35,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B02",
+    "name": "beginning of upper bend",
+    "s": 439.04,
+    "X": 32.96,
+    "Y": -1.01,
+    "Z": 34.43,
+    "cad_px": [
+     306.0,
+     959.0
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B03",
+    "name": "upper terminal shoulder",
+    "s": 477.75,
+    "X": -5.75,
+    "Y": -3.31,
+    "Z": 60.72,
+    "cad_px": [
+     172.2,
+     905.7
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B04",
+    "name": "narrowest / outermost terminal point",
+    "s": 478.87,
+    "X": -6.87,
+    "Y": -4.89,
+    "Z": 61.26,
+    "cad_px": [
+     166.8,
+     897.8
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B05",
+    "name": "lower terminal shoulder",
+    "s": 439.15,
+    "X": 32.85,
+    "Y": -38.87,
+    "Z": 27.6,
+    "cad_px": [
+     260.2,
+     783.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B06",
+    "name": "beginning of lower return",
+    "s": 423.66,
+    "X": 48.34,
+    "Y": -45.75,
+    "Z": 18.53,
+    "cad_px": [
+     318.8,
+     759.0
+    ],
+    "oem_px": [
+     318.8,
+     759.2
+    ],
+    "res_px": -0.12,
+    "res_mm": -0.02,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B07",
+    "name": "lower rail exit",
+    "s": 378.98,
+    "X": 93.02,
+    "Y": -49.78,
+    "Z": 1.19,
+    "cad_px": [
+     537.9,
+     757.5
+    ],
+    "oem_px": [
+     538.7,
+     763.1
+    ],
+    "res_px": -5.63,
+    "res_mm": -1.02,
+    "conf": "MEDIUM"
+   },
+   {
+    "id": "B08",
+    "name": "upper inner tangent",
+    "s": 413.99,
+    "X": 58.01,
+    "Y": -7.42,
+    "Z": 20.11,
+    "cad_px": [
+     403.3,
+     953.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B09",
+    "name": "upper inner bend",
+    "s": 458.25,
+    "X": 13.75,
+    "Y": -9.52,
+    "Z": 44.84,
+    "cad_px": [
+     225.2,
+     901.8
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B10",
+    "name": "deepest inner turning point",
+    "s": 459.12,
+    "X": 12.88,
+    "Y": -12.34,
+    "Z": 44.85,
+    "cad_px": [
+     218.6,
+     888.5
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B11",
+    "name": "lower inner bend",
+    "s": 425.76,
+    "X": 46.24,
+    "Y": -36.33,
+    "Z": 20.83,
+    "cad_px": [
+     320.0,
+     806.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B12",
+    "name": "lower inner tangent",
+    "s": 389.55,
+    "X": 82.45,
+    "Y": -42.65,
+    "Z": 5.12,
+    "cad_px": [
+     488.2,
+     797.0
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R01",
+    "name": "recess entry",
+    "s": 357.4,
+    "X": 114.6,
+    "Y": -39.23,
+    "Z": -2.76,
+    "cad_px": [
+     664.6,
+     829.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R02",
+    "name": "beginning of concavity",
+    "s": 369.39,
+    "X": 102.61,
+    "Y": -38.91,
+    "Z": -0.11,
+    "cad_px": [
+     598.6,
+     826.5
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R03",
+    "name": "maximum recess (max curvature)",
+    "s": 377.37,
+    "X": 94.63,
+    "Y": -38.71,
+    "Z": 1.95,
+    "cad_px": [
+     555.5,
+     823.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R04",
+    "name": "concavity exit",
+    "s": 385.58,
+    "X": 86.42,
+    "Y": -42.28,
+    "Z": 3.9,
+    "cad_px": [
+     509.2,
+     801.0
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R05",
+    "name": "transition back into the rail",
+    "s": 397.54,
+    "X": 74.46,
+    "Y": -42.3,
+    "Z": 7.91,
+    "cad_px": [
+     447.5,
+     794.4
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   }
+  ]
+ },
+ "oblique_B": {
+  "photo": "925_krik_0",
+  "rows": [
+   {
+    "id": "A01",
+    "name": "start of upper-end transition",
+    "s": 127.51,
+    "X": 344.49,
+    "Y": -3.26,
+    "Z": -3.68,
+    "cad_px": [
+     370.1,
+     337.8
+    ],
+    "oem_px": [
+     370.1,
+     337.4
+    ],
+    "res_px": 0.39,
+    "res_mm": 0.24,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A02",
+    "name": "upper crown start",
+    "s": 54.52,
+    "X": 417.48,
+    "Y": -4.44,
+    "Z": -2.34,
+    "cad_px": [
+     249.1,
+     342.7
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A03",
+    "name": "maximum upper fullness",
+    "s": 111.51,
+    "X": 360.49,
+    "Y": -3.51,
+    "Z": -3.45,
+    "cad_px": [
+     343.2,
+     338.8
+    ],
+    "oem_px": [
+     343.2,
+     338.9
+    ],
+    "res_px": -0.1,
+    "res_mm": -0.06,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A04",
+    "name": "beginning of outer descent",
+    "s": -2.38,
+    "X": 474.38,
+    "Y": -4.52,
+    "Z": -0.64,
+    "cad_px": [
+     157.8,
+     345.3
+    ],
+    "oem_px": [
+     158.7,
+     348.2
+    ],
+    "res_px": -3.0,
+    "res_mm": -2.01,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A05",
+    "name": "mid-point of outer descent",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     208.2,
+     418.5
+    ],
+    "oem_px": [
+     208.4,
+     418.3
+    ],
+    "res_px": -0.29,
+    "res_mm": -0.16,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A06",
+    "name": "outermost terminal point (nose)",
+    "s": -5.18,
+    "X": 477.18,
+    "Y": -9.53,
+    "Z": -1.29,
+    "cad_px": [
+     152.0,
+     353.5
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A07",
+    "name": "lower terminal transition",
+    "s": 19.92,
+    "X": 452.08,
+    "Y": -37.56,
+    "Z": -5.32,
+    "cad_px": [
+     185.3,
+     399.5
+    ],
+    "oem_px": [
+     185.1,
+     399.7
+    ],
+    "res_px": 0.28,
+    "res_mm": 0.15,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A08",
+    "name": "return into lower rail",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     208.2,
+     418.5
+    ],
+    "oem_px": [
+     208.4,
+     418.3
+    ],
+    "res_px": -0.29,
+    "res_mm": -0.16,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A09",
+    "name": "upper opening-start tangent",
+    "s": 141.7,
+    "X": 330.3,
+    "Y": -11.73,
+    "Z": -5.14,
+    "cad_px": [
+     393.2,
+     351.4
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A10",
+    "name": "upper opening shoulder",
+    "s": 113.35,
+    "X": 358.65,
+    "Y": -17.52,
+    "Z": -5.47,
+    "cad_px": [
+     344.4,
+     362.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A11",
+    "name": "inner-most rounded point of opening",
+    "s": 112.13,
+    "X": 359.87,
+    "Y": -22.3,
+    "Z": -6.03,
+    "cad_px": [
+     341.7,
+     370.3
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A12",
+    "name": "lower opening shoulder",
+    "s": 112.62,
+    "X": 359.38,
+    "Y": -25.25,
+    "Z": -6.37,
+    "cad_px": [
+     342.1,
+     375.4
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A13",
+    "name": "lower opening-start tangent",
+    "s": 172.43,
+    "X": 299.57,
+    "Y": -42.41,
+    "Z": -8.78,
+    "cad_px": [
+     444.3,
+     403.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B01",
+    "name": "upper rail entering terminal",
+    "s": 388.47,
+    "X": 83.53,
+    "Y": -0.21,
+    "Z": 11.5,
+    "cad_px": [
+     823.0,
+     327.5
+    ],
+    "oem_px": [
+     822.8,
+     325.7
+    ],
+    "res_px": 1.79,
+    "res_mm": 1.07,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B02",
+    "name": "beginning of upper bend",
+    "s": 439.04,
+    "X": 32.96,
+    "Y": -1.01,
+    "Z": 34.43,
+    "cad_px": [
+     899.1,
+     333.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B03",
+    "name": "upper terminal shoulder",
+    "s": 477.75,
+    "X": -5.75,
+    "Y": -3.31,
+    "Z": 60.72,
+    "cad_px": [
+     947.6,
+     343.5
+    ],
+    "oem_px": [
+     947.4,
+     344.5
+    ],
+    "res_px": -1.0,
+    "res_mm": -0.84,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B04",
+    "name": "narrowest / outermost terminal point",
+    "s": 478.87,
+    "X": -6.87,
+    "Y": -4.89,
+    "Z": 61.26,
+    "cad_px": [
+     949.5,
+     346.1
+    ],
+    "oem_px": [
+     949.0,
+     346.2
+    ],
+    "res_px": -0.5,
+    "res_mm": -0.49,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B05",
+    "name": "lower terminal shoulder",
+    "s": 439.15,
+    "X": 32.85,
+    "Y": -38.87,
+    "Z": 27.6,
+    "cad_px": [
+     911.4,
+     396.4
+    ],
+    "oem_px": [
+     911.4,
+     396.3
+    ],
+    "res_px": -0.15,
+    "res_mm": -0.08,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B06",
+    "name": "beginning of lower return",
+    "s": 423.66,
+    "X": 48.34,
+    "Y": -45.75,
+    "Z": 18.53,
+    "cad_px": [
+     890.9,
+     407.4
+    ],
+    "oem_px": [
+     891.7,
+     409.4
+    ],
+    "res_px": 2.16,
+    "res_mm": 1.18,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B07",
+    "name": "lower rail exit",
+    "s": 378.98,
+    "X": 93.02,
+    "Y": -49.78,
+    "Z": 1.19,
+    "cad_px": [
+     819.4,
+     413.8
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B08",
+    "name": "upper inner tangent",
+    "s": 413.99,
+    "X": 58.01,
+    "Y": -7.42,
+    "Z": 20.11,
+    "cad_px": [
+     865.1,
+     341.4
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B09",
+    "name": "upper inner bend",
+    "s": 458.25,
+    "X": 13.75,
+    "Y": -9.52,
+    "Z": 44.84,
+    "cad_px": [
+     927.0,
+     350.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B10",
+    "name": "deepest inner turning point",
+    "s": 459.12,
+    "X": 12.88,
+    "Y": -12.34,
+    "Z": 44.85,
+    "cad_px": [
+     929.1,
+     354.7
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B11",
+    "name": "lower inner bend",
+    "s": 425.76,
+    "X": 46.24,
+    "Y": -36.33,
+    "Z": 20.83,
+    "cad_px": [
+     891.3,
+     391.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B12",
+    "name": "lower inner tangent",
+    "s": 389.55,
+    "X": 82.45,
+    "Y": -42.65,
+    "Z": 5.12,
+    "cad_px": [
+     835.7,
+     400.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R01",
+    "name": "recess entry",
+    "s": 357.4,
+    "X": 114.6,
+    "Y": -39.23,
+    "Z": -2.76,
+    "cad_px": [
+     779.2,
+     393.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R02",
+    "name": "beginning of concavity",
+    "s": 369.39,
+    "X": 102.61,
+    "Y": -38.91,
+    "Z": -0.11,
+    "cad_px": [
+     800.3,
+     393.5
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R03",
+    "name": "maximum recess (max curvature)",
+    "s": 377.37,
+    "X": 94.63,
+    "Y": -38.71,
+    "Z": 1.95,
+    "cad_px": [
+     814.1,
+     393.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R04",
+    "name": "concavity exit",
+    "s": 385.58,
+    "X": 86.42,
+    "Y": -42.28,
+    "Z": 3.9,
+    "cad_px": [
+     828.9,
+     399.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R05",
+    "name": "transition back into the rail",
+    "s": 397.54,
+    "X": 74.46,
+    "Y": -42.3,
+    "Z": 7.91,
+    "cad_px": [
+     848.8,
+     400.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   }
+  ]
+ },
+ "profile": {
+  "photo": "925_mp_2_hr",
+  "rows": [
+   {
+    "id": "A01",
+    "name": "start of upper-end transition",
+    "s": 127.51,
+    "X": 344.49,
+    "Y": -3.26,
+    "Z": -3.68,
+    "cad_px": [
+     542.0,
+     964.3
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A02",
+    "name": "upper crown start",
+    "s": 54.52,
+    "X": 417.48,
+    "Y": -4.44,
+    "Z": -2.34,
+    "cad_px": [
+     543.0,
+     1141.7
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A03",
+    "name": "maximum upper fullness",
+    "s": 111.51,
+    "X": 360.49,
+    "Y": -3.51,
+    "Z": -3.45,
+    "cad_px": [
+     542.2,
+     1002.8
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A04",
+    "name": "beginning of outer descent",
+    "s": -2.38,
+    "X": 474.38,
+    "Y": -4.52,
+    "Z": -0.64,
+    "cad_px": [
+     548.0,
+     1286.8
+    ],
+    "oem_px": [
+     556.3,
+     1290.2
+    ],
+    "res_px": 9.04,
+    "res_mm": 3.82,
+    "conf": "MEDIUM"
+   },
+   {
+    "id": "A05",
+    "name": "mid-point of outer descent",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     432.6,
+     1200.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A06",
+    "name": "outermost terminal point (nose)",
+    "s": -5.18,
+    "X": 477.18,
+    "Y": -9.53,
+    "Z": -1.29,
+    "cad_px": [
+     529.5,
+     1298.5
+    ],
+    "oem_px": [
+     529.2,
+     1290.3
+    ],
+    "res_px": -8.13,
+    "res_mm": -3.21,
+    "conf": "HIGH"
+   },
+   {
+    "id": "A07",
+    "name": "lower terminal transition",
+    "s": 19.92,
+    "X": 452.08,
+    "Y": -37.56,
+    "Z": -5.32,
+    "cad_px": [
+     459.8,
+     1236.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A08",
+    "name": "return into lower rail",
+    "s": 35.2,
+    "X": 436.8,
+    "Y": -48.76,
+    "Z": -6.61,
+    "cad_px": [
+     432.6,
+     1200.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A09",
+    "name": "upper opening-start tangent",
+    "s": 141.7,
+    "X": 330.3,
+    "Y": -11.73,
+    "Z": -5.14,
+    "cad_px": [
+     516.2,
+     931.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A10",
+    "name": "upper opening shoulder",
+    "s": 113.35,
+    "X": 358.65,
+    "Y": -17.52,
+    "Z": -5.47,
+    "cad_px": [
+     503.8,
+     1000.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A11",
+    "name": "inner-most rounded point of opening",
+    "s": 112.13,
+    "X": 359.87,
+    "Y": -22.3,
+    "Z": -6.03,
+    "cad_px": [
+     492.6,
+     1003.8
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A12",
+    "name": "lower opening shoulder",
+    "s": 112.62,
+    "X": 359.38,
+    "Y": -25.25,
+    "Z": -6.37,
+    "cad_px": [
+     485.6,
+     1003.0
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "A13",
+    "name": "lower opening-start tangent",
+    "s": 172.43,
+    "X": 299.57,
+    "Y": -42.41,
+    "Z": -8.78,
+    "cad_px": [
+     442.8,
+     859.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B01",
+    "name": "upper rail entering terminal",
+    "s": 388.47,
+    "X": 83.53,
+    "Y": -0.21,
+    "Z": 11.5,
+    "cad_px": [
+     551.6,
+     348.8
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B02",
+    "name": "beginning of upper bend",
+    "s": 439.04,
+    "X": 32.96,
+    "Y": -1.01,
+    "Z": 34.43,
+    "cad_px": [
+     567.8,
+     208.2
+    ],
+    "oem_px": [
+     561.4,
+     207.9
+    ],
+    "res_px": -6.39,
+    "res_mm": -2.58,
+    "conf": "HIGH"
+   },
+   {
+    "id": "B03",
+    "name": "upper terminal shoulder",
+    "s": 477.75,
+    "X": -5.75,
+    "Y": -3.31,
+    "Z": 60.72,
+    "cad_px": [
+     588.2,
+     73.2
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B04",
+    "name": "narrowest / outermost terminal point",
+    "s": 478.87,
+    "X": -6.87,
+    "Y": -4.89,
+    "Z": 61.26,
+    "cad_px": [
+     579.8,
+     65.0
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B05",
+    "name": "lower terminal shoulder",
+    "s": 439.15,
+    "X": 32.85,
+    "Y": -38.87,
+    "Z": 27.6,
+    "cad_px": [
+     467.7,
+     199.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B06",
+    "name": "beginning of lower return",
+    "s": 423.66,
+    "X": 48.34,
+    "Y": -45.75,
+    "Z": 18.53,
+    "cad_px": [
+     446.9,
+     245.4
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B07",
+    "name": "lower rail exit",
+    "s": 378.98,
+    "X": 93.02,
+    "Y": -49.78,
+    "Z": 1.19,
+    "cad_px": [
+     427.3,
+     365.8
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B08",
+    "name": "upper inner tangent",
+    "s": 413.99,
+    "X": 58.01,
+    "Y": -7.42,
+    "Z": 20.11,
+    "cad_px": [
+     536.6,
+     279.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B09",
+    "name": "upper inner bend",
+    "s": 458.25,
+    "X": 13.75,
+    "Y": -9.52,
+    "Z": 44.84,
+    "cad_px": [
+     551.2,
+     146.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B10",
+    "name": "deepest inner turning point",
+    "s": 459.12,
+    "X": 12.88,
+    "Y": -12.34,
+    "Z": 44.85,
+    "cad_px": [
+     544.6,
+     142.7
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B11",
+    "name": "lower inner bend",
+    "s": 425.76,
+    "X": 46.24,
+    "Y": -36.33,
+    "Z": 20.83,
+    "cad_px": [
+     470.5,
+     241.3
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "B12",
+    "name": "lower inner tangent",
+    "s": 389.55,
+    "X": 82.45,
+    "Y": -42.65,
+    "Z": 5.12,
+    "cad_px": [
+     446.1,
+     339.7
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R01",
+    "name": "recess entry",
+    "s": 357.4,
+    "X": 114.6,
+    "Y": -39.23,
+    "Z": -2.76,
+    "cad_px": [
+     449.6,
+     421.5
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R02",
+    "name": "beginning of concavity",
+    "s": 369.39,
+    "X": 102.61,
+    "Y": -38.91,
+    "Z": -0.11,
+    "cad_px": [
+     451.7,
+     391.9
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R03",
+    "name": "maximum recess (max curvature)",
+    "s": 377.37,
+    "X": 94.63,
+    "Y": -38.71,
+    "Z": 1.95,
+    "cad_px": [
+     453.4,
+     371.8
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R04",
+    "name": "concavity exit",
+    "s": 385.58,
+    "X": 86.42,
+    "Y": -42.28,
+    "Z": 3.9,
+    "cad_px": [
+     446.2,
+     350.1
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   },
+   {
+    "id": "R05",
+    "name": "transition back into the rail",
+    "s": 397.54,
+    "X": 74.46,
+    "Y": -42.3,
+    "Z": 7.91,
+    "cad_px": [
+     448.5,
+     318.6
+    ],
+    "oem_px": null,
+    "res_px": null,
+    "res_mm": null,
+    "conf": "not measurable in this view"
+   }
+  ]
+ }
+}

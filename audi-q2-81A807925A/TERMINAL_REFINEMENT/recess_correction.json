@@ -1,0 +1,18 @@
+{
+ "top": {
+  "window_s": [
+   370.0,
+   414.0
+  ],
+  "max_abs_change_mm": 0.93,
+  "mean_change_mm": 0.29
+ },
+ "bottom": {
+  "window_s": [
+   360.0,
+   414.0
+  ],
+  "max_abs_change_mm": 0.67,
+  "mean_change_mm": 0.23
+ }
+}

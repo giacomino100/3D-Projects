@@ -1,0 +1,38 @@
+{
+ "camera_rms_px": 3.9113607636046512,
+ "f": 1574.0211752168875,
+ "stations": [
+  {
+   "s": 147.5,
+   "pa1_upper": 8.97,
+   "cad_upper": 8.83,
+   "pa1_lower": 14.15,
+   "cad_lower": 13.16,
+   "pa1_height": 49.18
+  },
+  {
+   "s": 213.3,
+   "pa1_upper": 10.3,
+   "cad_upper": 8.67,
+   "pa1_lower": 13.36,
+   "cad_lower": 11.85,
+   "pa1_height": 52.86
+  },
+  {
+   "s": 279.8,
+   "pa1_upper": 9.05,
+   "cad_upper": 8.79,
+   "pa1_lower": 12.51,
+   "cad_lower": 11.24,
+   "pa1_height": 50.84
+  },
+  {
+   "s": 348.0,
+   "pa1_upper": 8.26,
+   "cad_upper": 8.72,
+   "pa1_lower": 12.17,
+   "cad_lower": 10.9,
+   "pa1_height": 50.38
+  }
+ ]
+}

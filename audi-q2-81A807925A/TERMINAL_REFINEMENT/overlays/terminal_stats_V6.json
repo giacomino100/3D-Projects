@@ -1,0 +1,110 @@
+{
+ "A_front_A": {
+  "outer": {
+   "n": 56,
+   "mean": -0.14,
+   "mae": 0.24
+  },
+  "opening": {
+   "n": 2,
+   "mean": 1.17,
+   "mae": 1.65
+  }
+ },
+ "B_front_A": {
+  "outer": {
+   "n": 61,
+   "mean": -0.17,
+   "mae": 0.23
+  },
+  "opening": {
+   "n": 34,
+   "mean": 0.42,
+   "mae": 0.64
+  }
+ },
+ "A_front_C_assembly": {
+  "outer": {
+   "n": 30,
+   "mean": -0.98,
+   "mae": 0.98
+  },
+  "opening": {
+   "n": 8,
+   "mean": 0.8,
+   "mae": 0.82
+  }
+ },
+ "B_front_C_assembly": {
+  "outer": {
+   "n": 13,
+   "mean": 0.08,
+   "mae": 0.34
+  },
+  "opening": {
+   "n": 14,
+   "mean": 0.51,
+   "mae": 0.55
+  }
+ },
+ "A_oblique_A": {
+  "outer": {
+   "n": 80,
+   "mean": 0.0,
+   "mae": 1.36
+  },
+  "opening": {
+   "n": 0,
+   "mean": null,
+   "mae": null
+  }
+ },
+ "B_oblique_A": {
+  "outer": {
+   "n": 34,
+   "mean": 0.16,
+   "mae": 0.94
+  },
+  "opening": {
+   "n": 0,
+   "mean": null,
+   "mae": null
+  }
+ },
+ "A_oblique_B": {
+  "outer": {
+   "n": 74,
+   "mean": -0.45,
+   "mae": 0.59
+  },
+  "opening": {
+   "n": 0,
+   "mean": null,
+   "mae": null
+  }
+ },
+ "B_oblique_B": {
+  "outer": {
+   "n": 53,
+   "mean": 0.58,
+   "mae": 0.82
+  },
+  "opening": {
+   "n": 0,
+   "mean": null,
+   "mae": null
+  }
+ },
+ "B_profile": {
+  "outer": {
+   "n": 6,
+   "mean": -2.37,
+   "mae": 2.37
+  },
+  "opening": {
+   "n": 0,
+   "mean": null,
+   "mae": null
+  }
+ }
+}

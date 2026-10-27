@@ -1,0 +1,28 @@
+union FAILED Traceback (most recent call last):
+  File "<string>", line 45, in run
+  File "C:\Users/giaco/AppData/Local/Autodesk/webdeploy/production/c657666a51cec7a9bbd042e10872bcd9532508a8/Api/Python/packages\adsk\fusion.py", line 75852, in booleanOperation
+    return _fusion.TemporaryBRepManager_booleanOperation(self, targetBody, toolBody, booleanType)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: 3 : ASM_INCONS_FACE -   Si è verificato un problema di combinazione della geometria.
+    Se si tenta di eseguire un'operazione di unione/taglio/intersezione, verificare che i corpi presentino una sovrapposizione trasparente (possono verificarsi problemi se le facce e gli spigoli sono quasi coincidenti).
+
+union FAILED Traceback (most recent call last):
+  File "<string>", line 45, in run
+  File "C:\Users/giaco/AppData/Local/Autodesk/webdeploy/production/c657666a51cec7a9bbd042e10872bcd9532508a8/Api/Python/packages\adsk\fusion.py", line 75852, in booleanOperation
+    return _fusion.TemporaryBRepManager_booleanOperation(self, targetBody, toolBody, booleanType)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: 3 : ASM_BAD_BOUNDARY_COEDGE - misclassified graph coedge - probably geometrical problem
+
+union clip ok=True vol=33675 lumps=1 t=69.4
+union clip ok=True vol=34266 lumps=1 t=70.8
+clip FAILED 852, in booleanOperation
+    return _fusion.TemporaryBRepManager_booleanOperation(self, targetBody, toolBody, booleanType)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: 3 : ASM_INCONS_REL - Impossibile eseguire l'operazione booleana.
+
+union clip ok=True vol=34647 lumps=1 t=82.5
+union clip ok=True vol=35437 lumps=1 t=83.9
+union clip ok=True vol=36155 lumps=1 t=85.3
+union clip ok=True vol=36862 lumps=1 t=87.0
+union clip ok=True vol=36862 lumps=1 t=90.5
+final faces=277 vol=36862 lumps=1 t=91.8

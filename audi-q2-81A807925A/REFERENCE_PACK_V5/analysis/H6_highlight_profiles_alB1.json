@@ -1,0 +1,37 @@
+{
+ "x1400_installed bottom band": {
+  "min": 60.0,
+  "max": 179.1,
+  "range": 119.1
+ },
+ "x1400_installed top band": {
+  "min": 46.8,
+  "max": 161.9,
+  "range": 115.1
+ },
+ "x1000_installed bottom band": {
+  "min": 65.8,
+  "max": 180.3,
+  "range": 114.5
+ },
+ "x1000_installed top band": {
+  "min": 52.0,
+  "max": 178.1,
+  "range": 126.1
+ },
+ "x600_installed bottom band": {
+  "min": 67.5,
+  "max": 171.8,
+  "range": 104.2
+ },
+ "x600_installed top band": {
+  "min": 58.6,
+  "max": 172.6,
+  "range": 114.0
+ },
+ "plate_x2200_central60pct": {
+  "min": 110.9,
+  "max": 170.5,
+  "range": 59.6
+ }
+}

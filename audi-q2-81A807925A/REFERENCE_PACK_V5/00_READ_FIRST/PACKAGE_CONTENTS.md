@@ -1,0 +1,12 @@
+# Package contents
+- Current V5-candidate CAD screenshots supplied by the user
+- Prior CAD screenshots for regression checks
+- Exact-target / receiver / assembly source manifest
+- Strong V5 Claude brief
+- Current CAD diagnostic hypotheses
+- Evidence matrix and photo-measurement protocol
+- CSV templates for image evidence, landmarks and 3D stations
+- Playwright browser script to download dynamic marketplace images
+- contact-sheet builder
+- alpha/edge overlay helper
+- prior reverse-engineering docs and V4 pack

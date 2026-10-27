@@ -1,0 +1,7 @@
+V8 front_A 925_alB_1 {'outer': {'n': 284, 'coverage': 0.845, 'mean': -0.11, 'mae': 0.28, 'p90': 0.5}, 'opening': {'n': 194, 'coverage': 0.808, 'mean': 0.14, 'mae': 0.39, 'p90': 0.57}}
+V8 front_B 925_ccm_1 {'outer': {'n': 139, 'coverage': 0.414, 'mean': 0.33, 'mae': 0.46, 'p90': 0.66}, 'opening': {'n': 200, 'coverage': 0.833, 'mean': -0.4, 'mae': 0.82, 'p90': 1.34}}
+V8 front_C_assembly 681_pa_1 {'outer': {'n': 55, 'coverage': 0.164, 'mean': -0.82, 'mae': 0.91, 'p90': 1.79}, 'opening': {'n': 96, 'coverage': 0.4, 'mean': 0.24, 'mae': 0.48, 'p90': 1.15}}
+V8 oblique_A 925_alA_1 {'outer': {'n': 233, 'coverage': 0.693, 'mean': -0.27, 'mae': 1.31, 'p90': 3.21}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}
+V8 oblique_B 925_krik_0 {'outer': {'n': 250, 'coverage': 0.744, 'mean': 0.31, 'mae': 1.0, 'p90': 2.18}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}
+V8 rear 925_alB_2 {'outer': {'n': 170, 'coverage': 0.506, 'mean': -0.79, 'mae': 1.66, 'p90': 3.38}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}
+V8 profile 925_mp_2_hr {'outer': {'n': 61, 'coverage': 0.182, 'mean': -1.25, 'mae': 1.48, 'p90': 3.17}, 'opening': {'n': 0, 'coverage': 0.0, 'mean': nan, 'mae': nan, 'p90': nan}}

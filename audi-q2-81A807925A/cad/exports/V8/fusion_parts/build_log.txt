@@ -1,0 +1,13 @@
+  26.9s skin solid=True vol=30984
+  39.8s ret_open lumps=1 closed=[True] vol=37732
+  63.3s lip lumps=1 closed=[True] vol=43713
+  64.1s shells=[(True, False)]
+  77.9s body solid=True faces=57 vol=43713
+  87.5s CLIP_C01 attached overlap_mm3=170
+  96.5s CLIP_C02 attached overlap_mm3=184
+ 104.9s CLIP_C03 attached overlap_mm3=241
+ 113.2s CLIP_C05 attached overlap_mm3=285
+ 121.2s CLIP_C06 attached overlap_mm3=233
+ 129.2s CLIP_C07 attached overlap_mm3=202
+ 135.5s f3d True step True
+ 135.8s done

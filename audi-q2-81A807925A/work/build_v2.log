@@ -1,0 +1,59 @@
+C:\Users\giaco\Documents\pezzo audi\.venv\Lib\site-packages\cadquery\utils.py:82: FutureWarning: save will be removed in the next release.
+  warn(f"{f.__name__} will be removed in the next release.", FutureWarning)
+{
+ "body_valid": true,
+ "fused_valid": true,
+ "visible_fillets": "NOT applied: OCC fillet did not finish in 240 s on the spline edges -> sharp visible edges in V2 STEP (R_OUTER_VISIBLE/R_INNER_VISIBLE kept as parameters)",
+ "step_roundtrip_body": {
+  "type": "Solid",
+  "faces": 87,
+  "solids": 1,
+  "free_edges": 0,
+  "valid": true
+ },
+ "stl_check": {
+  "81A807925A_V2.stl": {
+   "watertight": true,
+   "faces": 146602,
+   "volume_mm3": 44291.7
+  },
+  "81A807925A_V2_body.stl": {
+   "watertight": true,
+   "faces": 132634,
+   "volume_mm3": 41379.9
+  }
+ },
+ "body_bbox": {
+  "xmin": 0.23,
+  "xmax": 471.91,
+  "ymin": -53.05,
+  "ymax": 0.04,
+  "zmin": -9.78,
+  "zmax": 44.02,
+  "dx": 471.68,
+  "dy": 53.09,
+  "dz": 53.8
+ },
+ "mass_estimate_g_PCABS": 50.9,
+ "clip_valid": {
+  "C01": true,
+  "C02": true,
+  "C03": true,
+  "C04": true,
+  "C05": true,
+  "C06": true,
+  "C07": true
+ },
+ "coupon_interference_mm3": {
+  "EYELET_TOP_c0.20": 0.0,
+  "EYELET_TOP_c0.30": 0.0,
+  "EYELET_TOP_c0.45": 0.0,
+  "TONGUE_END_c0.20": 0.0,
+  "TONGUE_END_c0.30": 0.0,
+  "TONGUE_END_c0.45": 0.0,
+  "EYELET_BOTTOM_c0.20": 0.0,
+  "EYELET_BOTTOM_c0.30": 0.0,
+  "EYELET_BOTTOM_c0.45": 0.0
+ },
+ "build_seconds": 337.9
+}

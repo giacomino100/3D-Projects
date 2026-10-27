@@ -1,0 +1,74 @@
+{
+ "front_01": {
+  "photo": "925_alB_1",
+  "f": 4424.447694510538,
+  "outer": {
+   "n": 283,
+   "coverage": 0.842,
+   "mean": -0.05,
+   "mae": 0.23,
+   "p90": 0.47
+  },
+  "opening": {
+   "n": 199,
+   "coverage": 0.826,
+   "mean": 0.07,
+   "mae": 0.29,
+   "p90": 0.42
+  }
+ },
+ "front_02": {
+  "photo": "925_ccm_1",
+  "f": 4546.910437507876,
+  "outer": {
+   "n": 139,
+   "coverage": 0.414,
+   "mean": 0.43,
+   "mae": 0.68,
+   "p90": 1.08
+  },
+  "opening": {
+   "n": 199,
+   "coverage": 0.826,
+   "mean": -0.38,
+   "mae": 0.69,
+   "p90": 1.19
+  }
+ },
+ "oblique_01": {
+  "photo": "925_alA_1",
+  "f": 1392.8815047852054,
+  "outer": {
+   "n": 231,
+   "coverage": 0.688,
+   "mean": -0.1,
+   "mae": 1.39,
+   "p90": 3.18
+  },
+  "opening": {
+   "n": 0,
+   "coverage": 0.0,
+   "mean": NaN,
+   "mae": NaN,
+   "p90": NaN
+  }
+ },
+ "oblique_02": {
+  "photo": "925_krik_0",
+  "f": 683.2080781664926,
+  "outer": {
+   "n": 235,
+   "coverage": 0.699,
+   "mean": 0.17,
+   "mae": 0.85,
+   "p90": 1.78
+  },
+  "opening": {
+   "n": 0,
+   "coverage": 0.0,
+   "mean": NaN,
+   "mae": NaN,
+   "p90": NaN
+  }
+ }
+}

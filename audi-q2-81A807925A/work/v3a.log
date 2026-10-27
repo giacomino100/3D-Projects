@@ -1,0 +1,16 @@
+  it0 V2 925_alB_1: outer MAE 0.59 mm (n=263), opening MAE 1.99 mm (n=190)
+  it0 V2 925_alB_2: outer MAE 1.76 mm (n=137), opening MAE 2.66 mm (n=87)
+  it0 V2 925_alA_1: outer MAE 1.69 mm (n=215), opening MAE 1.71 mm (n=154)
+  it0 V2 925_krik_0: outer MAE 0.93 mm (n=215), opening MAE 2.04 mm (n=82)
+  it1 V3 925_alB_1: outer MAE 0.4 mm (n=262), opening MAE 0.53 mm (n=206)
+  it1 V3 925_alB_2: outer MAE 2.09 mm (n=161), opening MAE 1.69 mm (n=48)
+  it1 V3 925_alA_1: outer MAE 1.45 mm (n=219), opening MAE 1.67 mm (n=150)
+  it1 V3 925_krik_0: outer MAE 1.11 mm (n=253), opening MAE 1.72 mm (n=67)
+  it2 V3 925_alB_1: outer MAE 0.49 mm (n=269), opening MAE 0.47 mm (n=208)
+  it2 V3 925_alB_2: outer MAE 1.94 mm (n=165), opening MAE 2.05 mm (n=47)
+  it2 V3 925_alA_1: outer MAE 1.42 mm (n=211), opening MAE 1.59 mm (n=150)
+  it2 V3 925_krik_0: outer MAE 1.0 mm (n=255), opening MAE 2.02 mm (n=73)
+  final V3-A 925_alB_1: outer MAE 0.46 opening MAE 0.46
+  final V3-A 925_alB_2: outer MAE 1.89 opening MAE 2.02
+  final V3-A 925_alA_1: outer MAE 1.44 opening MAE 1.39
+  final V3-A 925_krik_0: outer MAE 1.0 opening MAE 1.89

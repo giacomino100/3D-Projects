@@ -1,0 +1,128 @@
+{
+ "front_A": {
+  "photo": "925_alB_1",
+  "f": 5981.044970002976,
+  "outer": {
+   "n": 284,
+   "coverage": 0.845,
+   "mean": -0.07,
+   "mae": 0.26,
+   "p90": 0.5
+  },
+  "opening": {
+   "n": 197,
+   "coverage": 0.817,
+   "mean": 0.05,
+   "mae": 0.3,
+   "p90": 0.47
+  }
+ },
+ "front_B": {
+  "photo": "925_ccm_1",
+  "f": 990.0795330590507,
+  "outer": {
+   "n": 137,
+   "coverage": 0.408,
+   "mean": 0.57,
+   "mae": 0.8,
+   "p90": 1.32
+  },
+  "opening": {
+   "n": 192,
+   "coverage": 0.797,
+   "mean": -0.22,
+   "mae": 0.66,
+   "p90": 1.16
+  }
+ },
+ "front_C_assembly": {
+  "photo": "681_pa_1",
+  "f": 2083.7984772516324,
+  "outer": {
+   "n": 53,
+   "coverage": 0.158,
+   "mean": -0.79,
+   "mae": 0.87,
+   "p90": 1.53
+  },
+  "opening": {
+   "n": 107,
+   "coverage": 0.444,
+   "mean": 0.12,
+   "mae": 0.45,
+   "p90": 0.96
+  }
+ },
+ "oblique_A": {
+  "photo": "925_alA_1",
+  "f": 1822.7369683622942,
+  "outer": {
+   "n": 222,
+   "coverage": 0.661,
+   "mean": -0.02,
+   "mae": 1.39,
+   "p90": 2.91
+  },
+  "opening": {
+   "n": 0,
+   "coverage": 0.0,
+   "mean": NaN,
+   "mae": NaN,
+   "p90": NaN
+  }
+ },
+ "oblique_B": {
+  "photo": "925_krik_0",
+  "f": 809.1412540314399,
+  "outer": {
+   "n": 229,
+   "coverage": 0.682,
+   "mean": 0.02,
+   "mae": 0.74,
+   "p90": 1.62
+  },
+  "opening": {
+   "n": 0,
+   "coverage": 0.0,
+   "mean": NaN,
+   "mae": NaN,
+   "p90": NaN
+  }
+ },
+ "rear": {
+  "photo": "925_alB_2",
+  "f": 2370.843463689692,
+  "outer": {
+   "n": 180,
+   "coverage": 0.536,
+   "mean": -0.88,
+   "mae": 1.61,
+   "p90": 3.28
+  },
+  "opening": {
+   "n": 0,
+   "coverage": 0.0,
+   "mean": NaN,
+   "mae": NaN,
+   "p90": NaN
+  }
+ },
+ "profile": {
+  "photo": "925_mp_2_hr",
+  "f": 1017.9766670535097,
+  "outer": {
+   "n": 62,
+   "coverage": 0.185,
+   "mean": -1.05,
+   "mae": 1.26,
+   "p90": 3.56
+  },
+  "opening": {
+   "n": 0,
+   "coverage": 0.0,
+   "mean": NaN,
+   "mae": NaN,
+   "p90": NaN
+  }
+ }
+}
