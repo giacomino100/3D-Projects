@@ -1,0 +1,870 @@
+<meta charset="utf-8">
+<title>Cornice fendinebbia 3D</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: viewport 3D a tutto schermo, scheda tecnica flottante in alto, barra comandi in basso */
+:root {
+  --bg: #e4e5e3;
+  --bg2: #cfd1ce;
+  --fg: #1d2124;
+  --muted: #5b6268;
+  --panel: rgba(250, 250, 248, 0.86);
+  --line: rgba(29, 33, 36, 0.14);
+  --accent: #c2410c;
+  --btn: #ffffff;
+  --btn-on: #1d2124;
+  --btn-on-fg: #f3f3f1;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1b1e21; --bg2: #0f1113; --fg: #e8eaeb; --muted: #9aa2a8;
+    --panel: rgba(24, 27, 30, 0.82); --line: rgba(232, 234, 235, 0.14);
+    --accent: #fb923c; --btn: #24292d; --btn-on: #e8eaeb; --btn-on-fg: #15181a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1b1e21; --bg2: #0f1113; --fg: #e8eaeb; --muted: #9aa2a8;
+  --panel: rgba(24, 27, 30, 0.82); --line: rgba(232, 234, 235, 0.14);
+  --accent: #fb923c; --btn: #24292d; --btn-on: #e8eaeb; --btn-on-fg: #15181a;
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+body {
+  background: radial-gradient(ellipse at 50% 40%, var(--bg) 0%, var(--bg2) 100%);
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--mono);
+  overflow: hidden;
+}
+#stage { position: fixed; inset: 0; }
+#stage canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.sheet {
+  position: fixed;
+  top: calc(16px + env(safe-area-inset-top, 0px));
+  left: max(16px, env(safe-area-inset-left, 0px));
+  max-width: min(340px, calc(100% - 32px));
+  background: var(--panel);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 10px;
+}
+.eyebrow { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+h1 { margin: 0; font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1; letter-spacing: .01em; text-wrap: balance; }
+.specs { display: grid; grid-template-columns: auto 1fr; gap: 3px 14px; font-size: 12px; margin: 0; }
+.specs dt { color: var(--muted); }
+.specs dd { margin: 0; font-variant-numeric: tabular-nums; }
+.note { font-size: 11px; color: var(--muted); line-height: 1.45; margin: 0; }
+@media (max-height: 640px) { .note, .specs { display: none; } }
+.bar {
+  position: fixed;
+  left: 0; right: 0;
+  bottom: 0;
+  padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  pointer-events: none;
+}
+.bar button {
+  pointer-events: auto;
+  font: 500 12px/1 var(--mono);
+  letter-spacing: .04em;
+  padding: 10px 13px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  background: var(--btn);
+  color: var(--fg);
+  cursor: pointer;
+}
+.bar button[aria-pressed="true"] { background: var(--btn-on); color: var(--btn-on-fg); border-color: var(--btn-on); }
+.bend { pointer-events: auto; display: flex; align-items: center; gap: 8px; font: 500 12px/1 var(--mono); padding: 6px 12px; border-radius: 4px; border: 1px solid var(--line); background: var(--btn); color: var(--fg); }
+.bend input { width: 110px; accent-color: var(--accent); }
+.bend output { min-width: 3ch; font-variant-numeric: tabular-nums; }
+.bar button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+#tags { position: fixed; inset: 0; pointer-events: none; }
+.tag {
+  position: absolute; left: 0; top: 0;
+  min-width: 22px; height: 22px; padding: 0 6px;
+  display: grid; place-items: center;
+  font: 700 12px/1 var(--mono);
+  border-radius: 11px;
+  background: var(--accent); color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.35);
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+.tag.back { background: var(--fg); color: var(--bg); border-radius: 4px; }
+.tag[hidden] { display: none; }
+.legend { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; font-size: 11.5px; }
+.legend b { display: inline-grid; place-items: center; min-width: 18px; height: 18px; border-radius: 9px; background: var(--accent); color: #fff; font-size: 10.5px; }
+.legend b.back { background: var(--fg); color: var(--bg); border-radius: 3px; }
+.specs-box summary { cursor: pointer; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.specs-box[open] summary { margin-bottom: 8px; }
+.legend-title { font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0; }
+@media (max-height: 640px) { .legend, .legend-title { display: none; } }
+.hint { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); top: calc(16px + env(safe-area-inset-top, 0px)); font-size: 11px; color: var(--muted); text-align: right; }
+@media (max-width: 560px) {
+  .hint { display: none; }
+  h1 { font-size: 24px; }
+  .note { display: none; }
+}
+</style>
+
+<div id="stage"></div>
+<div id="tags" aria-hidden="true"></div>
+
+<section class="sheet" aria-label="Scheda tecnica">
+  <div class="eyebrow">Audi Q2 (GA) 2016–2020 · ricambio usato</div>
+  <h1>Listello griglia laterale paraurti anteriore</h1>
+  <details class="specs-box">
+  <summary>Scheda tecnica</summary>
+  <dl class="specs">
+    <dt>Lunghezza</dt><dd>≈ 360 mm (stimata)</dd>
+    <dt>Altezza</dt><dd>≈ 40,6 mm</dd>
+    <dt>Listelli</dt><dd>≈ 3,7 mm, sezione tonda</dd>
+    <dt>Finestra</dt><dd>≈ 250 × 32 mm</dd>
+    <dt>Materiale</dt><dd>ABS cromo satinato</dd>
+    <dt>Fissaggi</dt><dd>clip a scatto perpendicolari al retro: 3 asole su C, 3 linguette su D, 1 aletta in punta</dd>
+    <dt>Forma</dt><dd>labbro esterno dritto A→G e I→H con le clip; fascia interna di rientranza che segue l'avvolgimento (34°); piastra B in discesa di ≈ 9 mm da A–I a E</dd>
+    <dt>Usura</dt><dd>graffi concentrati sulla punta</dd>
+  </dl>
+  </details>
+  <p class="legend-title">Riferimenti · lettere fronte, numeri retro</p>
+  <ul class="legend" id="legend"></ul>
+  <p class="note">Pezzo identificato per ricerca visiva inversa. Contorno estratto dalla foto 1 (GrabCut), clip dalla foto 3, rampa di B dalle indicazioni sul pezzo reale, avvolgimento adattato al paraurti Q2 dal disegno quotato. Scala su lunghezza 360 mm.</p>
+</section>
+
+<div class="hint">Trascina per ruotare<br>Rotella / pinch per zoom<br>Tasto destro per spostare</div>
+
+<nav class="bar" aria-label="Comandi vista">
+  <button id="b-photo" type="button" aria-pressed="false">Come in foto</button>
+  <button id="b-front" type="button">Fronte</button>
+  <button id="b-back" type="button">Retro</button>
+  <button id="b-top" type="button">Profilo</button>
+  <button id="b-spin" type="button" aria-pressed="true">Rotazione</button>
+  <button id="b-wear" type="button" aria-pressed="true">Graffi</button>
+  <button id="b-chrome" type="button" aria-pressed="false">Cromo lucido</button>
+  <button id="b-wire" type="button" aria-pressed="false">Wireframe</button>
+  <button id="b-tags" type="button" aria-pressed="true">Etichette</button>
+  <label class="bend" for="frame">Avvolgimento cornice <input id="frame" type="range" min="0" max="60" step="1" value="0"> <output id="frame-out">0°</output></label>
+  <label class="bend" for="bend">Avvolgimento cavità <input id="bend" type="range" min="0" max="60" step="1" value="34"> <output id="bend-out">34°</output></label>
+  <label class="bend" for="ramp">Profondità B (A–I → E) <input id="ramp" type="range" min="0" max="16" step="0.5" value="9"> <output id="ramp-out">9 mm</output></label>
+</nav>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import Delaunator from 'https://cdn.jsdelivr.net/npm/delaunator@5.0.1/+esm';
+
+// ---------- Renderer / scena ----------
+const stage = document.getElementById('stage');
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.05;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+stage.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+const pmrem = new THREE.PMREMGenerator(renderer);
+// Ambiente "cortile": cielo luminoso, orizzonte grigio chiaro, cemento sotto, più due softbox
+function yardEnv() {
+  const env = new THREE.Scene();
+  const geo = new THREE.SphereGeometry(100, 64, 32);
+  const col = [], p = geo.attributes.position, c = new THREE.Color();
+  for (let i = 0; i < p.count; i++) {
+    const h = p.getY(i) / 100;
+    // fascia scura all'orizzonte (edifici, alberi) che disegna i riflessi sulle superfici curve
+    const band = Math.exp(-(((h - 0.08) / 0.12) ** 2));
+    if (h > 0) c.setRGB(0.8 + 0.2 * h, 0.82 + 0.18 * h, 0.85 + 0.15 * h).multiplyScalar(1 - 0.55 * band);
+    else c.setRGB(0.55 + 0.3 * h, 0.54 + 0.3 * h, 0.52 + 0.3 * h).multiplyScalar(1 - 0.4 * band);
+    col.push(c.r, c.g, c.b);
+  }
+  geo.setAttribute('color', new THREE.Float32BufferAttribute(col, 3));
+  env.add(new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ vertexColors: true, side: THREE.BackSide })));
+  for (const [x, y, z, w, h, k] of [[-40, 60, 50, 60, 20, 3.0], [50, 30, -60, 40, 30, 2.0]]) {
+    const box = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: new THREE.Color(k, k, k), side: THREE.DoubleSide }));
+    box.position.set(x, y, z); box.lookAt(0, 0, 0); env.add(box);
+  }
+  return pmrem.fromScene(env, 0.02).texture;
+}
+scene.environment = yardEnv();
+
+const camera = new THREE.PerspectiveCamera(30, 1, 1, 5000);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.minDistance = 120;
+controls.maxDistance = 1600;
+
+const key = new THREE.DirectionalLight(0xffffff, 1.6);
+key.position.set(-180, 320, 260);
+key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048);
+Object.assign(key.shadow.camera, { left: -260, right: 260, top: 200, bottom: -200, near: 10, far: 1000 });
+key.shadow.bias = -0.0005;
+scene.add(key);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x666666, 0.35));
+
+// ---------- Geometria (mm) ----------
+// Contorno tracciato dalla foto 1 (segmentazione GrabCut + rilievo dei bordi ingranditi),
+// scalato a lunghezza 360 mm: x 0→360 dalla punta, y 0→40,6.
+const L = 360, H = 40.6;
+const FACE = 0.7, BEVEL = 0.6;           // lamina frontale
+const Z_FRONT = FACE + BEVEL;
+const WALL = 1.2, WALL_OUT = 2.5, WALL_IN = 2.5, SHELF_Z = 4;                  // pareti di ritorno sul retro
+
+const OUTER_MM = [[0.0, 36.01], [6.87, 37.84], [22.12, 39.06], [58.74, 39.98], [89.26, 40.59], [238.79, 40.59], [290.67, 39.98], [321.18, 39.06], [339.49, 38.45], [351.7, 36.62], [360.0, 33.57], [358.41, 29.3], [354.14, 22.58], [349.26, 15.87], [343.16, 9.77], [334.61, 4.88], [324.85, 1.83], [302.87, 0.92], [205.22, 0.61], [101.47, 0.31], [55.69, 0.0], [40.43, 2.44], [28.23, 6.71], [19.07, 13.73], [9.92, 24.41]];
+const HOLE_MM = [[107.57, 36.31], [102.08, 36.01], [100.25, 34.18], [99.03, 27.46], [99.94, 18.92], [104.52, 12.21], [112.15, 8.54], [122.83, 4.58], [205.22, 4.27], [302.87, 5.19], [317.52, 6.1], [329.73, 7.93], [338.27, 12.82], [344.38, 19.53], [349.26, 27.46], [350.17, 31.74], [348.04, 34.48], [342.54, 35.7], [205.22, 36.31]];
+
+// Curva chiusa Catmull-Rom centripeta (niente sovraelongazioni sulle punte), ricampionata a passo costante
+function closedPts(arr, n) {
+  const c = new THREE.CatmullRomCurve3(arr.map(([x, y]) => new THREE.Vector3(x, y, 0)), true, 'centripetal');
+  const pts = c.getSpacedPoints(n).slice(0, -1).map(v => new THREE.Vector2(v.x, v.y));
+  if (THREE.ShapeUtils.isClockWise(pts)) pts.reverse();
+  return pts;
+}
+// Offset lungo la normale (d > 0 verso l'esterno del poligono antiorario); scarta i tratti
+// che si ribaltano vicino alle punte, così gli anelli restano poligoni semplici
+function offsetPts(pts, d) {
+  const n = pts.length, out = [], tans = [];
+  pts.forEach((p, i) => {
+    const t = new THREE.Vector2().subVectors(pts[(i + 1) % n], pts[(i - 1 + n) % n]).normalize();
+    tans.push(t);
+    out.push(new THREE.Vector2(p.x + t.y * d, p.y - t.x * d));
+  });
+  const keep = [];
+  for (let i = 0; i < n; i++) {
+    const prev = keep.length ? keep[keep.length - 1] : out[n - 1];
+    const seg = new THREE.Vector2().subVectors(out[i], prev);
+    if (keep.length && seg.dot(tans[i]) <= 0) continue;
+    keep.push(out[i]);
+  }
+  return keep;
+}
+
+const outerPts = closedPts(OUTER_MM, 700);
+const holePts = closedPts(HOLE_MM, 560);
+
+// Superficie frontale come campo di altezze: punti del contorno (passo 0,5 mm) + griglia interna,
+// triangolazione Delaunay conforme (niente giunzioni a T), quota z(x, y) dalla distanza dai bordi.
+function inPoly(x, y, pts) {
+  let inside = false;
+  for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) {
+    const a = pts[i], b = pts[j];
+    if ((a.y > y) !== (b.y > y) && x < (b.x - a.x) * (y - a.y) / (b.y - a.y) + a.x) inside = !inside;
+  }
+  return inside;
+}
+function faceMesh(outerP, holeP, step) {
+  const xy = [];
+  for (const p of [...outerP, ...holeP]) xy.push(p.x, p.y);
+  for (let y = step / 2; y < H; y += step) {
+    for (let x = (Math.round(y / step) % 2) * step / 2; x < L; x += step) {
+      if (!inPoly(x, y, outerP) || inPoly(x, y, holeP)) continue;
+      if (distToPoly(x, y, outerP) < step * 0.6 || distToPoly(x, y, holeP) < step * 0.6) continue;
+      xy.push(x, y);
+    }
+  }
+  const tri = new Delaunator(xy).triangles, idx = [];
+  for (let i = 0; i < tri.length; i += 3) {
+    const [a, b, c] = [tri[i], tri[i + 1], tri[i + 2]];
+    const cx = (xy[2 * a] + xy[2 * b] + xy[2 * c]) / 3, cy = (xy[2 * a + 1] + xy[2 * b + 1] + xy[2 * c + 1]) / 3;
+    // Delaunator restituisce triangoli orari con y verso l'alto: inverto per avere la normale verso +z
+    if (inPoly(cx, cy, outerP) && !inPoly(cx, cy, holeP)) idx.push(a, c, b);
+  }
+  const pos = [];
+  for (let i = 0; i < xy.length; i += 2) pos.push(xy[i], xy[i + 1], 0);
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  g.setIndex(idx);
+  return g;
+}
+function distToPoly(x, y, pts) {
+  let best = Infinity;
+  for (let i = 0, n = pts.length; i < n; i++) {
+    const a = pts[i], b = pts[(i + 1) % n];
+    const dx = b.x - a.x, dy = b.y - a.y;
+    const t = Math.max(0, Math.min(1, ((x - a.x) * dx + (y - a.y) * dy) / (dx * dx + dy * dy)));
+    const ex = a.x + t * dx - x, ey = a.y + t * dy - y, d = ex * ex + ey * ey;
+    if (d < best) best = d;
+  }
+  return Math.sqrt(best);
+}
+const EDGE_R = 2.2, RECESS = 0.9, BOW = 0.35, CREASE = 1.6;
+const smooth = (a, b, v) => { const t = Math.min(1, Math.max(0, (v - a) / (b - a))); return t * t * (3 - 2 * t); };
+function edgeHeight(d, recess = RECESS) {
+  if (d < EDGE_R) { const s = 1 - d / EDGE_R; return EDGE_R * Math.sqrt(1 - s * s); }
+  return EDGE_R - recess * smooth(EDGE_R, EDGE_R + CREASE, d);
+}
+// Labbro inferiore unico: da D (sotto la finestra) fino a I il bordo basso ha sempre la stessa
+// sezione tonda del listello D, larga LIP_W, e segue la curva del contorno verso I senza stacchi.
+// Dopo la cresta scende alla quota della piastra; oltre I (verso A) si dissolve nel bordo A–I.
+const LIP_W = 3.7, LIP_DROP = 1.1, LIP_FALL = 1.6;
+function lipHeight(d) {
+  const crest = LIP_W / 2;
+  if (d <= crest) return edgeHeight(d, 0);
+  const top = edgeHeight(crest, 0), plate = EDGE_R - LIP_DROP;
+  return top + (plate - top) * smooth(crest, crest + LIP_FALL, d);
+}
+// Bordo esterno con un'unica sezione su tutto il giro (A→C→G sopra, I→D sotto): stesso labbro
+// tondo ovunque, nessuna gola, nessuna bombatura, nessun cambio di profilo lungo il pezzo.
+function faceHeight(x, y) {
+  return Math.min(lipHeight(distToPoly(x, y, outerPts)), edgeHeight(distToPoly(x, y, holePts)));
+}
+const faceShape = new THREE.Shape(outerPts);
+faceShape.holes.push(new THREE.Path(holePts));
+const faceFlat = faceMesh(closedPts(OUTER_MM, 1600), closedPts(HOLE_MM, 1100), 0.6);
+const bodyGeo = faceFlat.clone();
+{
+  const p = bodyGeo.attributes.position, uv = [];
+  for (let i = 0; i < p.count; i++) {
+    const x = p.getX(i), y = p.getY(i);
+    p.setZ(i, faceHeight(x, y));
+    uv.push(x, y);
+  }
+  bodyGeo.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
+  bodyGeo.computeVertexNormals();
+}
+// retro: stessa maglia fitta della faccia, così segue anche la discesa della piastra
+const backGeo = faceFlat.clone();
+backGeo.translate(0, 0, -0.4);
+
+// bordini di ritorno sul retro, bassi: il pezzo è un guscio sottile (foto 3)
+// Parete chiusa che segue un contorno punto per punto (una fetta ogni ~0,5 mm): con l'avvolgimento
+// cornice non ci sono triangoli lunghi che tagliano la curva e coprono le clip.
+// side = +1 la parete sta a sinistra del contorno (interno per un contorno antiorario), -1 a destra.
+function wallStrip(pts, side, depth) {
+  const m = pts.length, prof = [[0, 0], [0, -depth], [WALL, -depth], [WALL, 0]], n = prof.length;
+  const pos = [], idx = [], wr = [];
+  pts.forEach((p, i) => {
+    const q = pts[(i + 1) % m], r = pts[(i - 1 + m) % m];
+    let nx = -(q.y - r.y), ny = q.x - r.x; const nl = Math.hypot(nx, ny) || 1; nx = side * nx / nl; ny = side * ny / nl;
+    for (const [off, z] of prof) { pos.push(p.x + nx * off, p.y + ny * off, z); wr.push(p.x, p.y); }
+    const j = (i + 1) % m;
+    for (let k = 0; k < n; k++) {
+      const a = n * i + k, b = n * i + (k + 1) % n, c = n * j + k, d = n * j + (k + 1) % n;
+      idx.push(a, c, b, b, c, d);
+    }
+  });
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  g.setIndex(idx);
+  g.userData.edgeXY = new Float32Array(wr);   // punto di bordo di ogni vertice (peso rampa)
+  return g;
+}
+const wallGeo = wallStrip(closedPts(OUTER_MM, 1600), 1, WALL_OUT);
+const wallHoleGeo = wallStrip(closedPts(HOLE_MM, 1100), -1, WALL_IN);
+
+// Livello posteriore (scelto dall'utente: "fronte dritto, retro curvo"): lungo tutta la cavità interna, separato
+// dal labbro e dalle clip, una parete con un piano largo BAND_W alla base, spessore 1,1 mm. Parte
+// dal retro del listello lungo il bordo della finestra e va sempre più indietro verso G: la
+// profondità extra (peso userData.bw) la applica bendGeo in base all'angolo di avvolgimento.
+const BAND_W = 5, BAND_T = 1.1, BAND_REACH = 25;
+// anello continuo lungo tutto il bordo della cavità (sopra C, sotto D, curve in E e verso G)
+function bandGeo() {
+  const pts = holePts, m = pts.length;
+  // sezione chiusa [spostamento verso la finestra, z piana, peso profondità]: parete + piano
+  const prof = [[0, 0, 0], [0, -BAND_T, 1], [BAND_W, -BAND_T, 1], [BAND_W, 0, 1], [BAND_T, 0, 1], [BAND_T, 0, 0]];
+  const n = prof.length, pos = [], bw = [], idx = [], wr = [];
+  // holePts è antiorario: la normale a sinistra (-ty, tx) punta sempre verso l'interno della finestra
+  pts.forEach((p, i) => {
+    const q = pts[(i + 1) % m], r = pts[(i - 1 + m) % m];
+    let nx = -(q.y - r.y), ny = q.x - r.x; const nl = Math.hypot(nx, ny) || 1; nx /= nl; ny /= nl;
+    for (const [off, dz, wgt] of prof) { pos.push(p.x + nx * off, p.y + ny * off, -WALL_IN + dz); bw.push(wgt); wr.push(p.x, p.y); }
+    const j = (i + 1) % m;
+    for (let k = 0; k < n; k++) {
+      const a = n * i + k, b = n * i + (k + 1) % n, c = n * j + k, d = n * j + (k + 1) % n;
+      idx.push(a, c, b, b, c, d);
+    }
+  });
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  g.setIndex(idx);
+  g.userData.bw = new Float32Array(bw);
+  g.userData.edgeXY = new Float32Array(wr);   // punto di bordo di ogni vertice (peso rampa)
+  return g;
+}
+const bandLoop = bandGeo();
+
+// Retro rilevato dalla foto 3 (x in mm dalla punta):
+// - mensola arretrata dietro il bordo alto della finestra, x 40→291: è la fascia scura che
+//   in foto 1 si vede attraverso la finestra sotto il listello superiore
+// - 3 asole trapezoidali sulla mensola, 3 linguette forate sul bordo inferiore,
+//   una aletta inclinata vicino alla punta destra
+// Clip a pinna (foto 3 ingrandita): lato verso la punta A inclinato, lato opposto verticale,
+// finestra rettangolare vicino alla cima e bordino di rinforzo attorno. Costruita già rivolta
+// verso -y: base sul bordo (y = 0), cima a y = -h.
+function finGeo(base = 18, top = 10, h = 7, t = 1.2) {
+  const r = 0.8;
+  const s = new THREE.Shape();
+  s.moveTo(-base / 2, 0);
+  s.lineTo(base / 2, 0);
+  s.lineTo(base / 2, -h + r);
+  s.quadraticCurveTo(base / 2, -h, base / 2 - r, -h);
+  s.lineTo(base / 2 - top + r, -h);
+  s.quadraticCurveTo(base / 2 - top, -h, base / 2 - top - r * 0.6, -h + r * 0.8);
+  s.lineTo(-base / 2, 0);
+  const wx0 = base / 2 - top + 1.4, wx1 = base / 2 - 1.6, wy0 = -h + 1.3, wy1 = -h + 3.6;
+  const w = new THREE.Path();
+  w.moveTo(wx0, wy0); w.lineTo(wx1, wy0); w.lineTo(wx1, wy1); w.lineTo(wx0, wy1); w.lineTo(wx0, wy0);
+  s.holes.push(w);
+  const g = new THREE.ExtrudeGeometry(s, { depth: t, bevelEnabled: true, bevelThickness: 0.25, bevelSize: 0.25, bevelSegments: 2, curveSegments: 6 });
+  // bordino di rinforzo attorno alla finestra, sul lato visibile dal retro
+  const rim = new THREE.Shape();
+  rim.moveTo(wx0 - 1, wy0 - 1); rim.lineTo(wx1 + 1, wy0 - 1); rim.lineTo(wx1 + 1, wy1 + 1); rim.lineTo(wx0 - 1, wy1 + 1); rim.lineTo(wx0 - 1, wy0 - 1);
+  rim.holes.push(w);
+  const rg = new THREE.ExtrudeGeometry(rim, { depth: 0.6, bevelEnabled: false });
+  rg.translate(0, 0, -0.6);
+  return mergeGeos([g, rg]);
+}
+function mergeGeos(list) {
+  const pos = [];
+  for (const g of list) { const n = g.index ? g.toNonIndexed() : g; pos.push(...n.attributes.position.array); }
+  const m = new THREE.BufferGeometry();
+  m.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  return m;
+}
+const parts = [];
+// Tutte le clip stanno in piedi, perpendicolari al retro e rivolte all'indietro verso il paraurti:
+// il lato inclinato (verso la punta A) è lo scivolo d'ingresso, la finestra riceve il dente della
+// sede, il lato verticale fa da battuta. finGeo è costruita verso -y: ruotandola di +90° su x
+// la cima va verso -z (all'indietro) e lo spessore si dispone lungo y.
+// peso della rampa nel punto in cui la clip si attacca: la piastra a metà altezza alla stessa x
+function clipWeight(x) { return rampWeight(x, H / 2); }
+function standingFin(x, y, zBase, base, top, h) {
+  const g = finGeo(base, top, h);
+  g.rotateX(Math.PI / 2);
+  g.translate(x, y + 0.6, zBase);
+  g.userData.clipX = x;
+  g.userData.zBase = zBase;
+  return g;
+}
+// asole 2–4: sul bordino di ritorno del listello superiore C
+for (const x of [41, 116, 224]) parts.push(standingFin(x, 38.6, -WALL_OUT, 19, 10, 7.5));
+// linguette 5–7: sul bordino del listello inferiore
+for (const x of [82, 164, 221]) parts.push(standingFin(x, 1.4, -WALL_OUT, 17.5, 9.5, 8));
+// aletta 8: lamella vicino alla punta destra, anch'essa in piedi
+{
+  const s = new THREE.Shape();
+  s.moveTo(0, 0); s.lineTo(30, 0); s.lineTo(30, -3.4); s.quadraticCurveTo(30, -4.6, 28.8, -4.6); s.lineTo(4, -4.6); s.lineTo(0, 0);
+  const g = new THREE.ExtrudeGeometry(s, { depth: 1.1, bevelEnabled: true, bevelThickness: 0.2, bevelSize: 0.2, bevelSegments: 2, curveSegments: 6 });
+  g.rotateX(Math.PI / 2);
+  g.rotateY(0.12);
+  g.translate(316, 33.2, -2.4);
+  g.userData.clipX = 330;
+  g.userData.zBase = -2.4;
+  parts.push(g);
+}
+
+// Avvolgimento: il labbro esterno (A→G, I→H) e le clip restano dritti; l'angolo agisce solo sulla
+// fascia interna di rientranza di C e D, che ruota all'indietro in modo progressivo verso G:
+// theta(x) = bendAngle · (0,4·t + 0,6·t²), t = x / L. 34° viene dal confronto col paraurti Q2.
+// Le geometrie conservano le coordinate piane originali, così i cursori ricalcolano da quelle.
+let bendAngle = THREE.MathUtils.degToRad(34);
+// Avvolgimento cornice: piega l'intera cornice (fronte, contorno, clip) all'indietro verso G con la
+// stessa legge progressiva; indipendente dall'avvolgimento della cavità. Parte da 0 (pezzo dritto).
+let frameAngle = 0;
+let frameTable = null;
+function buildFrame() {
+  const n = Math.ceil(L) + 1, tbl = new Float32Array(n * 3);
+  let px = 0, pz = 0;
+  for (let i = 0; i < n; i++) {
+    const t = i / L, th = frameAngle * (0.4 * t + 0.6 * t * t);
+    tbl[3 * i] = px; tbl[3 * i + 1] = pz; tbl[3 * i + 2] = th;
+    px += Math.cos(th); pz -= Math.sin(th);
+  }
+  frameTable = tbl;
+}
+buildFrame();
+
+// Rampa della zona piena: i listelli C e D restano fermi; la piastra B parte a filo sul bordo
+// A–I e sprofonda all'indietro fino a E, dove arriva alla profondità dei listelli, che fanno
+// da sponde. Il peso (0 sul bordo e sui listelli, 1 in fondo alla rampa) dipende solo dalla
+// posizione nel piano ed è calcolato una volta per vertice; il cursore cambia solo la profondità.
+const RAMP_END_X = 102, RAMP_ZONE_X = 140, RAIL_W = 3.4, RAIL_SLOPE = 1.6;
+let rampDepth = 9;
+const leftEdge = (() => {
+  const t = [];
+  for (let i = 0; i <= 90; i++) {
+    const y = i * 0.5;
+    let best = RAMP_END_X;
+    for (const p of outerPts) if (p.x < RAMP_END_X && Math.abs(p.y - y) < 0.8) best = Math.min(best, p.x);
+    t.push(best);
+  }
+  return y => t[Math.max(0, Math.min(90, Math.round(y / 0.5)))];
+})();
+function rampWeight(x, y) {
+  if (x >= RAMP_ZONE_X) return 0;
+  const dOut = distToPoly(x, y, outerPts);
+  const wall = smooth(RAIL_W, RAIL_W + RAIL_SLOPE, dOut);
+  if (wall <= 0) return 0;
+  const xl = leftEdge(y);
+  const t = x >= RAMP_END_X ? 1 : THREE.MathUtils.clamp((x - xl) / Math.max(1, RAMP_END_X - xl), 0, 1);
+  return wall * (0.35 * t * t * (3 - 2 * t) + 0.65 * t) * (1 - smooth(RAMP_ZONE_X - 25, RAMP_ZONE_X, x));
+}
+function bendPoint(x, y, z, w = 0) {
+  z -= rampDepth * w;
+  if (frameAngle < 1e-4) return [x - L / 2, y - H / 2, z];
+  const xs = THREE.MathUtils.clamp(x, 0, L), i = Math.min(Math.floor(xs), Math.ceil(L) - 1), f = xs - i;
+  const px = THREE.MathUtils.lerp(frameTable[3 * i], frameTable[3 * i + 3], f) + (x - xs);
+  const pz = THREE.MathUtils.lerp(frameTable[3 * i + 1], frameTable[3 * i + 4], f);
+  const th = THREE.MathUtils.lerp(frameTable[3 * i + 2], frameTable[3 * i + 5], f);
+  return [px + z * Math.sin(th) - L / 2, y - H / 2, pz + z * Math.cos(th)];
+}
+// angolo di avvolgimento raggiunto alla posizione x (progressivo, 0 in A, bendAngle in G)
+function wrapTheta(x) {
+  const t = THREE.MathUtils.clamp(x / L, 0, 1);
+  return bendAngle * (0.4 * t + 0.6 * t * t);
+}
+const bendables = [];
+function bendGeo(g) {
+  const o = g.userData.flat, w = g.userData.w, bw = g.userData.bw, p = g.attributes.position;
+  for (let i = 0; i < p.count; i++) {
+    const bz = bw ? bw[i] * BAND_REACH * Math.sin(wrapTheta(o[3 * i])) : 0;
+    const [x, y, z] = bendPoint(o[3 * i], o[3 * i + 1], o[3 * i + 2] - bz, w[i]);
+    p.setXYZ(i, x, y, z);
+  }
+  p.needsUpdate = true;
+  g.computeVertexNormals();
+  g.computeBoundingSphere();
+}
+function deform(g) {
+  const o = g.userData.flat = g.attributes.position.array.slice();
+  g.userData.w = new Float32Array(o.length / 3);
+  // clip: la base resta sul bordino, il corpo segue la piastra (raccordo nei primi 2 mm)
+  const wf = g.userData.clipX !== undefined ? clipWeight(g.userData.clipX) : undefined, zb = g.userData.zBase;
+  for (let i = 0; i < g.userData.w.length; i++)
+    g.userData.w[i] = g.userData.edgeXY ? rampWeight(g.userData.edgeXY[2 * i], g.userData.edgeXY[2 * i + 1]) : wf !== undefined ? wf * smooth(0, 2, zb - o[3 * i + 2]) : rampWeight(o[3 * i], o[3 * i + 1]);
+  bendables.push(g);
+  bendGeo(g);
+  return g;
+}
+function setBend(deg) {
+  bendAngle = THREE.MathUtils.degToRad(deg);
+  bendables.forEach(bendGeo);
+}
+function setFrame(deg) {
+  frameAngle = THREE.MathUtils.degToRad(deg);
+  buildFrame();
+  bendables.forEach(bendGeo);
+}
+function setRamp(mm) {
+  rampDepth = mm;
+  bendables.forEach(bendGeo);
+}
+
+// ---------- Texture procedurali: graffi + spazzolatura ----------
+const TW = 2048, TH = 256;
+function rng(seed) { return () => (seed = (seed * 16807) % 2147483647) / 2147483647; }
+function makeMaps(withScratches) {
+  const rough = document.createElement('canvas'), bump = document.createElement('canvas');
+  rough.width = bump.width = TW; rough.height = bump.height = TH;
+  const r = rough.getContext('2d'), b = bump.getContext('2d');
+  r.fillStyle = 'rgb(128,128,128)'; r.fillRect(0, 0, TW, TH);
+  b.fillStyle = 'rgb(128,128,128)'; b.fillRect(0, 0, TW, TH);
+  const rand = rng(42);
+  // spazzolatura orizzontale del satinato, molto fine
+  for (let i = 0; i < 1400; i++) {
+    const y = rand() * TH, v = 120 + rand() * 16;
+    r.strokeStyle = `rgba(${v},${v},${v},0.25)`; r.lineWidth = 0.5;
+    r.beginPath(); r.moveTo(0, y); r.lineTo(TW, y + (rand() - 0.5) * 1.5); r.stroke();
+  }
+  if (withScratches) {
+    const toPx = (x, y) => [x / L * TW, (1 - y / H) * TH];
+    // graffi sottili quasi orizzontali sulla zona piena della punta (foto 2), pochi altrove
+    for (let i = 0; i < 38; i++) {
+      const onTip = rand() < 0.8;
+      const x0 = onTip ? 8 + rand() * 85 : 110 + rand() * 230;
+      const y0 = onTip ? 14 + rand() * 22 : 38 + rand() * 3;
+      const len = onTip ? 3 + rand() * 14 : 2 + rand() * 5;
+      const ang = (rand() - 0.5) * 0.5 - (rand() < 0.35 ? 0.6 : 0);
+      const [ax, ay] = toPx(x0, y0), [bx, by] = toPx(x0 + Math.cos(ang) * len, y0 + Math.sin(ang) * len);
+      const w = 0.5 + rand() * 0.9, a = 0.25 + rand() * 0.35;
+      r.strokeStyle = `rgba(220,220,220,${a})`; r.lineWidth = w;
+      r.beginPath(); r.moveTo(ax, ay); r.lineTo(bx, by); r.stroke();
+      b.strokeStyle = `rgba(70,70,70,${a})`; b.lineWidth = w;
+      b.beginPath(); b.moveTo(ax, ay); b.lineTo(bx, by); b.stroke();
+    }
+  }
+  // sezione bombata: la normale ruota lungo l'altezza, dando il gradiente di riflesso visto in foto
+  const nrm = document.createElement('canvas'); nrm.width = 4; nrm.height = TH;
+  const nc = nrm.getContext('2d');
+  for (let row = 0; row < TH; row++) {
+    const y = 1 - row / TH;
+    const th = 1.1 * (y - 0.5) + (y > 0.8 ? 2.2 * (y - 0.8) : 0) - (y < 0.2 ? 1.6 * (0.2 - y) : 0);
+    nc.fillStyle = `rgb(128,${Math.round((Math.sin(th) + 1) * 127.5)},${Math.round((Math.cos(th) + 1) * 127.5)})`;
+    nc.fillRect(0, row, 4, 1);
+  }
+  const tex = c => {
+    const t = new THREE.CanvasTexture(c);
+    t.repeat.set(1 / L, 1 / H);
+    t.wrapS = t.wrapT = THREE.ClampToEdgeWrapping;
+    t.anisotropy = renderer.capabilities.getMaxAnisotropy();
+    return t;
+  };
+  return { rough: tex(rough), bump: tex(bump), normal: tex(nrm) };
+}
+const worn = makeMaps(true), clean = makeMaps(false);
+
+// ---------- Materiali ----------
+const satin = { color: 0xb6babe, roughness: 0.32, anisotropy: 0.85, clearcoat: 0.0, clearcoatRoughness: 0.3 };
+const gloss = { color: 0xe6e8ea, roughness: 0.08, anisotropy: 0.0, clearcoat: 1.0, clearcoatRoughness: 0.03 };
+const faceMat = new THREE.MeshPhysicalMaterial({
+  metalness: 1, ...satin, envMapIntensity: 1.0,
+  roughnessMap: worn.rough, bumpMap: worn.bump, bumpScale: 0.02
+});
+const edgeMat = new THREE.MeshPhysicalMaterial({ metalness: 1, ...satin, envMapIntensity: 0.75, side: THREE.DoubleSide });
+const backMat = new THREE.MeshStandardMaterial({ color: 0xb4b8bc, metalness: 0.35, roughness: 0.5, side: THREE.DoubleSide });
+const wallMat = new THREE.MeshStandardMaterial({ color: 0xb4b8bc, metalness: 0.35, roughness: 0.5, side: THREE.DoubleSide });
+
+// ---------- Assemblaggio ----------
+const piece = new THREE.Group();
+const body = new THREE.Mesh(deform(bodyGeo), faceMat);
+const back = new THREE.Mesh(deform(backGeo), wallMat);
+const walls = [wallGeo, wallHoleGeo, bandLoop].map(g => new THREE.Mesh(deform(g), wallMat));
+piece.add(body, back, ...walls);
+for (const g of parts) piece.add(new THREE.Mesh(deform(g), backMat));
+
+// marcature stampate nel pezzo sul retro della piastra (foto 3): griglia di codici e simboli
+const lab = document.createElement('canvas'); lab.width = 512; lab.height = 128;
+{
+  const c = lab.getContext('2d'); const rand = rng(7);
+  c.clearRect(0, 0, 512, 128);
+  c.strokeStyle = 'rgba(40,44,48,0.75)'; c.lineWidth = 3;
+  for (let r = 0; r < 3; r++) for (let k = 0; k < 4; k++) c.strokeRect(20 + k * 46, 18 + r * 32, 38, 24);
+  c.fillStyle = 'rgba(40,44,48,0.7)'; c.font = '600 22px monospace';
+  c.fillText('>PP-EPDM<', 230, 40);
+  for (let r = 0; r < 3; r++) for (let k = 0; k < 9; k++) if (rand() > 0.25) c.fillRect(230 + k * 28, 58 + r * 20, 18, 9);
+}
+const labelGeo = new THREE.PlaneGeometry(48, 12, 8, 4);
+labelGeo.rotateY(Math.PI);
+labelGeo.translate(70, 20, -0.5);
+const labelTex = new THREE.CanvasTexture(lab);
+labelTex.colorSpace = THREE.SRGBColorSpace;
+const label = new THREE.Mesh(deform(labelGeo), new THREE.MeshStandardMaterial({ map: labelTex, transparent: true, roughness: 0.6, metalness: 0.3, depthWrite: false }));
+piece.add(label);
+
+piece.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
+piece.rotation.x = -0.12;
+piece.position.y = 26;
+scene.add(piece);
+
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(2000, 2000), new THREE.ShadowMaterial({ opacity: 0.22 }));
+ground.rotation.x = -Math.PI / 2;
+ground.position.y = -10;
+ground.receiveShadow = true;
+scene.add(ground);
+
+// Cemento procedurale per la scena "come in foto"
+const conc = document.createElement('canvas'); conc.width = conc.height = 1024;
+{
+  const c = conc.getContext('2d'), rand = rng(99), img = c.createImageData(1024, 1024);
+  for (let i = 0; i < img.data.length; i += 4) {
+    const v = 128 + (rand() - 0.5) * 46;
+    img.data[i] = v; img.data[i + 1] = v - 2; img.data[i + 2] = v - 5; img.data[i + 3] = 255;
+  }
+  c.putImageData(img, 0, 0);
+  for (let i = 0; i < 2600; i++) {
+    const v = rand() < 0.5 ? 70 + rand() * 40 : 170 + rand() * 50;
+    c.fillStyle = `rgba(${v},${v - 4},${v - 10},${0.35 + rand() * 0.5})`;
+    c.beginPath(); c.arc(rand() * 1024, rand() * 1024, 0.6 + rand() * 2.6, 0, 7); c.fill();
+  }
+}
+const concTex = new THREE.CanvasTexture(conc);
+concTex.colorSpace = THREE.SRGBColorSpace;
+concTex.wrapS = concTex.wrapT = THREE.RepeatWrapping;
+concTex.repeat.set(3, 3);
+const concrete = new THREE.Mesh(new THREE.PlaneGeometry(900, 900),
+  new THREE.MeshStandardMaterial({ map: concTex, roughness: 0.95, bumpMap: concTex, bumpScale: 0.6 }));
+concrete.rotation.x = -Math.PI / 2;
+concrete.position.y = -0.5;
+concrete.receiveShadow = true;
+concrete.visible = false;
+scene.add(concrete);
+
+// ---------- Riferimenti: lettere sul fronte, numeri sul retro ----------
+// coordinate piane del pezzo (mm dalla punta); il fronte prende la quota della superficie
+const TAGS = [
+  ['A', 'Punta sinistra (piena)', 1.5, 36.5, 'front'],
+  ['B', 'Piastra in discesa da A–I a E', 50, 20, 'front'],
+  ['C', 'Listello superiore', 230, 40.3, 'front'],
+  ['D', 'Listello inferiore', 230, 1.2, 'front'],
+  ['E', 'Inizio finestra (curva a D)', 100.5, 26, 'front'],
+  ['F', 'Finestra', 230, 20, 'front'],
+  ['G', 'Punta destra (aperta)', 359, 33.5, 'front'],
+  ['H', 'Tratto diagonale destro', 350, 16, 'front'],
+  ['I', 'Bordo inferiore della punta', 22, 10, 'front'],
+  ['2', 'Asola sinistra', 45, 38.6, 'back', -WALL_OUT - 6],
+  ['3', 'Asola centrale', 120, 38.6, 'back', -WALL_OUT - 6],
+  ['4', 'Asola destra', 228, 38.6, 'back', -WALL_OUT - 6],
+  ['5', 'Linguetta sinistra', 86, 1.5, 'back', -WALL_OUT - 7],
+  ['6', 'Linguetta centrale', 168, 1.5, 'back', -WALL_OUT - 7],
+  ['7', 'Linguetta destra', 225, 1.5, 'back', -WALL_OUT - 7],
+  ['8', 'Aletta in punta', 333, 33, 'back', -5.5],
+  ['9', 'Marcature stampate', 70, 20, 'back', -1],
+  ['10', 'Livello posteriore dietro C', 250, 33.5, 'back', -WALL_IN - 4],
+  ['11', 'Livello posteriore dietro D', 315, 14, 'back', -WALL_IN - 4],
+];
+const tagLayer = document.getElementById('tags'), legend = document.getElementById('legend');
+const tagEls = TAGS.map(([id, name, x, y, side]) => {
+  const el = document.createElement('div');
+  el.className = 'tag' + (side === 'back' ? ' back' : '');
+  el.textContent = id;
+  tagLayer.appendChild(el);
+  const li = document.createElement('li');
+  li.style.display = 'contents';
+  li.innerHTML = `<b class="${side === 'back' ? 'back' : ''}">${id}</b><span>${name}</span>`;
+  legend.appendChild(li);
+  return el;
+});
+let tagsOn = true;
+const _v = new THREE.Vector3(), _n = new THREE.Vector3(), _c = new THREE.Vector3();
+function updateTags() {
+  const w = stage.clientWidth, h = stage.clientHeight;
+  camera.getWorldPosition(_c);
+  TAGS.forEach(([, , x, y, side, zb], i) => {
+    const el = tagEls[i];
+    if (!tagsOn) { el.hidden = true; return; }
+    const z = side === 'front' ? faceHeight(x, y) + 0.6
+      : /^1[01]$/.test(TAGS[i][0]) ? -WALL_IN - BAND_T - BAND_REACH * Math.sin(wrapTheta(x))
+      : zb;
+    const rw = side === 'back' && /^[2-8]$/.test(TAGS[i][0]) ? clipWeight(x) : rampWeight(x, y);
+    const [px, py, pz] = bendPoint(x, y, z, rw);
+    // normale locale (verso il fronte) piegata come il pezzo, per nascondere le etichette dal lato opposto
+    const [qx, qy, qz] = bendPoint(x, y, z + 1, rw);
+    _v.set(px, py, pz); piece.localToWorld(_v);
+    _n.set(qx, qy, qz); piece.localToWorld(_n); _n.sub(_v);
+    const toCam = _c.clone().sub(_v);
+    const facing = _n.dot(toCam) > 0;
+    if (facing !== (side === 'front')) { el.hidden = true; return; }
+    _v.project(camera);
+    if (_v.z > 1) { el.hidden = true; return; }
+    el.hidden = false;
+    el.style.transform = `translate(${(_v.x + 1) / 2 * w}px, ${(1 - _v.y) / 2 * h}px) translate(-50%, -50%)`;
+  });
+}
+
+// ---------- Viste ----------
+const views = {
+  front: [new THREE.Vector3(0, 55, 560), new THREE.Vector3(0, 40, 0)],
+  back: [new THREE.Vector3(60, 70, -660), new THREE.Vector3(-20, 22, -20)],
+  top: [new THREE.Vector3(0, 560, 40), new THREE.Vector3(0, 22, 0)],
+  photo: [new THREE.Vector3(-25, 470, 150), new THREE.Vector3(-25, 0, 8)]
+};
+// appoggia il pezzo sul piano visibile (cemento o ombra), qualunque sia l'avvolgimento
+function restOnGround() {
+  piece.position.y = 0;
+  piece.updateMatrixWorld(true);
+  const box = new THREE.Box3().setFromObject(piece);
+  const floor = concrete.visible ? concrete.position.y : ground.position.y + 12;
+  piece.position.y = floor - box.min.y;
+}
+function setPhotoScene(on) {
+  $('b-photo').setAttribute('aria-pressed', on);
+  concrete.visible = on;
+  ground.visible = !on;
+  piece.rotation.set(on ? -Math.PI / 2 : -0.12, 0, 0);
+  restOnGround();
+  if (on) goTo('photo'); else goTo('front');
+}
+let tween = null;
+function goTo(name) {
+  const [p, t] = views[name];
+  setSpin(false);
+  controls.enableDamping = false; controls.update(); controls.enableDamping = true; // azzera l'inerzia
+  // interpolazione in coordinate sferiche: la camera gira attorno al pezzo invece di attraversarlo
+  tween = {
+    s0: new THREE.Spherical().setFromVector3(camera.position.clone().sub(controls.target)),
+    s1: new THREE.Spherical().setFromVector3(p.clone().sub(t)),
+    t0: controls.target.clone(), t, k: 0
+  };
+}
+camera.position.set(-260, 150, 380);
+controls.target.set(0, 22, 0);
+
+// ---------- Comandi ----------
+const $ = id => document.getElementById(id);
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+function setSpin(on) { controls.autoRotate = on; controls.autoRotateSpeed = 1.2; $('b-spin').setAttribute('aria-pressed', on); }
+setSpin(!reduced);
+const leavePhoto = () => { if (concrete.visible) { concrete.visible = false; ground.visible = true; piece.rotation.set(-0.12, 0, 0); restOnGround(); $('b-photo').setAttribute('aria-pressed', false); } };
+$('b-front').onclick = () => { leavePhoto(); goTo('front'); };
+$('b-back').onclick = () => { leavePhoto(); goTo('back'); };
+$('b-top').onclick = () => { leavePhoto(); goTo('top'); };
+$('b-photo').onclick = () => setPhotoScene(!concrete.visible);
+$('b-spin').onclick = () => setSpin(!controls.autoRotate);
+$('b-wear').onclick = e => {
+  const on = e.currentTarget.getAttribute('aria-pressed') !== 'true';
+  e.currentTarget.setAttribute('aria-pressed', on);
+  const m = on ? worn : clean;
+  faceMat.roughnessMap = m.rough; faceMat.bumpMap = m.bump; faceMat.needsUpdate = true;
+};
+$('b-chrome').onclick = e => {
+  const on = e.currentTarget.getAttribute('aria-pressed') !== 'true';
+  e.currentTarget.setAttribute('aria-pressed', on);
+  for (const m of [faceMat, edgeMat]) { const s = on ? gloss : satin; m.color.setHex(s.color); Object.assign(m, { roughness: s.roughness, anisotropy: s.anisotropy, clearcoat: s.clearcoat, clearcoatRoughness: s.clearcoatRoughness }); m.needsUpdate = true; }
+};
+$('ramp').oninput = e => { setRamp(+e.target.value); restOnGround(); $('ramp-out').textContent = e.target.value + ' mm'; };
+$('frame').oninput = e => { setFrame(+e.target.value); restOnGround(); $('frame-out').textContent = e.target.value + '°'; };
+$('bend').oninput = e => { setBend(+e.target.value); restOnGround(); $('bend-out').textContent = e.target.value + '°'; };
+$('b-tags').onclick = e => {
+  tagsOn = e.currentTarget.getAttribute('aria-pressed') !== 'true';
+  e.currentTarget.setAttribute('aria-pressed', tagsOn);
+};
+$('b-wire').onclick = e => {
+  const on = e.currentTarget.getAttribute('aria-pressed') !== 'true';
+  e.currentTarget.setAttribute('aria-pressed', on);
+  for (const m of [faceMat, edgeMat, backMat]) m.wireframe = on;
+};
+
+// ---------- Loop ----------
+function resize() {
+  const w = stage.clientWidth, h = stage.clientHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w / h;
+  camera.fov = w < 600 ? 42 : 30;
+  // su schermi larghi centra il pezzo nello spazio libero a destra della scheda
+  const sheet = document.querySelector('.sheet').getBoundingClientRect();
+  if (w > 900) camera.setViewOffset(w, h, -sheet.right / 2, 0, w, h);
+  else camera.clearViewOffset();
+  camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize);
+resize();
+const clock = new THREE.Clock();
+renderer.setAnimationLoop(() => {
+  const dt = Math.min(clock.getDelta(), 0.1);
+  if (tween) {
+    // durata fissa di 0,9 s, indipendente dal frame rate
+    tween.k = Math.min(1, tween.k + (reduced ? 1 : dt / 0.9));
+    const e = 1 - Math.pow(1 - tween.k, 3);
+    const { s0, s1 } = tween;
+    const dth = THREE.MathUtils.euclideanModulo(s1.theta - s0.theta + Math.PI, 2 * Math.PI) - Math.PI;
+    const sp = new THREE.Spherical(
+      THREE.MathUtils.lerp(s0.radius, s1.radius, e),
+      THREE.MathUtils.lerp(s0.phi, s1.phi, e),
+      s0.theta + dth * e);
+    controls.target.lerpVectors(tween.t0, tween.t, e);
+    camera.position.setFromSpherical(sp).add(controls.target);
+    if (tween.k >= 1) tween = null;
+  }
+  controls.update();
+  renderer.render(scene, camera);
+  updateTags();
+});
+</script>
