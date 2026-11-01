@@ -1,0 +1,21 @@
+{
+  "source": "MakerWorld 3497493 / profilo 4028964 / anteprima pubblica GLB",
+  "author": "Th3D.br",
+  "license_metadata": "BY-NC",
+  "dimensions_mm": [
+    99.88568723201752,
+    71.29727303981781,
+    109.48198288679123
+  ],
+  "vertices_welded": 23467,
+  "triangles": 46934,
+  "boundary_edges": 0,
+  "non_manifold_edges": 0,
+  "changes": [
+    "saldatura vertici coincidenti entro 0,0001 mm",
+    "normali e shading",
+    "traslazione al piano Z=0",
+    "materiale e studio"
+  ],
+  "status": "mesh di anteprima, non validata come file definitivo di stampa"
+}

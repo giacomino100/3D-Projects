@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-01",
+  "creator": "Th3D.br",
+  "makerworld_id": 3497493,
+  "source": "https://makerworld.com/en/models/3497493-minimalist-nativity-scene-holy-family-3d-print",
+  "license_from_primary_metadata": "BY-NC",
+  "allowReCreation": true,
+  "entries": [
+    {
+      "id": "U1",
+      "file": "riferimenti/originale/screenshot_utente.jpg",
+      "url": null,
+      "type": "screenshot utente",
+      "confidence": "riferimento principale; fronte obliquo; nessuna quota metrica",
+      "sha256": "71e91e7d086a5f073ae81e3c9d0a4be70c5f28d2314026a9b8834c79556ce831",
+      "image_size": [
+        1220,
+        2712
+      ]
+    },
+    {
+      "id": "MW_cover",
+      "file": "riferimenti/web/candidato_th3d_render.png",
+      "url": "https://makerworld.bblmw.com/makerworld/model/USb707e3541debfe/design/11c9f391ca18165e.png",
+      "type": "immagine promozionale",
+      "confidence": "non usata come prova metrica o foto reale",
+      "sha256": "69939e6e2e523140e9560f7839e42fe05499167432f80aaaa94e6f8b2b799ccb",
+      "image_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "id": "P1",
+      "file": "riferimenti/web/th3d_stampa_1.jpeg",
+      "url": "https://makerworld.bblmw.com/makerworld/model/USb707e3541debfe/1108943329/instance/0896cb736705e29b.jpeg",
+      "type": "foto di stampa nella galleria del profilo",
+      "confidence": "fronte e viste oblique; esemplare diverso da U1",
+      "sha256": "f42ca2d1580762757a55e2a9964515e45d043948081711fe41b39466c7917b08",
+      "image_size": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "id": "P2",
+      "file": "riferimenti/web/th3d_stampa_2.jpeg",
+      "url": "https://makerworld.bblmw.com/makerworld/model/USb707e3541debfe/1108943329/instance/18a7aac8c013d527.jpeg",
+      "type": "foto di stampa nella galleria del profilo",
+      "confidence": "fronte e viste oblique; esemplare diverso da U1",
+      "sha256": "aca19e6a4bb709666206513949a546f3aa1e9ed7695ec380f999ab88b16272d7",
+      "image_size": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "id": "P3",
+      "file": "riferimenti/web/th3d_stampa_3.jpeg",
+      "url": "https://makerworld.bblmw.com/makerworld/model/USb707e3541debfe/1108943329/instance/a3eab97cb0f77b9d.jpeg",
+      "type": "foto di stampa nella galleria del profilo",
+      "confidence": "fronte e viste oblique; esemplare diverso da U1",
+      "sha256": "445967e7e3a6d6b9b71224e31235c5125855059d1b4dd5e9fee4865fd2742afa",
+      "image_size": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "id": "P4",
+      "file": "riferimenti/web/th3d_stampa_4.jpeg",
+      "url": "https://makerworld.bblmw.com/makerworld/model/USb707e3541debfe/1108943329/instance/25e1e03e39860bad.jpeg",
+      "type": "foto di stampa nella galleria del profilo",
+      "confidence": "fronte e viste oblique; esemplare diverso da U1",
+      "sha256": "99f18d68a48e068a183ec3d36f812adea48250ed7491d1ebc0317ff9041cd90e",
+      "image_size": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "id": "A1",
+      "file": "riferimenti/web/th3d_vista_1.png",
+      "url": "https://makerworld.bblmw.com/makerworld/model/USb707e3541debfe/design/756c933f40e4bcea.png",
+      "original_name": "Imagem do ChatGPT 26 de out. de 2026, 08_26_54-3.png",
+      "type": "promozionale, nome file indica ChatGPT",
+      "confidence": "non considerata fotografia reale del retro",
+      "sha256": "890be7947b57aaf1160d9f9b4bae110aa15f165d92c21eccaf74157e3e994a6a",
+      "image_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "id": "A2",
+      "file": "riferimenti/web/th3d_vista_2.png",
+      "url": "https://makerworld.bblmw.com/makerworld/model/USb707e3541debfe/design/20fdc69c1f3e5b2a.png",
+      "original_name": "Imagem do ChatGPT 26 de out. de 2026, 08_26_54-2.png",
+      "type": "promozionale, nome file indica ChatGPT",
+      "confidence": "non considerata fotografia reale del retro",
+      "sha256": "c5c9f5f7f298527b4e297bfd6b5c0d74f4a81f6b135ba41c1d280ed784cfb1af",
+      "image_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "id": "A3",
+      "file": "riferimenti/web/th3d_vista_3.png",
+      "url": "https://makerworld.bblmw.com/makerworld/model/USb707e3541debfe/design/662f77daef82c901.png",
+      "original_name": "Imagem do ChatGPT 26 de out. de 2026, 08_26_53-1.png",
+      "type": "promozionale, nome file indica ChatGPT",
+      "confidence": "non considerata fotografia reale del retro",
+      "sha256": "e063c2863491ef41a0d11de28530aafcfa0b663dca4b06b53165c807125fd1de",
+      "image_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "id": "M1",
+      "file": "progetto/input_plate_1.glb",
+      "url": "https://makerworld.com/api/v1/design-service/design/3497493",
+      "type": "mesh pubblica di anteprima del profilo 4028964",
+      "confidence": "geometria documentata; non file di stampa originale a piena risoluzione",
+      "sha256": "0bc1a2613e5c6cbd365ea558489cf4fe1e3ac19803167002726d0948f22c84b1"
+    }
+  ]
+}
