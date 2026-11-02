@@ -129,11 +129,11 @@ h1 { margin: 0; font-family: var(--display); font-weight: 700; font-size: 30px; 
   <dl class="specs">
     <dt>Lunghezza</dt><dd>≈ 360 mm (stimata)</dd>
     <dt>Altezza</dt><dd>≈ 40,6 mm</dd>
-    <dt>Listelli</dt><dd>≈ 3,7 mm, sezione tonda</dd>
-    <dt>Finestra</dt><dd>≈ 250 × 32 mm</dd>
+    <dt>Listelli</dt><dd>≈ 5,7 mm, bordo esterno tondo</dd>
+    <dt>Finestra</dt><dd>≈ 246 × 28 mm</dd>
     <dt>Materiale</dt><dd>ABS cromo satinato</dd>
-    <dt>Fissaggi</dt><dd>clip a scatto perpendicolari al retro: 3 asole su C, 3 linguette su D, 1 aletta in punta</dd>
-    <dt>Forma</dt><dd>labbro esterno dritto A→G e I→H con le clip; fascia interna di rientranza che segue l'avvolgimento (34°); piastra B in discesa di ≈ 9 mm da A–I a E</dd>
+    <dt>Fissaggi</dt><dd>clip a scatto perpendicolari al retro: 3 asole su C, 3 linguette su D</dd>
+    <dt>Forma</dt><dd>cornice avvolta di 19° con le clip; fascia interna di rientranza con avvolgimento di 34°; piastra B in discesa di ≈ 11 mm da A–I a E</dd>
     <dt>Usura</dt><dd>graffi concentrati sulla punta</dd>
   </dl>
   </details>
@@ -154,9 +154,12 @@ h1 { margin: 0; font-family: var(--display); font-weight: 700; font-size: 30px; 
   <button id="b-chrome" type="button" aria-pressed="false">Cromo lucido</button>
   <button id="b-wire" type="button" aria-pressed="false">Wireframe</button>
   <button id="b-tags" type="button" aria-pressed="true">Etichette</button>
-  <label class="bend" for="frame">Avvolgimento cornice <input id="frame" type="range" min="0" max="60" step="1" value="0"> <output id="frame-out">0°</output></label>
+  <button id="b-dimensions" type="button">Quotatura</button>
+  <label class="bend" for="frame">Avvolgimento cornice <input id="frame" type="range" min="0" max="60" step="1" value="19"> <output id="frame-out">19°</output></label>
   <label class="bend" for="bend">Avvolgimento cavità <input id="bend" type="range" min="0" max="60" step="1" value="34"> <output id="bend-out">34°</output></label>
-  <label class="bend" for="ramp">Profondità B (A–I → E) <input id="ramp" type="range" min="0" max="16" step="0.5" value="9"> <output id="ramp-out">9 mm</output></label>
+  <label class="bend" for="ramp">Profondità B (A–I → E) <input id="ramp" type="range" min="0" max="16" step="0.5" value="11"> <output id="ramp-out">11 mm</output></label>
+  <label class="bend" for="tilt-top">Inclinazione sopra <input id="tilt-top" type="range" min="0" max="20" step="0.5" value="11"> <output id="tilt-top-out">11°</output></label>
+  <label class="bend" for="tilt-bottom">Inclinazione sotto <input id="tilt-bottom" type="range" min="0" max="20" step="0.5" value="11"> <output id="tilt-bottom-out">11°</output></label>
 </nav>
 
 <script type="importmap">
@@ -169,6 +172,7 @@ h1 { margin: 0; font-family: var(--display); font-weight: 700; font-size: 30px; 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import Delaunator from 'https://cdn.jsdelivr.net/npm/delaunator@5.0.1/+esm';
+import { buildDimensionReport } from './quotatura.js';
 
 // ---------- Renderer / scena ----------
 const stage = document.getElementById('stage');
@@ -227,6 +231,8 @@ const L = 360, H = 40.6;
 const FACE = 0.7, BEVEL = 0.6;           // lamina frontale
 const Z_FRONT = FACE + BEVEL;
 const WALL = 1.2, WALL_OUT = 2.5, WALL_IN = 2.5, SHELF_Z = 4;                  // pareti di ritorno sul retro
+// Fascia aggiunta fra cornice interna e bordo esterno, stimata dalla foto.
+const INNER_FRAME_INSET = 2;
 
 const OUTER_MM = [[0.0, 36.01], [6.87, 37.84], [22.12, 39.06], [58.74, 39.98], [89.26, 40.59], [238.79, 40.59], [290.67, 39.98], [321.18, 39.06], [339.49, 38.45], [351.7, 36.62], [360.0, 33.57], [358.41, 29.3], [354.14, 22.58], [349.26, 15.87], [343.16, 9.77], [334.61, 4.88], [324.85, 1.83], [302.87, 0.92], [205.22, 0.61], [101.47, 0.31], [55.69, 0.0], [40.43, 2.44], [28.23, 6.71], [19.07, 13.73], [9.92, 24.41]];
 const HOLE_MM = [[107.57, 36.31], [102.08, 36.01], [100.25, 34.18], [99.03, 27.46], [99.94, 18.92], [104.52, 12.21], [112.15, 8.54], [122.83, 4.58], [205.22, 4.27], [302.87, 5.19], [317.52, 6.1], [329.73, 7.93], [338.27, 12.82], [344.38, 19.53], [349.26, 27.46], [350.17, 31.74], [348.04, 34.48], [342.54, 35.7], [205.22, 36.31]];
@@ -235,8 +241,22 @@ const HOLE_MM = [[107.57, 36.31], [102.08, 36.01], [100.25, 34.18], [99.03, 27.4
 function closedPts(arr, n) {
   const c = new THREE.CatmullRomCurve3(arr.map(([x, y]) => new THREE.Vector3(x, y, 0)), true, 'centripetal');
   const pts = c.getSpacedPoints(n).slice(0, -1).map(v => new THREE.Vector2(v.x, v.y));
+  if (arr === HOLE_MM) {
+    // Dopo E il bordo inferiore è rettilineo. Catmull-Rom prolungava
+    // la tangente della curva E e creava una rientranza prima della clip 6.
+    const [ax, ay] = HOLE_MM[7], [bx, by] = HOLE_MM[8];
+    for (const p of pts) {
+      if (p.x >= ax && p.x <= bx && p.y < 8)
+        p.y = THREE.MathUtils.lerp(ay, by, (p.x - ax) / (bx - ax));
+      // Anche il bordo superiore prosegue diritto dopo la curva E.
+      if (p.x >= HOLE_MM[0][0] && p.x <= HOLE_MM[18][0] && p.y > 34)
+        p.y = HOLE_MM[0][1];
+    }
+  }
   if (THREE.ShapeUtils.isClockWise(pts)) pts.reverse();
-  return pts;
+  // L'esterno resta fermo; l'apertura e la cornice interna arretrano verso
+  // il centro della finestra. Stesso contorno per fronte, ritorni e cavità.
+  return arr === HOLE_MM ? offsetPts(pts, -INNER_FRAME_INSET) : pts;
 }
 // Offset lungo la normale (d > 0 verso l'esterno del poligono antiorario); scarta i tratti
 // che si ribaltano vicino alle punte, così gli anelli restano poligoni semplici
@@ -321,10 +341,36 @@ function lipHeight(d) {
   const top = edgeHeight(crest, 0), plate = EDGE_R - LIP_DROP;
   return top + (plate - top) * smooth(crest, crest + LIP_FALL, d);
 }
-// Bordo esterno con un'unica sezione su tutto il giro (A→C→G sopra, I→D sotto): stesso labbro
-// tondo ovunque, nessuna gola, nessuna bombatura, nessun cambio di profilo lungo il pezzo.
+// C e D hanno una sezione arrotondata su tutta la larghezza della fascia,
+// senza il precedente tratto piano fra i due bordi. Altezza parametrica.
+const RAIL_ROUND_HEIGHT = 2.2;
 function faceHeight(x, y) {
-  return Math.min(lipHeight(distToPoly(x, y, outerPts)), edgeHeight(distToPoly(x, y, holePts)));
+  const dOut = distToPoly(x, y, outerPts), dIn = distToPoly(x, y, holePts);
+  const base = Math.min(lipHeight(dOut), edgeHeight(dIn));
+  const span = dOut + dIn;
+  const u = span > 1e-6 ? dOut / span : 0;
+  const rounded = RAIL_ROUND_HEIGHT * Math.sqrt(Math.max(0, 4 * u * (1 - u)));
+  // Profili dei listelli stretti C/D e raccordi terminali.
+  const rails = smooth(H * 0.5, H * 0.75, y) + (1 - smooth(H * 0.25, H * 0.5, y));
+  const blend = rails * (1 - smooth(8, 11, span));
+  let height = THREE.MathUtils.lerp(base, rounded, blend);
+  // Sopra e sotto B il bordo interno della fascia è la linea della rampa,
+  // non il contorno della finestra. Prosegue con la stessa sezione convessa.
+  const rampRails = [
+    [upperRailInnerY(x), HOLE_MM[0][0], 1],
+    [lowerRailInnerY(x), HOLE_MM[7][0], -1],
+  ];
+  for (const [boundary, endX, side] of rampRails) {
+    const inwardDistance = side * (y - boundary);
+    if (x >= endX + 6 || inwardDistance < 0) continue;
+    const width = dOut + inwardDistance;
+    const t = width > 1e-6 ? dOut / width : 0;
+    const plate = Math.min(lipHeight(distToPoly(x, boundary, outerPts)), edgeHeight(distToPoly(x, boundary, holePts)));
+    const crown = Math.min(RAIL_ROUND_HEIGHT, width * 0.45);
+    const section = t * plate + (crown - plate * 0.5) * Math.sqrt(Math.max(0, 4 * t * (1 - t)));
+    height = THREE.MathUtils.lerp(height, section, 1 - smooth(endX - 3, endX + 6, x));
+  }
+  return height;
 }
 const faceShape = new THREE.Shape(outerPts);
 faceShape.holes.push(new THREE.Path(holePts));
@@ -370,32 +416,58 @@ function wallStrip(pts, side, depth) {
 const wallGeo = wallStrip(closedPts(OUTER_MM, 1600), 1, WALL_OUT);
 const wallHoleGeo = wallStrip(closedPts(HOLE_MM, 1100), -1, WALL_IN);
 
-// Livello posteriore (scelto dall'utente: "fronte dritto, retro curvo"): lungo tutta la cavità interna, separato
-// dal labbro e dalle clip, una parete con un piano largo BAND_W alla base, spessore 1,1 mm. Parte
+// Livello posteriore (scelto dall'utente: "fronte dritto, retro curvo"): lungo la cavità interna, separato
+// dal labbro e dalle clip, una parete spessa 1,1 mm senza ripiano dentro la finestra. Parte
 // dal retro del listello lungo il bordo della finestra e va sempre più indietro verso G: la
 // profondità extra (peso userData.bw) la applica bendGeo in base all'angolo di avvolgimento.
-const BAND_W = 5, BAND_T = 1.1, BAND_REACH = 25;
-// anello continuo lungo tutto il bordo della cavità (sopra C, sotto D, curve in E e verso G)
+const BAND_T = 1.1, BAND_REACH = 25;
+// Lieve inclinazione delle pareti verso l'apertura, ASSUMED_PARAMETRIC.
+// Sopra va verso il basso, sotto verso l'alto; la radice resta sul bordo.
+let bandTilt = THREE.MathUtils.degToRad(11);
+let bandTopTilt = THREE.MathUtils.degToRad(11);
+// La foto del pezzo montato mostra che i due bordi interni finiscono prima
+// della curva G. Posizione PHOTO_DERIVED approssimata nella scala ipotizzata.
+const BAND_END_X = 310;
+function bandPath() {
+  const m = holePts.length;
+  const start = holePts.findIndex((p, i) => p.x <= BAND_END_X && holePts[(i - 1 + m) % m].x > BAND_END_X);
+  const crossing = (a, b) => a.clone().lerp(b, (BAND_END_X - a.x) / (b.x - a.x));
+  const pts = [crossing(holePts[(start - 1 + m) % m], holePts[start])];
+  for (let k = 0; k < m; k++) {
+    const i = (start + k) % m, p = holePts[i], q = holePts[(i + 1) % m];
+    pts.push(p);
+    if (q.x > BAND_END_X) { pts.push(crossing(p, q)); break; }
+  }
+  return pts;
+}
+// Profilo aperto sopra e sotto verso G, continuo intorno a E; estremità tappate.
 function bandGeo() {
-  const pts = holePts, m = pts.length;
-  // sezione chiusa [spostamento verso la finestra, z piana, peso profondità]: parete + piano
-  const prof = [[0, 0, 0], [0, -BAND_T, 1], [BAND_W, -BAND_T, 1], [BAND_W, 0, 1], [BAND_T, 0, 1], [BAND_T, 0, 0]];
-  const n = prof.length, pos = [], bw = [], idx = [], wr = [];
+  const pts = bandPath(), m = pts.length;
+  // Sezione chiusa [offset, z piana, peso profondità]: solo parete.
+  // Offset negativi: spessore verso il listello, senza restringere la finestra.
+  const prof = [[0, 0, 0], [0, 0, 1], [-BAND_T, 0, 1], [-BAND_T, 0, 0]];
+  const n = prof.length, pos = [], bw = [], idx = [], wr = [], inward = [];
   // holePts è antiorario: la normale a sinistra (-ty, tx) punta sempre verso l'interno della finestra
   pts.forEach((p, i) => {
-    const q = pts[(i + 1) % m], r = pts[(i - 1 + m) % m];
+    const q = pts[Math.min(i + 1, m - 1)], r = pts[Math.max(i - 1, 0)];
     let nx = -(q.y - r.y), ny = q.x - r.x; const nl = Math.hypot(nx, ny) || 1; nx /= nl; ny /= nl;
-    for (const [off, dz, wgt] of prof) { pos.push(p.x + nx * off, p.y + ny * off, -WALL_IN + dz); bw.push(wgt); wr.push(p.x, p.y); }
-    const j = (i + 1) % m;
+    for (const [off, dz, wgt] of prof) { pos.push(p.x + nx * off, p.y + ny * off, -WALL_IN + dz); bw.push(wgt); wr.push(p.x, p.y); inward.push(nx, ny); }
+    if (i === m - 1) return;
+    const j = i + 1;
     for (let k = 0; k < n; k++) {
       const a = n * i + k, b = n * i + (k + 1) % n, c = n * j + k, d = n * j + (k + 1) % n;
       idx.push(a, c, b, b, c, d);
     }
   });
+  // Chiude lo spessore dei due tagli senza collegarli attraverso G.
+  idx.push(0, 1, 2, 0, 2, 3);
+  const end = n * (m - 1);
+  idx.push(end, end + 2, end + 1, end, end + 3, end + 2);
   const g = new THREE.BufferGeometry();
   g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
   g.setIndex(idx);
   g.userData.bw = new Float32Array(bw);
+  g.userData.inward = new Float32Array(inward);
   g.userData.edgeXY = new Float32Array(wr);   // punto di bordo di ogni vertice (peso rampa)
   return g;
 }
@@ -405,7 +477,7 @@ const bandLoop = bandGeo();
 // - mensola arretrata dietro il bordo alto della finestra, x 40→291: è la fascia scura che
 //   in foto 1 si vede attraverso la finestra sotto il listello superiore
 // - 3 asole trapezoidali sulla mensola, 3 linguette forate sul bordo inferiore,
-//   una aletta inclinata vicino alla punta destra
+//   aletta vicino alla punta destra rimossa su richiesta dell'utente
 // Clip a pinna (foto 3 ingrandita): lato verso la punta A inclinato, lato opposto verticale,
 // finestra rettangolare vicino alla cima e bordino di rinforzo attorno. Costruita già rivolta
 // verso -y: base sul bordo (y = 0), cima a y = -h.
@@ -454,22 +526,12 @@ function standingFin(x, y, zBase, base, top, h) {
   g.userData.zBase = zBase;
   return g;
 }
-// asole 2–4: sul bordino di ritorno del listello superiore C
-for (const x of [41, 116, 224]) parts.push(standingFin(x, 38.6, -WALL_OUT, 19, 10, 7.5));
-// linguette 5–7: sul bordino del listello inferiore
-for (const x of [82, 164, 221]) parts.push(standingFin(x, 1.4, -WALL_OUT, 17.5, 9.5, 8));
-// aletta 8: lamella vicino alla punta destra, anch'essa in piedi
-{
-  const s = new THREE.Shape();
-  s.moveTo(0, 0); s.lineTo(30, 0); s.lineTo(30, -3.4); s.quadraticCurveTo(30, -4.6, 28.8, -4.6); s.lineTo(4, -4.6); s.lineTo(0, 0);
-  const g = new THREE.ExtrudeGeometry(s, { depth: 1.1, bevelEnabled: true, bevelThickness: 0.2, bevelSize: 0.2, bevelSegments: 2, curveSegments: 6 });
-  g.rotateX(Math.PI / 2);
-  g.rotateY(0.12);
-  g.translate(316, 33.2, -2.4);
-  g.userData.clipX = 330;
-  g.userData.zBase = -2.4;
-  parts.push(g);
-}
+const CLIP_SPECS = [
+  ...[41, 116, 224].map((x, i) => ({ id: String(i + 2), family: 'C', x, y: 38.6, base: 19, top: 10, height: 7.5, thickness: 1.2 })),
+  ...[82, 164, 221].map((x, i) => ({ id: String(i + 5), family: 'D', x, y: 1.4, base: 17.5, top: 9.5, height: 8, thickness: 1.2 })),
+];
+for (const clip of CLIP_SPECS) parts.push(standingFin(clip.x, clip.y, -WALL_OUT, clip.base, clip.top, clip.height));
+// Aletta 8 rimossa su richiesta dell'utente; numeri delle altre clip invariati.
 
 // Avvolgimento: il labbro esterno (A→G, I→H) e le clip restano dritti; l'angolo agisce solo sulla
 // fascia interna di rientranza di C e D, che ruota all'indietro in modo progressivo verso G:
@@ -477,8 +539,8 @@ for (const x of [82, 164, 221]) parts.push(standingFin(x, 1.4, -WALL_OUT, 17.5, 
 // Le geometrie conservano le coordinate piane originali, così i cursori ricalcolano da quelle.
 let bendAngle = THREE.MathUtils.degToRad(34);
 // Avvolgimento cornice: piega l'intera cornice (fronte, contorno, clip) all'indietro verso G con la
-// stessa legge progressiva; indipendente dall'avvolgimento della cavità. Parte da 0 (pezzo dritto).
-let frameAngle = 0;
+// stessa legge progressiva; indipendente dall'avvolgimento della cavità. Parte da 19? (impostazione utente).
+let frameAngle = THREE.MathUtils.degToRad(19);
 let frameTable = null;
 function buildFrame() {
   const n = Math.ceil(L) + 1, tbl = new Float32Array(n * 3);
@@ -497,7 +559,37 @@ buildFrame();
 // da sponde. Il peso (0 sul bordo e sui listelli, 1 in fondo alla rampa) dipende solo dalla
 // posizione nel piano ed è calcolato una volta per vertice; il cursore cambia solo la profondità.
 const RAMP_END_X = 102, RAMP_ZONE_X = 140, RAIL_W = 3.4, RAIL_SLOPE = 1.6;
-let rampDepth = 9;
+// La linea della rampa parte dall'angolo A e arriva al labbro superiore in E.
+// La fascia quindi nasce a zero in A e si allarga fino alla cornice interna.
+function rampInclineWidth(angle) {
+  // A 0° conserva una transizione finita, senza divisioni per zero.
+  return Math.max(0.25, rampDepth * Math.tan(angle));
+}
+function upperRailInnerY(x) {
+  const t = THREE.MathUtils.clamp(x / HOLE_MM[0][0], 0, 1);
+  return THREE.MathUtils.lerp(OUTER_MM[0][1], HOLE_MM[0][1] - INNER_FRAME_INSET, t);
+}
+// Stessa prosecuzione sotto B: il bordo di D segue I fino alla punta A.
+// Si raccorda alla linea già rettificata della finestra senza cambiare quota.
+function lowerRailInnerY(x) {
+  const [ax, ay] = HOLE_MM[7], [bx, by] = HOLE_MM[8];
+  const slope = (by - ay) / (bx - ax);
+  const lineY = px => ay + slope * (px - ax) + INNER_FRAME_INSET * Math.hypot(1, slope);
+  const [joinX, joinY] = OUTER_MM[19];
+  if (x >= joinX) return lineY(x);
+  const width = lineY(joinX) - joinY;
+  let previous = OUTER_MM[0];
+  for (let i = OUTER_MM.length - 1; i >= 19; i--) {
+    const current = OUTER_MM[i];
+    if (x <= current[0]) {
+      const t = THREE.MathUtils.clamp((x - previous[0]) / (current[0] - previous[0]), 0, 1);
+      return THREE.MathUtils.lerp(previous[1], current[1], t) + width;
+    }
+    previous = current;
+  }
+  return lineY(x);
+}
+let rampDepth = 11;
 const leftEdge = (() => {
   const t = [];
   for (let i = 0; i <= 90; i++) {
@@ -511,7 +603,19 @@ const leftEdge = (() => {
 function rampWeight(x, y) {
   if (x >= RAMP_ZONE_X) return 0;
   const dOut = distToPoly(x, y, outerPts);
-  const wall = smooth(RAIL_W, RAIL_W + RAIL_SLOPE, dOut);
+  // I raccordi di B usano gli stessi angoli delle due pareti interne.
+  // La corsa trasversale segue anche la profondità B scelta dal cursore.
+  const slopeWidth = rampInclineWidth(bandTopTilt);
+  // La fascia di D conserva la sua larghezza lungo tutta la zona piena B.
+  const lowerEdgeY = lowerRailInnerY(x);
+  // Raccordo speculare a quello superiore: sale verso B dal bordo basso.
+  // La stessa deformazione è condivisa da fronte, retro e pareti della cornice.
+  const lowerSlopeWidth = rampInclineWidth(bandTilt);
+  const lowerLip = smooth(lowerEdgeY, lowerEdgeY + lowerSlopeWidth, y);
+  const upperBoundary = upperRailInnerY(x);
+  const topSlope = 1 - smooth(upperBoundary - slopeWidth, upperBoundary, y);
+  const topRegion = smooth(H * 0.5, H * 0.75, y);
+  const wall = THREE.MathUtils.lerp(smooth(RAIL_W, RAIL_W + RAIL_SLOPE, dOut), topSlope, topRegion) * lowerLip;
   if (wall <= 0) return 0;
   const xl = leftEdge(y);
   const t = x >= RAMP_END_X ? 1 : THREE.MathUtils.clamp((x - xl) / Math.max(1, RAMP_END_X - xl), 0, 1);
@@ -526,30 +630,74 @@ function bendPoint(x, y, z, w = 0) {
   const th = THREE.MathUtils.lerp(frameTable[3 * i + 2], frameTable[3 * i + 5], f);
   return [px + z * Math.sin(th) - L / 2, y - H / 2, pz + z * Math.cos(th)];
 }
-// angolo di avvolgimento raggiunto alla posizione x (progressivo, 0 in A, bendAngle in G)
+// La curva E resta alla quota della rampa: l'avvolgimento inizia dopo E,
+// con pendenza iniziale nulla, e raggiunge l'angolo scelto verso G.
+const CAVITY_START_X = 123;
 function wrapTheta(x) {
-  const t = THREE.MathUtils.clamp(x / L, 0, 1);
-  return bendAngle * (0.4 * t + 0.6 * t * t);
+  const t = THREE.MathUtils.clamp((x - CAVITY_START_X) / (L - CAVITY_START_X), 0, 1);
+  return bendAngle * t * t;
+}
+// Collegamenti diretti dalla fine di E al fondo, sui due bordi della cavità.
+function cavityRampWeightBase(x, y) {
+  // Presso la clip 3 la dissolvenza della rampa faceva risalire il fondo
+  // superiore. Collega direttamente la fine di E alla quota successiva.
+  const topStart = HOLE_MM[0][0], topEnd = CAVITY_START_X + 25;
+  if (y > 34 && x >= topStart && x < topEnd) {
+    const initial = rampWeight(topStart, HOLE_MM[0][1]);
+    return THREE.MathUtils.lerp(initial, 1, (x - topStart) / (topEnd - topStart));
+  }
+  const local = rampWeight(x, y);
+  if (x <= CAVITY_START_X) return local;
+  if (x >= CAVITY_START_X + 25) return 1;
+  const previous = THREE.MathUtils.lerp(local, 1, smooth(CAVITY_START_X, CAVITY_START_X + 25, x));
+  return Math.max(rampWeight(CAVITY_START_X, y), previous);
+}
+function cavityRampWeight(x, y) {
+  // Il bordo interno inferiore resta alla profondità di B, anche presso E.
+  // Non eredita né la protezione del labbro esterno né la dissolvenza della
+  // piastra: entrambe causavano la risalita a zero e la successiva discesa.
+  // Stessa quota sul bordo superiore: nessuna risalita vicino alla clip 3.
+  // Solo la parte centrale di E conserva il raccordo alla piastra.
+  const center = smooth(12, 20, y) * (1 - smooth(24, 32, y));
+  return THREE.MathUtils.lerp(1, cavityRampWeightBase(x, y), center);
 }
 const bendables = [];
 function bendGeo(g) {
   const o = g.userData.flat, w = g.userData.w, bw = g.userData.bw, p = g.attributes.position;
   for (let i = 0; i < p.count; i++) {
-    const bz = bw ? bw[i] * BAND_REACH * Math.sin(wrapTheta(o[3 * i])) : 0;
-    const [x, y, z] = bendPoint(o[3 * i], o[3 * i + 1], o[3 * i + 2] - bz, w[i]);
+    // Stesso fondo precedente; correzione limitata alla piccola risalita dopo E.
+    const bz = bw ? bw[i] * (rampDepth * (g.userData.cavityW[i] - w[i]) + BAND_REACH * Math.sin(wrapTheta(o[3 * i]))) : 0;
+    // Inclina la cornice stessa, non soltanto la superficie della rampa.
+    // Il bordo profondo si sposta verso l'apertura lungo la normale locale;
+    // con profondità nulla non viene introdotta alcuna sporgenza.
+    const tilt = bw ? THREE.MathUtils.lerp(bandTilt, bandTopTilt,
+      smooth(24, 32, g.userData.edgeXY[2 * i + 1])) : 0;
+    const lean = bw ? bz * Math.tan(tilt) : 0;
+    const ix = bw ? g.userData.inward[2 * i] * lean : 0;
+    const iy = bw ? g.userData.inward[2 * i + 1] * lean : 0;
+    const [x, y, z] = bendPoint(o[3 * i] + ix, o[3 * i + 1] + iy, o[3 * i + 2] - bz, w[i]);
     p.setXYZ(i, x, y, z);
   }
   p.needsUpdate = true;
   g.computeVertexNormals();
   g.computeBoundingSphere();
 }
-function deform(g) {
-  const o = g.userData.flat = g.attributes.position.array.slice();
+function updateRampWeights(g) {
+  const o = g.userData.flat;
   g.userData.w = new Float32Array(o.length / 3);
   // clip: la base resta sul bordino, il corpo segue la piastra (raccordo nei primi 2 mm)
   const wf = g.userData.clipX !== undefined ? clipWeight(g.userData.clipX) : undefined, zb = g.userData.zBase;
   for (let i = 0; i < g.userData.w.length; i++)
     g.userData.w[i] = g.userData.edgeXY ? rampWeight(g.userData.edgeXY[2 * i], g.userData.edgeXY[2 * i + 1]) : wf !== undefined ? wf * smooth(0, 2, zb - o[3 * i + 2]) : rampWeight(o[3 * i], o[3 * i + 1]);
+  if (g.userData.bw) {
+    g.userData.cavityW = new Float32Array(g.userData.w.length);
+    for (let i = 0; i < g.userData.w.length; i++)
+      g.userData.cavityW[i] = cavityRampWeight(g.userData.edgeXY[2 * i], g.userData.edgeXY[2 * i + 1]);
+  }
+}
+function deform(g) {
+  g.userData.flat = g.attributes.position.array.slice();
+  updateRampWeights(g);
   bendables.push(g);
   bendGeo(g);
   return g;
@@ -565,8 +713,104 @@ function setFrame(deg) {
 }
 function setRamp(mm) {
   rampDepth = mm;
-  bendables.forEach(bendGeo);
+  refreshRamp();
 }
+function refreshRamp() {
+  bendables.forEach(g => { updateRampWeights(g); bendGeo(g); });
+}
+function setTopTilt(deg) {
+  bandTopTilt = THREE.MathUtils.degToRad(deg);
+  refreshRamp();
+}
+function setBottomTilt(deg) {
+  bandTilt = THREE.MathUtils.degToRad(deg);
+  refreshRamp();
+}
+
+// Snapshot della geometria e dei parametri correnti per le tavole quotate.
+// Le misure restano nella scala ipotizzata di 360 mm finché manca A→G reale.
+function getDimensionSnapshot() {
+  const bounds = geometries => {
+    const min = [Infinity, Infinity, Infinity], max = [-Infinity, -Infinity, -Infinity];
+    for (const g of geometries) {
+      const a = g.attributes.position.array;
+      for (let i = 0; i < a.length; i++) { const k = i % 3; min[k] = Math.min(min[k], a[i]); max[k] = Math.max(max[k], a[i]); }
+    }
+    return { min, max, size: max.map((v, i) => v - min[i]) };
+  };
+  const hull = points => {
+    const pts = points.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+    const cross = (a, b, c) => (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0]);
+    const half = list => { const h = []; for (const p of list) { while (h.length > 1 && cross(h.at(-2), h.at(-1), p) <= 0) h.pop(); h.push(p); } return h; };
+    return half(pts).slice(0, -1).concat(half([...pts].reverse()).slice(0, -1));
+  };
+  const projections = g => Object.fromEntries([['xy', [0, 1]], ['xz', [0, 2]], ['yz', [1, 2]]].map(([name, axes]) => {
+    const a = g.attributes.position.array, pts = [];
+    for (let i = 0; i < a.length; i += 3) pts.push([a[i + axes[0]], a[i + axes[1]]]);
+    return [name, hull(pts)];
+  }));
+  const posed = pts => pts.map(p => bendPoint(p.x, p.y, faceHeight(p.x, p.y), rampWeight(p.x, p.y)));
+  const bandRows = [];
+  for (let i = 0; i < bandLoop.attributes.position.count; i += 4) {
+    const p = bandLoop.attributes.position;
+    bandRows.push({ root: [p.getX(i), p.getY(i), p.getZ(i)], floor: [p.getX(i + 1), p.getY(i + 1), p.getZ(i + 1)] });
+  }
+  const sections = [60, 220].map(x => {
+    const runs = []; let run = [];
+    for (let i = 0; i <= 900; i++) {
+      const y = H * i / 900;
+      if (inPoly(x, y, outerPts) && !inPoly(x, y, holePts)) {
+        const drop = rampDepth * rampWeight(x, y);
+        run.push([y, faceHeight(x, y) - drop, -0.4 - drop]);
+      } else if (run.length) { runs.push(run); run = []; }
+    }
+    if (run.length) runs.push(run);
+    return { x, runs };
+  });
+  const clips = CLIP_SPECS.map((clip, i) => ({ ...clip, zBase: -WALL_OUT,
+    windowWidth: clip.top - 3, windowHeight: 2.3, windowBottom: 1.3,
+    rimWidth: 1, rimDepth: 0.6, bevel: 0.25, cornerRadius: 0.8,
+    bounds: bounds([parts[i]]), projections: projections(parts[i]),
+  }));
+  return {
+    version: 1, title: 'Audi Q2 — listello griglia, modello parametrico', scaleConfirmed: false,
+    scaleNote: 'Quote del modello in scala ipotizzata A–G = 360 mm. Lunghezza reale non disponibile; nessuna quota è certificata OEM.',
+    settings: { frame: THREE.MathUtils.radToDeg(frameAngle), cavity: THREE.MathUtils.radToDeg(bendAngle), ramp: rampDepth,
+      top: THREE.MathUtils.radToDeg(bandTopTilt), bottom: THREE.MathUtils.radToDeg(bandTilt) },
+    parameters: [
+      ['L', 'Riferimento X prima dell’avvolgimento', L, 'mm'], ['H', 'Altezza nominale di riferimento', H, 'mm'],
+      ['FRAME', 'Avvolgimento cornice', THREE.MathUtils.radToDeg(frameAngle), '°'],
+      ['CAVITY', 'Avvolgimento cavità impostato', THREE.MathUtils.radToDeg(bendAngle), '°'],
+      ['B_DEPTH', 'Profondità rampa B', rampDepth, 'mm'],
+      ['TILT_C', 'Inclinazione superiore', THREE.MathUtils.radToDeg(bandTopTilt), '°'],
+      ['TILT_D', 'Inclinazione inferiore', THREE.MathUtils.radToDeg(bandTilt), '°'],
+      ['INSET', 'Fascia aggiunta sul bordo interno', INNER_FRAME_INSET, 'mm'],
+      ['BAND_T', 'Spessore nominale parete interna', BAND_T, 'mm'],
+      ['BAND_REACH', 'Leva parametrica profondità cavità', BAND_REACH, 'mm'],
+      ['BAND_END', 'Arresto interno sopra/sotto verso G', BAND_END_X, 'mm da A'],
+      ['WALL_T', 'Spessore nominale ritorni', WALL, 'mm'], ['WALL_OUT', 'Ritorno esterno', WALL_OUT, 'mm'],
+      ['WALL_IN', 'Ritorno finestra', WALL_IN, 'mm'], ['CROWN', 'Altezza sezione convessa C/D', RAIL_ROUND_HEIGHT, 'mm'],
+      ['BACK', 'Offset superficie posteriore', 0.4, 'mm'], ['RAMP_END', 'Fine progressione iniziale B', RAMP_END_X, 'mm da A'],
+      ['RAMP_ZONE', 'Fine zona deformata della piastra', RAMP_ZONE_X, 'mm da A'],
+      ['CAVITY_START', 'Inizio avvolgimento cavità', CAVITY_START_X, 'mm da A'],
+      ['EDGE_R', 'Raggio nominale profilo di base', EDGE_R, 'mm'],
+      ['LIP_W', 'Larghezza profilo di base in B', LIP_W, 'mm'],
+      ['LIP_DROP', 'Discesa locale profilo di base', LIP_DROP, 'mm'],
+      ['LIP_FALL', 'Raccordo locale profilo di base', LIP_FALL, 'mm'],
+      ['RECESS', 'Rientro nominale profilo finestra', RECESS, 'mm'],
+      ['CREASE', 'Larghezza raccordo profilo finestra', CREASE, 'mm'],
+      ['RAIL_W', 'Fascia protetta della rampa', RAIL_W, 'mm'],
+      ['RAIL_SLOPE', 'Raccordo base della rampa', RAIL_SLOPE, 'mm'],
+    ],
+    flat: { outer: outerPts.map(p => p.toArray()), hole: holePts.map(p => p.toArray()),
+      outerControls: OUTER_MM, holeControls: HOLE_MM, bandPath: bandPath().map(p => p.toArray()) },
+    posed: { outer: posed(outerPts), hole: posed(holePts), bandRows,
+      bounds: bounds([bodyGeo, backGeo, wallGeo, wallHoleGeo, bandLoop, ...parts]) },
+    clips, sections,
+  };
+}
+window.getDimensionSnapshot = getDimensionSnapshot;
+window.getQuotationHtml = () => buildDimensionReport(getDimensionSnapshot());
 
 // ---------- Texture procedurali: graffi + spazzolatura ----------
 const TW = 2048, TH = 256;
@@ -715,10 +959,9 @@ const TAGS = [
   ['5', 'Linguetta sinistra', 86, 1.5, 'back', -WALL_OUT - 7],
   ['6', 'Linguetta centrale', 168, 1.5, 'back', -WALL_OUT - 7],
   ['7', 'Linguetta destra', 225, 1.5, 'back', -WALL_OUT - 7],
-  ['8', 'Aletta in punta', 333, 33, 'back', -5.5],
   ['9', 'Marcature stampate', 70, 20, 'back', -1],
   ['10', 'Livello posteriore dietro C', 250, 33.5, 'back', -WALL_IN - 4],
-  ['11', 'Livello posteriore dietro D', 315, 14, 'back', -WALL_IN - 4],
+  ['11', 'Livello posteriore dietro D', 295, 9, 'back', -WALL_IN - 4],
 ];
 const tagLayer = document.getElementById('tags'), legend = document.getElementById('legend');
 const tagEls = TAGS.map(([id, name, x, y, side]) => {
@@ -741,9 +984,10 @@ function updateTags() {
     const el = tagEls[i];
     if (!tagsOn) { el.hidden = true; return; }
     const z = side === 'front' ? faceHeight(x, y) + 0.6
-      : /^1[01]$/.test(TAGS[i][0]) ? -WALL_IN - BAND_T - BAND_REACH * Math.sin(wrapTheta(x))
+      : /^1[01]$/.test(TAGS[i][0]) ? -WALL_IN - BAND_REACH * Math.sin(wrapTheta(x))
       : zb;
-    const rw = side === 'back' && /^[2-8]$/.test(TAGS[i][0]) ? clipWeight(x) : rampWeight(x, y);
+    const rw = side === 'back' && /^1[01]$/.test(TAGS[i][0]) ? cavityRampWeight(x, y)
+      : side === 'back' && /^[2-7]$/.test(TAGS[i][0]) ? clipWeight(x) : rampWeight(x, y);
     const [px, py, pz] = bendPoint(x, y, z, rw);
     // normale locale (verso il fronte) piegata come il pezzo, per nascondere le etichette dal lato opposto
     const [qx, qy, qz] = bendPoint(x, y, z + 1, rw);
@@ -822,6 +1066,15 @@ $('b-chrome').onclick = e => {
 $('ramp').oninput = e => { setRamp(+e.target.value); restOnGround(); $('ramp-out').textContent = e.target.value + ' mm'; };
 $('frame').oninput = e => { setFrame(+e.target.value); restOnGround(); $('frame-out').textContent = e.target.value + '°'; };
 $('bend').oninput = e => { setBend(+e.target.value); restOnGround(); $('bend-out').textContent = e.target.value + '°'; };
+$('tilt-top').oninput = e => { setTopTilt(+e.target.value); restOnGround(); $('tilt-top-out').textContent = e.target.value + '°'; };
+$('tilt-bottom').oninput = e => { setBottomTilt(+e.target.value); restOnGround(); $('tilt-bottom-out').textContent = e.target.value + '°'; };
+$('b-dimensions').onclick = () => {
+  const report = window.open('', '_blank');
+  if (!report) { alert('Consenti l’apertura della finestra di quotatura per visualizzare le tavole.'); return; }
+  report.document.open();
+  report.document.write(buildDimensionReport(getDimensionSnapshot()));
+  report.document.close();
+};
 $('b-tags').onclick = e => {
   tagsOn = e.currentTarget.getAttribute('aria-pressed') !== 'true';
   e.currentTarget.setAttribute('aria-pressed', tagsOn);

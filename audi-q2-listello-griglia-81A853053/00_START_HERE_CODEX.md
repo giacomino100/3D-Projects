@@ -14,6 +14,8 @@ Codici ricambio probabili: 81A853053 (sinistro) / 81A853054 (destro), da conferm
 - `modello/cornice-fendinebbia.html` — il modello, una sola pagina senza build.
 - `foto/` — foto originali del pezzo.
 - `render/` — render e confronti prodotti durante il lavoro.
+- `quote/` — PDF A3 di cinque tavole, HTML autonomo, SVG, CSV/JSON e script di esportazione.
+- `modello/quotatura.js` — generatore delle tavole, alimentato dallo snapshot della geometria corrente.
 
 ## Avvio
 ```bash
@@ -24,9 +26,11 @@ Poi apri `http://localhost:8765/cornice-fendinebbia.html`.
 
 ## Comandi nella pagina
 - Viste: Come in foto, Fronte, Retro, Profilo; Etichette, Wireframe, Graffi, Cromo lucido.
-- **Avvolgimento cornice** (0° di default): piega tutto il pezzo con le clip verso G.
+- **Avvolgimento cornice** (19° di default): piega tutto il pezzo con le clip verso G.
 - **Avvolgimento cavità** (34° di default): solo l'anello posteriore attorno alla finestra.
-- **Profondità B**: discesa della piastra da A–I a E (9 mm di default).
+- **Profondità B**: discesa della piastra da A–I a E (11 mm di default).
+- **Inclinazione sopra / sotto**: cursori indipendenti 0–20°, passo 0,5°, entrambi inizialmente a 11°. Ogni cursore regola la parete interna e il corrispondente raccordo della rampa B; la corsa del raccordo segue anche la profondità B.
+- **Quotatura**: apre cinque tavole della configurazione corrente, stampabili in PDF ed esportabili in CSV, JSON e SVG. Tutte le quote rimangono nella scala ipotizzata di 360 mm; la misura reale A→G manca ancora.
 
 ## Regole di lavoro concordate con l'utente
 - Parlare delle parti usando lettere e numeri dei riferimenti.
