@@ -1,19 +1,19 @@
-﻿BOMBONIERA - VASO F2 + 4 PIEDINI (Giacomo e Simona, 2 Ottobre 2027)
+VASI - un vaso = una cartella (file .blend + cartella 3MF)
+
+01_F2_nervature_beige    F2_vaso.blend + 3MF/ (vaso con scritta Giacomo/Simona, senza scritta, piedini x4, piatto completo)
+02_petali_torti          vaso_petali_torti.blend + 3MF/
+03_loto                  vaso_loto.blend + 3MF/
+04_intreccio             vaso_intreccio.blend + 3MF/
+05_gemma                 vaso_gemma.blend + 3MF/
+06_plisse_grigio         vaso_plisse_grigio.blend + 3MF/
+07_vaso_grande_114x105   vaso.blend, crea_vaso.py, vaso.3mf, foto di riferimento
+_ARCHIVIO                blend originali (scena unica, tutti_i_vasi) e versione grande 116x106 non piu valida
+
+BOMBONIERA F2 - VASO + 4 PIEDINI (Giacomo e Simona, 2 Ottobre 2027)
 Pensato per un vasetto di plastica diametro 70 x altezza 60 mm.
 
-1_STAMPA_3MF  (da stampare, piatto Kobra S1 250x250)
-  F2_vaso_Giacomo_Simona.3mf     vaso con scritta (Giacomo / e / Simona / 02.10.2027)
-  F2_vaso_senza_scritta.3mf      stesso vaso senza scritta
-  F2_piedini_x4.3mf              4 piedini svasati 14 gradi
-  F2_piatto_vaso+4piedini.3mf    vaso con scritta + piedini sullo stesso piatto
-2_BLENDER
-  F2_vaso_e_piedini.blend        F2, senza scritta, piedini, anteprima con vasetto
-  tutti_i_vasi_85x76.blend       tutti i modelli A-E, F2
-3_ARCHIVIO_grande_116x106       versione precedente per vasetto 100x80 (non piu valida)
-4_ALTRI_MODELLI_3MF             A petali torti, B loto, C intreccio, D gemma, E plisse grigio
-
 MISURE
-  Vaso: diametro circa 85 x altezza 76 mm, cavita diametro 74, fondo 8 mm
+  Vaso: diametro circa 77 x altezza 76 mm, cavita diametro 74, fondo 8 mm (ridotto da 85 il 11/11, fori piedini invariati; i 3MF F2 sono ancora della versione 85)
   Profondita utile 68 mm: vasetto 70x60 poggia sul fondo, bordo 8 mm sotto il bordo vaso
   Scritta: Segoe Script Bold, incisione 1,5 mm, nomi larghi 50 mm, data 02.10.2027 larga 44 mm (tratto 0,75-1 mm, ok ugello 0,4)
   Piedino: alto 34,5 mm (perno diametro 9 x 4,5), svasato 14 gradi
