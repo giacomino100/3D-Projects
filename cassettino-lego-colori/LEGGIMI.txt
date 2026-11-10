@@ -1,0 +1,19 @@
+CASSETTINO LEGO DA SCRIVANIA - 24 MATITE COLORATE
+
+FILE
+  cassettino_lego.blend     2 oggetti: CORPO e CASSETTO (unita: mm)
+  crea_cassettino.py        script che rigenera tutto: blender -b --python crea_cassettino.py
+  3MF/cassettino_corpo.3mf, cassettino_cassetto.3mf, cassettino_piatto_completo.3mf (piatto 250x250)
+
+MISURE
+  Corpo: 111.8 x 199.8 x 28.8 mm (14x25 borchie, alto 3 mattoncini) + borchie 1.7 = 30.5 mm
+  Cassetto: 106.4 x 197 x 21.6 mm, gioco 0.3 mm per lato
+  Interno cassetto: 103.2 x 192.4 x 19.6 mm, divisorio centrale: 2 colonne da 12 matite
+  Matite fino a circa 185 mm di lunghezza
+  Lego: passo 8 mm, borchie d 4.8 x 1.7, tubi sotto d 6.51 / foro 4.9, misure esterne N*8-0.2
+
+STAMPA (da provare, non ancora stampato)
+  Corpo: borchie in alto, senza supporti (il fondo con i tubi parte dal piatto).
+  Cassetto: fondo sul piatto, senza supporti. Foro per il dito a ponte, ok.
+  Se il cassetto e troppo stretto/lasco: cambia CLR nello script (0.3 mm).
+  Se i mattoncini Lego non tengono o sono troppo duri: cambia TUBE_ID (4.9) o STUD_D (4.8).
