@@ -7,6 +7,7 @@ VASI - un vaso = una cartella (file .blend + cartella 3MF)
 05_gemma                 vaso_gemma.blend + 3MF/
 06_plisse_grigio         vaso_plisse_grigio.blend + 3MF/
 07_vaso_grande_114x105   vaso.blend, crea_vaso.py, vaso.3mf, foto di riferimento
+08_vaso_50mm           vaso grande scalato a diametro 50 mm + vasetto interno forato (vaso_50mm.blend, crea_vaso_50mm.py, 3MF/, sezione.png)
 _ARCHIVIO                blend originali (scena unica, tutti_i_vasi) e versione grande 116x106 non piu valida
 
 BOMBONIERA F2 - VASO + 4 PIEDINI (Giacomo e Simona, 2 Ottobre 2027)
@@ -23,3 +24,9 @@ STAMPA
   Vaso con fondo sul piatto, senza supporti. Piedini in piedi, senza supporti.
   Piedini incollati nei fori (gioco 0,2 mm per lato).
   Non ancora provato in slicer/stampa: fare prima una prova di un piedino e di un foro.
+
+VASO 50 MM + VASETTO INTERNO (08_vaso_50mm)
+  Vaso: stessa forma del 114x105 scalata di 50/114: diametro esterno 50 x altezza 46 mm, parete 1,6 mm, 48 scanalature, cavita 46,5 mm al bordo
+  Vasetto interno: parete e fondo 0,8 mm, altezza 40 mm, diametro 44,4 mm al bordo (gioco minimo reale 0,9 mm dal vaso), bordo 3 mm sotto il bordo del vaso (non si vede)
+  Fondo vasetto: 7 fori da 3 mm (1 centrale + 6), fondo piatto (stampa senza supporti); i 3 piedini alti 1,2 mm sono sul fondo del vaso e tengono il vasetto sollevato: l acqua cola sotto
+  3MF: vaso_50mm.3mf, vasetto_interno_50mm.3mf, vaso_50mm_e_vasetto.3mf (entrambi sul piatto). Vasetto: stampare in piedi, senza supporti
